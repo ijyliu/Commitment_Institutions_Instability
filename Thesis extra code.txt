@@ -1,0 +1,6 @@
+// Fine classifications are 1 for currency union, 2 for pre announced peg or board, 3 for narrow band, 4 for de facto peg, 5 for crawling peg, 6 for crawling band, 7 for de facto crawling peg, 8 for de facto crawling band, 9 for pre announced
+
+// Missing if no CB
+foreach variable in timetoregularturnover numberofactualturnovers regularturnoverdummy irregularturnoverdummy timeinoffice legalduration {
+replace `variable' = . if `variable' == -999
+}

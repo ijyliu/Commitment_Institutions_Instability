@@ -1,0 +1,195 @@
+Afghanistan |        219        1.25        1.25
+                 Albania |        105        0.60        1.84
+                 Algeria |         57        0.32        2.17
+                  Angola |         44        0.25        2.42
+               Argentina |        194        1.10        3.52
+                 Armenia |         28        0.16        3.68
+               Australia |        118        0.67        4.36
+                 Austria |        219        1.25        5.60
+              Azerbaijan |         28        0.16        5.76
+                   Baden |         53        0.30        6.06
+                 Bahrain |         48        0.27        6.34
+              Bangladesh |         47        0.27        6.61
+                 Bavaria |         72        0.41        7.02
+                 Belarus |         28        0.16        7.17
+                 Belgium |        189        1.08        8.25
+                   Benin |         59        0.34        8.59
+                  Bhutan |        112        0.64        9.22
+                 Bolivia |        194        1.10       10.33
+                  Bosnia |         27        0.15       10.48
+                Botswana |         53        0.30       10.78
+                  Brazil |        195        1.11       11.90
+                Bulgaria |        140        0.80       12.69
+            Burkina Faso |         59        0.34       13.03
+                 Burundi |         57        0.32       13.35
+                Cambodia |         66        0.38       13.73
+                Cameroon |         59        0.34       14.06
+                  Canada |        152        0.87       14.93
+              Cape Verde |         44        0.25       15.18
+Central African Republic |         59        0.34       15.52
+                    Chad |         59        0.34       15.85
+                   Chile |        201        1.14       17.00
+                   China |        219        1.25       18.24
+                Colombia |        187        1.06       19.31
+                 Comoros |         44        0.25       19.56
+       Congo Brazzaville |         59        0.34       19.90
+          Congo Kinshasa |         59        0.34       20.23
+              Costa Rica |        181        1.03       21.26
+           Cote D'Ivoire |          3        0.02       21.28
+                 Croatia |         28        0.16       21.44
+                    Cuba |        117        0.67       22.10
+                  Cyprus |         59        0.34       22.44
+          Czech Republic |         26        0.15       22.59
+          Czechoslovakia |         75        0.43       23.02
+                 Denmark |        219        1.25       24.26
+                Djibouti |         42        0.24       24.50
+      Dominican Republic |        175        1.00       25.50
+              East Timor |         14        0.08       25.58
+                 Ecuador |        189        1.08       26.65
+                   Egypt |         97        0.55       27.21
+             El Salvador |        178        1.01       28.22
+       Equatorial Guinea |         51        0.29       28.51
+                 Eritrea |         26        0.15       28.66
+                 Estonia |         52        0.30       28.95
+                Ethiopia |        165        0.94       29.89
+                    Fiji |         49        0.28       30.17
+                 Finland |        102        0.58       30.75
+                  France |        219        1.25       32.00
+                   Gabon |         59        0.34       32.34
+                  Gambia |         54        0.31       32.64
+                 Georgia |         28        0.16       32.80
+                 Germany |        107        0.61       33.41
+            Germany East |         46        0.26       33.67
+            Germany West |         46        0.26       33.94
+                   Ghana |         59        0.34       34.27
+           Gran Colombia |         12        0.07       34.34
+                  Greece |        192        1.09       35.43
+               Guatemala |        180        1.02       36.46
+                  Guinea |         61        0.35       36.81
+           Guinea-Bissau |         45        0.26       37.06
+                  Guyana |         53        0.30       37.36
+                   Haiti |        199        1.13       38.50
+                Honduras |        180        1.02       39.52
+                 Hungary |        152        0.87       40.39
+                   India |         69        0.39       40.78
+               Indonesia |         74        0.42       41.20
+                    Iran |        219        1.25       42.45
+                    Iraq |         95        0.54       42.99
+                 Ireland |         98        0.56       43.55
+                  Israel |         71        0.40       43.95
+                   Italy |        158        0.90       44.85
+             Ivory Coast |         56        0.32       45.17
+                 Jamaica |         60        0.34       45.51
+                   Japan |        219        1.25       46.76
+                  Jordan |         73        0.42       47.18
+              Kazakhstan |         28        0.16       47.34
+                   Kenya |         56        0.32       47.65
+                   Korea |        111        0.63       48.29
+             Korea North |         71        0.40       48.69
+             Korea South |         71        0.40       49.09
+                  Kosovo |         11        0.06       49.16
+                  Kuwait |         56        0.32       49.48
+              Kyrgyzstan |         28        0.16       49.64
+                    Laos |         65        0.37       50.01
+                  Latvia |         49        0.28       50.28
+                 Lebanon |         76        0.43       50.72
+                 Lesotho |         53        0.30       51.02
+                 Liberia |        172        0.98       52.00
+                   Libya |         68        0.39       52.39
+               Lithuania |         51        0.29       52.68
+              Luxembourg |        152        0.87       53.54
+               Macedonia |         28        0.16       53.70
+              Madagascar |         59        0.34       54.04
+                  Malawi |         55        0.31       54.35
+                Malaysia |         62        0.35       54.70
+                    Mali |         59        0.34       55.04
+              Mauritania |         59        0.34       55.38
+               Mauritius |         51        0.29       55.67
+                  Mexico |        197        1.12       56.79
+                  Modena |         46        0.26       57.05
+                 Moldova |         28        0.16       57.21
+                Mongolia |         95        0.54       57.75
+              Montenegro |         13        0.07       57.82
+                 Morocco |        176        1.00       58.83
+              Mozambique |         44        0.25       59.08
+         Myanmar (Burma) |         71        0.40       59.48
+                 Namibia |         29        0.17       59.65
+                   Nepal |        219        1.25       60.89
+             Netherlands |        204        1.16       62.05
+             New Zealand |        162        0.92       62.98
+               Nicaragua |        181        1.03       64.01
+                   Niger |         59        0.34       64.34
+                 Nigeria |         59        0.34       64.68
+                  Norway |        205        1.17       65.85
+                    Oman |        219        1.25       67.09
+       Orange Free State |         49        0.28       67.37
+                Pakistan |         72        0.41       67.78
+                  Panama |        116        0.66       68.44
+            Papal States |         56        0.32       68.76
+        Papua New Guinea |         44        0.25       69.01
+                Paraguay |        208        1.18       70.20
+                   Parma |         46        0.26       70.46
+                    Peru |        198        1.13       71.59
+             Philippines |         84        0.48       72.06
+                  Poland |        101        0.58       72.64
+                Portugal |        219        1.25       73.89
+                 Prussia |         68        0.39       74.27
+                   Qatar |         48        0.27       74.55
+                 Romania |        160        0.91       75.46
+                  Russia |        150        0.85       76.31
+                  Rwanda |         58        0.33       76.64
+                Sardinia |         47        0.27       76.91
+            Saudi Arabia |         93        0.53       77.44
+                  Saxony |         66        0.38       77.82
+                 Senegal |         59        0.34       78.15
+                  Serbia |        104        0.59       78.74
+   Serbia and Montenegro |          4        0.02       78.77
+            Sierra Leone |         58        0.33       79.10
+               Singapore |         60        0.34       79.44
+         Slovak Republic |         26        0.15       79.59
+                Slovenia |         28        0.16       79.75
+         Solomon Islands |         41        0.23       79.98
+                 Somalia |         59        0.34       80.32
+            South Africa |        109        0.62       80.94
+             South Sudan |          8        0.05       80.98
+                   Spain |        219        1.25       82.23
+               Sri Lanka |         71        0.40       82.63
+                   Sudan |         56        0.32       82.95
+             Sudan-North |          8        0.05       83.00
+                Suriname |         44        0.25       83.25
+               Swaziland |         51        0.29       83.54
+                  Sweden |        219        1.25       84.79
+             Switzerland |        171        0.97       85.76
+                   Syria |         75        0.43       86.19
+                  Taiwan |         70        0.40       86.58
+              Tajikistan |         28        0.16       86.74
+                Tanzania |         58        0.33       87.07
+                Thailand |        219        1.25       88.32
+             Timor Leste |          3        0.02       88.34
+                    Togo |         59        0.34       88.67
+     Trinidad and Tobago |         57        0.32       89.00
+                 Tunisia |         60        0.34       89.34
+                  Turkey |        219        1.25       90.59
+            Turkmenistan |         28        0.16       90.75
+                 Tuscany |         46        0.26       91.01
+            Two Sicilies |         45        0.26       91.27
+                     UAE |         48        0.27       91.54
+                    USSR |         70        0.40       91.94
+                  Uganda |         57        0.32       92.26
+                 Ukraine |         28        0.16       92.42
+          United Kingdom |        219        1.25       93.67
+      United Province CA |         15        0.09       93.75
+           United States |        219        1.25       95.00
+                 Uruguay |        189        1.08       96.08
+              Uzbekistan |         28        0.16       96.24
+               Venezuela |        189        1.08       97.31
+                 Vietnam |         43        0.24       97.56
+           Vietnam North |         23        0.13       97.69
+           Vietnam South |         21        0.12       97.81
+            Wuerttemburg |         72        0.41       98.22
+                   Yemen |         29        0.17       98.38
+             Yemen North |         73        0.42       98.80
+             Yemen South |         24        0.14       98.94
+              Yugoslavia |         83        0.47       99.41
+                  Zambia |         55        0.31       99.72
+                Zimbabwe |         49        0.28      100.00
