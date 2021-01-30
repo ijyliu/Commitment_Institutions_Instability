@@ -166,7 +166,7 @@ save "${Intermediate_Data}/Clean_DPI", replace
 *****************************************************************************
 
 // Visser's index of corporatism
-import excel "${Input}/Visser_Corp", sheet("ICTWSS6.0") firstrow clear
+import excel "${Input}/Visser_Corp.xlsx", sheet("ICTWSS6.0") firstrow clear
 rename country country_name
 keep country_name year Coord Type
 // Coordination goes from 1 for fragmented wage bargaining to 5 with centralized. Type goes from 0 for no govt intervention to 6 for government imposed bargaining/statutory controls.
@@ -423,7 +423,7 @@ save "${Intermediate_Data}/Clean_AREARS", replace
 *****************************************************************************
 
 // Polity IV
-import excel "${Input}/p4v2018", firstrow clear
+import excel "${Input}/p4v2018.xls", firstrow clear
 
 // Keep only relevant variables
 keep country year xconst xrcomp xropen parreg parcomp
