@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+De Jure CBI (CNW Index)&    0.321\sym{*}  &    0.648\sym{***}&    0.587\sym{***}&    0.308\sym{**} &    0.488\sym{***}\\
+                &   (2.51)         &   (5.96)         &   (5.01)         &   (2.80)         &  (11.69)         \\
+[1em]
+Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0147\sym{**} &  -0.0130\sym{**} & -0.00280         &   0.0347\sym{***}& -0.00292         \\
+                &  (-2.61)         &  (-2.61)         &  (-0.49)         &   (6.45)         &  (-1.74)         \\
+[1em]
+Constant        &    0.617\sym{***}&    0.157\sym{**} &    0.413\sym{***}&   -0.598\sym{***}&    0.193\sym{***}\\
+                &   (8.50)         &   (2.70)         &   (6.19)         &  (-7.54)         &   (8.73)         \\
+\hline
+Observations    &     1399         &     1399         &     1141         &     2141         &     4207         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

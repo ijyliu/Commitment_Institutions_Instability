@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}\\
+\hline
+Exchange Rate Classification (RR inverted, higher = more fixed)&   0.0397         & -0.00497         &    0.105\sym{*}  &   0.0621\sym{***}\\
+                &   (0.75)         &  (-0.10)         &   (1.99)         &   (3.44)         \\
+[1em]
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&        0         &        0         &        0         &   -1.325         \\
+                &      (.)         &      (.)         &      (.)         &  (-0.46)         \\
+[1em]
+Constant        &    0.452         &    0.528         &    0.154         &    1.402         \\
+                &   (0.89)         &   (1.05)         &   (0.33)         &   (0.48)         \\
+\hline
+Observations    &       52         &       52         &       45         &      169         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
