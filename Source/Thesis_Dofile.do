@@ -241,7 +241,7 @@ browse if country_name == "Yemen"
 // No data in all the situations, so it does not matter what is dropped
 duplicates drop country_name year, force
 
-save Clean_Garriga_CBI, replace
+save "${Intermediate_Data}/Clean_Garriga_CBI", replace
 
 *****************************************************************************
 
@@ -259,7 +259,7 @@ save Clean_Garriga_CBI, replace
 * save Clean_Grilli_CBI, replace
 
 // Governor Turnover from Axel, Strum De Haan
-. import excel "Axel Sturm De Haan Gov Turnover.xlsx", sheet("data v2018") firstrow clear
+. import excel "${Input}/Axel Sturm De Haan Gov Turnover.xlsx", sheet("data v2018") firstrow clear
 
 // Tidy up variables
 drop countcentralbanks codewdi
@@ -327,12 +327,12 @@ replace country_name = "Yemen" if country_name == "Yemen, Rep."
 rename country_name cb_name
 
 // Save file
-save Clean_CBI_Turnover, replace
+save "${Intermediate_Data}/Clean_CBI_Turnover", replace
 
 *****************************************************************************
 
 // Reinhart Rog ex reg class
-import excel "ERA_Classification_Annual_1940-2016_Mod.xlsx", sheet("Fine") firstrow clear
+import excel "${Input}/ERA_Classification_Annual_1940-2016_Mod.xlsx", sheet("Fine") firstrow clear
 
 // Tidying up variables
 destring year, replace
@@ -384,13 +384,13 @@ replace country_name = "United Arab Emirates" if country_name == "UAE"
 replace country_name = "United States of America" if country_name == "United States"
 replace country_name = "Yemen" if country_name == "Yemen Rep. of"
 
-save Clean_RR, replace
+save "${Intermediate_Data}/Clean_RR", replace
 
 *****************************************************************************
 
 // AREARS IMF on de jure rates and cap controls
 // Rate data is only available since 2008! :(
-import excel "AREARforCapConandDJRates.xlsx", sheet("AREAER-DataQueryReport_03.28.20") firstrow clear
+import excel "${Input}/AREARforCapConandDJRates.xlsx", sheet("AREAER-DataQueryReport_03.28.20") firstrow clear
 
 gen stat = (Status == "yes") if Status != ""
 drop Status
@@ -418,12 +418,12 @@ egen floatAR = rowtotal(statFloating statFree_floating) if year > 2008
 
 // Align country names
 
-save Clean_AREARS, replace
+save "${Intermediate_Data}/Clean_AREARS", replace
 
 *****************************************************************************
 
 // Polity IV
-import excel p4v2018, firstrow clear
+import excel "${Input}/p4v2018", firstrow clear
 
 // Keep only relevant variables
 keep country year xconst xrcomp xropen parreg parcomp
@@ -483,12 +483,12 @@ sum parcomp, detail
 gen hcomp3 = (parcomp > 3)
 
 // Save.
-save Clean_Polity4, replace
+save "${Intermediate_Data}/Clean_Polity4", replace
 
 *****************************************************************************
 
 // Chinn Ito KAOPEN index capital control openness
-use kaopen_2017, clear
+use "${Input}/kaopen_2017", clear
 keep country_name year ka_open
 
 * Cleaning
@@ -518,12 +518,12 @@ replace country_name = "United States of America" if country_name == "United Sta
 replace country_name = "Venezuela" if country_name == "Venezuela, RB"
 replace country_name = "Yemen" if country_name == "Yemen, Rep."
 
-save Clean_kaopen, replace
+save "${Intermediate_Data}/Clean_kaopen", replace
 
 *****************************************************************************
 
 // OECD social science and biz grad
-import excel "OECD Tert Grads.xlsx", sheet("DP_LIVE_22032020015002769") firstrow clear
+import excel "${Input}/OECD Tert Grads.xlsx", sheet("DP_LIVE_22032020015002769") firstrow clear
 keep LOCATION SUBJECT TIME Value
 keep if SUBJECT == "SOC_SCI" | SUBJECT == "BUSINESS"
 order LOCATION TIME
@@ -595,7 +595,7 @@ replace country_name = "Turkey" if country_name == "TUR"
 replace country_name = "United States of America" if country_name == "USA"
 replace country_name = "South Africa" if country_name == "ZAF"
 
-save Clean_OECD_Thesis, replace
+save "${Intermediate_Data}/Clean_OECD_Thesis", replace
 
 *****************************************************************************
 
@@ -634,15 +634,15 @@ replace country_name = "United States of America" if country_name == "United Sta
 replace country_name = "Venezuela" if country_name == "Venezuela, RB"
 replace country_name = "Yemen" if country_name == "Yemen, Rep."
 
-save Clean_Thesis_WB, replace
+save "${Intermediate_Data}/Clean_Thesis_WB", replace
 
 *****************************************************************************
 
 // Merging datasets
-use Clean_VDem, clear
-merge 1:1 country_name year using Clean_Garriga_CBI, gen(merge1)
-merge 1:1 country_name year using Clean_RR, gen(merge2)
-merge 1:1 country_name year using Clean_Polity4, gen(merge3)
+use "${Intermediate_Data}/Clean_VDem", clear
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_Garriga_CBI", gen(merge1)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_RR", gen(merge2)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_Polity4", gen(merge3)
 // Special merge for gov turnover data
 gen cb_name = country_name
 replace cb_name = "Central Bank of West African States" if ((country_name == "Benin" | country_name == "Burkina Faso" | country_name == "Ivory Coast" | country_name == "Mali" | country_name == "Niger" | country_name == "Senegal" | country_name == "Togo") & year >= 1994) | (country_name == "Guinea-Bissau" & year >= 1997)
@@ -658,11 +658,11 @@ replace cb_name = "European Central Bank" if (country_name == "Cyprus" & year >=
 // Anguilla, Antigua and Barbuda, Dominica, Grenada, Monteserrat, St Kitts and Nevis, St Lucia, St Vincent and the Grenadines from 1983 and from 1987 for Anguilla.
 // For some strange reason the ECB is already classified as individual CBs.
 // But just to be sure, ECB founded 1999, member cyprus since 2008, estonia 2011, greece 2001, latvia 2014, lith 2015, malta 2008, slovenia 2007, slovakia 2009, original members austria belgium finland france germany, ireland, italy, luxembourg, netherlands, portugal, spain
-merge m:1 cb_name year using Clean_CBI_Turnover, gen(merge4)
+merge m:1 cb_name year using "${Intermediate_Data}/Clean_CBI_Turnover", gen(merge4)
 drop cb_name
 drop if country_name == ""
-merge 1:1 country_name year using Clean_OECD_Thesis, gen(merge5)
-merge 1:1 country_name year using Clean_Thesis_WB, gen(merge6)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_OECD_Thesis", gen(merge5)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_Thesis_WB", gen(merge6)
 
 // Cut down on unneeded observations- run one last time to make sure
 drop if year < 1970
@@ -872,8 +872,8 @@ eststo clear
 *****************************************************************************
 
 * Controls
-merge 1:1 country_name year using Clean_DPI, gen(merge7)
-merge 1:1 country_name year using Clean_Visser, gen(merge8)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_DPI", gen(merge7)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_Visser", gen(merge8)
 
 local noCorpControls "v2elreggov v2x_horacc checks auton author"
 local fullcontrols "`noCorpControls' Coord Type"
@@ -1132,7 +1132,7 @@ save IV_Analysis_Ready, replace
 *****************************************************************************
 
 * Capital controls (capital account) level robustness
-merge 1:1 country_name year using Clean_kaopen, gen(merge9)
+merge 1:1 country_name year using "${Intermediate_Data}/Clean_kaopen", gen(merge9)
 
 hist ka_open
 * Set high as "above median/50th percentile"
@@ -1311,11 +1311,11 @@ eststo clear
 
 * OECD Monetary Institutions aid as an IV?
 
-save latepriorities_Ready, replace
+save "${Intermediate_Data}/latepriorities_Ready", replace
 
 *****************************************************************************
 
-use latepriorities_Ready, clear
+use "${Intermediate_Data}/latepriorities_Ready", clear
 duplicates drop country year, force
 xtset country year
 
@@ -1409,7 +1409,7 @@ eststo clear
 estpost sum
 esttab . using "sumstatsAll.rtf", label cells("mean sd count") noobs replace
 
-use latepriorities_Ready, clear
+use "${Intermediate_Data}/latepriorities_Ready", clear
 
 * Recreating Appendix Early Tables (were A1 or A3 and A2 i think pre corr)
 reg v2elturnhog irregtd, robust
@@ -1466,9 +1466,9 @@ eststo clear
 *****************************************************************************
 
 *Prepping for CR
-save CR_Priorities_Ready, replace
+save "${Intermediate_Data}/CR_Priorities_Ready", replace
 
-use CR_Priorities_Ready, clear
+use "${Intermediate_Data}/CR_Priorities_Ready", clear
 
 *Keeping the locals
 local ElStabVars "v2elturnhog v2elturnhos v2eltvrig"
@@ -2120,4 +2120,4 @@ eststo llpintlaglogInstabDF
 esttab llpintlagordLogHOGDF llpintlagordLogHOSDF llpintlagordLogLHDF llpintlaglogInstabDF using "llpintlagordLogDF.rtf", label replace compress
 eststo clear
 
-save CR_Adequate, replace
+save "${Intermediate_Data}/CR_Adequate", replace
