@@ -19,7 +19,7 @@ Contains final submissions, paper drafts, and presentations. The main draft is .
 
 ### [Source](Source)
 
-Contains the project source code in the Stata dofile [Thesis_Dofile.do](Source/Thesis_Dofile.do).
+Contains the project source code in the Stata dofile [Thesis_Dofile.do](Source/Thesis_Dofile.do). The only line any user may need to change in order to run the code is the location of the global "Root", which should be set to the root/main folder of this repository.
 
 ## Notes
 

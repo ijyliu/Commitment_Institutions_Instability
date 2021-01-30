@@ -10,8 +10,8 @@ clear
 macro drop _all
 
 // Set paths
-cd ..
-global Root = `c(pwd)'
+* The root directory line below should be the only setting which a user has to customize for their computer
+global Root = "~/repo/Commitment_Institutions_Instability"
 global Input = "${Root}/Input"
 global Output = "${Root}/Output"
 global Intermediate_Data = "${Output}/Intermediate_Data"
