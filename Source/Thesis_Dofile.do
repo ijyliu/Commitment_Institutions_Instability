@@ -161,15 +161,15 @@ replace country_name = "United Arab Emirates" if country_name == "UAE"
 replace country_name = "United Kingdom" if country_name == "UK"
 replace country_name = "United States of America" if country_name == "USA"
 
-save Clean_DPI, replace
+save "${Intermediate_Data}/Clean_DPI", replace
 
 *****************************************************************************
 
 // Visser's index of corporatism
-import excel Visser_Corp, sheet("ICTWSS6.0") firstrow clear
+import excel "${Input}/Visser_Corp", sheet("ICTWSS6.0") firstrow clear
 rename country country_name
 keep country_name year Coord Type
-// Coordination goes from 1 for fragmented wage bargaining to 5 with centralized. Type goes from 0 for no govt intervention to 6 for governmetn imposed bargaining/statutory controls.
+// Coordination goes from 1 for fragmented wage bargaining to 5 with centralized. Type goes from 0 for no govt intervention to 6 for government imposed bargaining/statutory controls.
 destring Coord, replace
 destring Type, replace
 drop if year < 1970
@@ -187,14 +187,16 @@ replace country_name = "Russia" if country_name == "Russian Federation"
 replace country_name = "Slovakia" if country_name == "Slovak Republic"
 replace country_name = "Taiwan" if country_name == "Taiwan, China"
 
-save Clean_Visser, replace
+save "${Intermediate_Data}/Clean_Visser", replace
+
+*****************************************************************************
 
 * Not really needed:
 // CSP Armed Conflict- CIVVIOL CIVWAR ETHVIOL ETHWAR CIVTOT
 // WB world governance indicators PV.EST
 
 // CBI Garriga statutory
-use "CBI Data", clear
+use "${Input}/CBI Data", clear
 
 // Variables are creation, reform, direction, increase, decrease, regional, lvau_garriga, lvaw_garriga, cuk_ceo, cuk_obj, cuk_pol, cuk_limlen, lvau_garriga_old, lvaw_garriga_old.
 // We have when a cb was created, when there was a reform, inc or decrease, and whether the cb is regional/for more than one country. Most reforms increase CWN's weighted index.
@@ -240,6 +242,8 @@ browse if country_name == "Yemen"
 duplicates drop country_name year, force
 
 save Clean_Garriga_CBI, replace
+
+*****************************************************************************
 
 // Romelli Grilli CBI extension- de facto CBI
 * import excel "C:\Users\Isaac Liu\OneDrive - Georgetown University\Senior\Spring Class\Thesis\Romelli CBI.xlsx", sheet("CBI Indices") firstrow
@@ -325,6 +329,8 @@ rename country_name cb_name
 // Save file
 save Clean_CBI_Turnover, replace
 
+*****************************************************************************
+
 // Reinhart Rog ex reg class
 import excel "ERA_Classification_Annual_1940-2016_Mod.xlsx", sheet("Fine") firstrow clear
 
@@ -380,6 +386,8 @@ replace country_name = "Yemen" if country_name == "Yemen Rep. of"
 
 save Clean_RR, replace
 
+*****************************************************************************
+
 // AREARS IMF on de jure rates and cap controls
 // Rate data is only available since 2008! :(
 import excel "AREARforCapConandDJRates.xlsx", sheet("AREAER-DataQueryReport_03.28.20") firstrow clear
@@ -411,6 +419,8 @@ egen floatAR = rowtotal(statFloating statFree_floating) if year > 2008
 // Align country names
 
 save Clean_AREARS, replace
+
+*****************************************************************************
 
 // Polity IV
 import excel p4v2018, firstrow clear
@@ -475,6 +485,8 @@ gen hcomp3 = (parcomp > 3)
 // Save.
 save Clean_Polity4, replace
 
+*****************************************************************************
+
 // Chinn Ito KAOPEN index capital control openness
 use kaopen_2017, clear
 keep country_name year ka_open
@@ -507,6 +519,8 @@ replace country_name = "Venezuela" if country_name == "Venezuela, RB"
 replace country_name = "Yemen" if country_name == "Yemen, Rep."
 
 save Clean_kaopen, replace
+
+*****************************************************************************
 
 // OECD social science and biz grad
 import excel "OECD Tert Grads.xlsx", sheet("DP_LIVE_22032020015002769") firstrow clear
@@ -583,6 +597,8 @@ replace country_name = "South Africa" if country_name == "ZAF"
 
 save Clean_OECD_Thesis, replace
 
+*****************************************************************************
+
 * World Bank data on population, GDP PPP 2011 IDollars, tertiary education enrollment percent.
 wbopendata, indicator(SP.POP.TOTL; NY.GDP.MKTP.PP.KD; SE.TER.ENRR) year(1970:2019) long clear
 ren countryname country_name
@@ -620,6 +636,8 @@ replace country_name = "Yemen" if country_name == "Yemen, Rep."
 
 save Clean_Thesis_WB, replace
 
+*****************************************************************************
+
 // Merging datasets
 use Clean_VDem, clear
 merge 1:1 country_name year using Clean_Garriga_CBI, gen(merge1)
@@ -648,6 +666,8 @@ merge 1:1 country_name year using Clean_Thesis_WB, gen(merge6)
 
 // Cut down on unneeded observations- run one last time to make sure
 drop if year < 1970
+
+*****************************************************************************
 
 // Panel Regressions
 encode country_name, gen(country)
@@ -684,6 +704,8 @@ local StabVars "`ElStabVars' `PolStabVars'"
 *eststo logFE_`stabVar'`commVar'
 *logFE_`stabVar'`commVar'
 
+*****************************************************************************
+
 // All independent variables in the same regressions
 * To avoid multicolinearity, need to pick independent variables carefully.
 * Use the weighted CBI index from CNW. More interpretable and significant in more single regressions.
@@ -693,12 +715,14 @@ local StabVars "`ElStabVars' `PolStabVars'"
 * This is due to the bad controls problem: de jure likely affects de facto.
 local primCommInstVarsDJ "lvaw_gar RRrate"
 local primCommInstVarsDF "irregtd RRrate"
+
 foreach stabVar in `StabVars' {
-reg `stabVar' `primCommInstVarsDJ', robust
-eststo miolsDJ_`stabVar'
-xtreg `stabVar' `primCommInstVarsDJ', fe cluster(country)
-eststo miFEDJ_`stabVar'
+    reg `stabVar' `primCommInstVarsDJ', robust
+    eststo miolsDJ_`stabVar'
+    xtreg `stabVar' `primCommInstVarsDJ', fe cluster(country)
+    eststo miFEDJ_`stabVar'
 }
+
 esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "multIndOLSDJ.rtf", label replace compress
 
 esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "multIndFEDJ.rtf", label replace compress
@@ -706,10 +730,10 @@ esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve 
 eststo clear
 
 foreach stabVar in `StabVars' {
-reg `stabVar' `primCommInstVarsDF', robust
-eststo miolsDF_`stabVar'
-xtreg `stabVar' `primCommInstVarsDF', fe cluster(country)
-eststo miFEDF_`stabVar'
+    reg `stabVar' `primCommInstVarsDF', robust
+    eststo miolsDF_`stabVar'
+    xtreg `stabVar' `primCommInstVarsDF', fe cluster(country)
+    eststo miFEDF_`stabVar'
 }
 esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "multIndOLSDF.rtf", label replace compress
 
@@ -726,10 +750,10 @@ reg irregtd RRrate
 
 * Run interactions
 foreach stabVar in `StabVars' {
-reg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, robust
-eststo imiols_`stabVar'
-xtreg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, fe cluster(country)
-eststo imiFE_`stabVar'
+    reg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, robust
+    eststo imiols_`stabVar'
+    xtreg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, fe cluster(country)
+    eststo imiFE_`stabVar'
 }
 esttab imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "imultIndOLS.rtf", label replace compress
 
@@ -737,14 +761,16 @@ esttab imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiF
 
 eststo clear
 
+*****************************************************************************
+
 * CORRECTED Interactions
 
 * DJ
-foreach stabVar in `StabVars' {
-reg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, robust
-eststo imiolsDJ_`stabVar'
-xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, fe cluster(country)
-eststo imiFEDJ_`stabVar'
+    foreach stabVar in `StabVars' {
+    reg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, robust
+    eststo imiolsDJ_`stabVar'
+    xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, fe cluster(country)
+    eststo imiFEDJ_`stabVar'
 }
 esttab imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "imultIndOLSDJ.rtf", label replace compress
 
@@ -764,6 +790,8 @@ esttab imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_w
 esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "imultIndFEDF.rtf", label replace compress
 
 eststo clear
+
+*****************************************************************************
 
 * Binary dependent variables.
 * NOT REALLY NEEDED
@@ -789,6 +817,8 @@ esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF
 
 esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "logitFEMultInd2DF.rtf", label replace compress
 
+*****************************************************************************
+
 * JUST binary instab event:
 
 * DJ
@@ -806,6 +836,8 @@ esttab cbinstabEventDF using "coeffsJustBinInstabEventDF.rtf", label replace com
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
 esttab mlf_binstabEventDF using "margsJustBinInstabEventDF.rtf", label replace compress
+
+*****************************************************************************
 
 * Binary independent variables.
 * Maybe use later if want a combined cbi and fixed rate var
@@ -836,6 +868,8 @@ esttab bolsDF_v2elturnhog bolsDF_v2elturnhos bolsDF_v2eltvrig bolsDF_e_wbgi_pve 
 esttab bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "binaryIndFEDF.rtf", label replace compress
 
 eststo clear
+
+*****************************************************************************
 
 * Controls
 merge 1:1 country_name year using Clean_DPI, gen(merge7)
@@ -876,6 +910,8 @@ esttab fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig ful
 
 eststo clear
 
+*****************************************************************************
+
 *No corp controls
 
 *DJ
@@ -915,6 +951,8 @@ eststo clear
 *Go back and look at c results and maybe chuck some controls.
 
 save OLS_FEanalysis_Ready, replace
+
+*****************************************************************************
 
 // Arellano Bond etc.
 
@@ -1091,6 +1129,8 @@ esttab miniLH miniWB using "miniRRIVs.rtf", label replace compress
 
 save IV_Analysis_Ready, replace
 
+*****************************************************************************
+
 * Capital controls (capital account) level robustness
 merge 1:1 country_name year using Clean_kaopen, gen(merge9)
 
@@ -1161,6 +1201,8 @@ eststo clear
 
 save capaccount_Analysis_Ready,  replace
 
+*****************************************************************************
+
 * Deeper political institutional analysis.
 * HOS = HOG
 local HOSHOGStabVars = "v2elturnhog v2elturnhos"
@@ -1198,6 +1240,8 @@ esttab llpFEDF_v2eltvrig using "llpFEDF.rtf", label replace compress
 * Note factor variables may not contain negative values hence
 replace e_polity2 = e_polity2 + 10 if e_polity2 != .
 
+*****************************************************************************
+
 *Binary polity variable.
 gen deme_polity2 = (e_polity2 > 10) if e_polity2 != .
 
@@ -1214,6 +1258,8 @@ xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.deme_polity2 c.RRrate##i.deme_
 eststo idemcmiFEDF_`stabVar'
 }
 esttab idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "binarydemcmultIndFEDF.rtf", label replace compress
+
+*****************************************************************************
 
 * Split sample for democracy/nondemocracy
 * Democracies
@@ -1266,6 +1312,8 @@ eststo clear
 * OECD Monetary Institutions aid as an IV?
 
 save latepriorities_Ready, replace
+
+*****************************************************************************
 
 use latepriorities_Ready, clear
 duplicates drop country year, force
@@ -1355,6 +1403,8 @@ eststo clear
 
 * Arellano Bond Specification
 
+*****************************************************************************
+
 * Summary Statistics for the entire dataset
 estpost sum
 esttab . using "sumstatsAll.rtf", label cells("mean sd count") noobs replace
@@ -1413,8 +1463,11 @@ eststo cordLogv2eltvrigDF
 esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "coeffordLogDF.rtf", label replace compress
 eststo clear
 
+*****************************************************************************
+
 *Prepping for CR
 save CR_Priorities_Ready, replace
+
 use CR_Priorities_Ready, clear
 
 *Keeping the locals
@@ -1776,6 +1829,8 @@ gen kapDFinteraction = irregtd * ka_open
 label var kapDFinteraction "De Facto CBI * Capital Account Openness"
 gen kapRRinteraction = RRrate * ka_open
 label var kapRRinteraction "More Fixed Rate * Capital Account Openness"
+
+*****************************************************************************
 
 * Correction 6-14-20: add in DJinteraction, DFinteraction where appropriate.
 
