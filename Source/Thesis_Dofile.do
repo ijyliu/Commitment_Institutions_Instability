@@ -2,21 +2,32 @@
 // Commitment Institutions and Instability
 // Isaac Liu
 
+*****************************************************************************
+
+*Pre-Run Settings
+
 clear
 macro drop _all
 
-// Set working directory
-cd "C:\Users\ijyli\OneDrive - Georgetown University\Senior\Spring Class\Thesis"
+// Set paths
+cd ..
+global Root = `c(pwd)'
+global Input = "${Root}/Input"
+global Output = "${Root}/Output"
+global Intermediate_Data = "${Output}/Intermediate_Data"
+global Regressions = "${Output}/Regressions"
 
-* Some commands
+* Programs needed
 ssc install wbopendata, replace
 ssc install estout, replace
+
+*****************************************************************************
 
 // Data collection and cleaning
 
 // VDEM
 // Select out critical variables (since Stata version will not accommodate all of them)
-use country_name year v2elturnhog v2elturnhos v2eltvrexo v2eltvrig v3eltvriguc e_coups e_wbgi_pve e_mipopula v2petersch e_migdppc e_civil_war e_miinterc e_pt_coup v2elreggov v2x_horacc v3eldirepr v2exhoshog v2lglegplo e_polity2 using V-Dem-CY-Full+Others-v10, clear
+use country_name year v2elturnhog v2elturnhos v2eltvrexo v2eltvrig v3eltvriguc e_coups e_wbgi_pve e_mipopula v2petersch e_migdppc e_civil_war e_miinterc e_pt_coup v2elreggov v2x_horacc v3eldirepr v2exhoshog v2lglegplo e_polity2 using "${Input}/V-Dem-CY-Full+Others-v10", clear
 
 label var v2elturnhog "Head of Govt. Turnover"
 label var v2elturnhos "Head of State Turnover"
@@ -27,12 +38,12 @@ label var v2exhoshog "HOS = HOG"
 label var v2lglegplo "Legislative Efficacy"
 label var e_polity2 "Polity Democracy Score (v2)"
 
-// Variables are, respectively, country, year, head of government turnover event, head of state turnover event, executive turnover, lower chamber turnover, upper chamber turnover, coups (PIPE), WGI political stability, total population, tertiary school enrollment, GDP per capita, civil war, internal armed conflict, coups d'etat, existance of regional governments, horizontal accountability (checks and balances).
+// Variables are, respectively, country, year, head of government turnover event, head of state turnover event, executive turnover, lower chamber turnover, upper chamber turnover, coups (PIPE), WGI political stability, total population, tertiary school enrollment, GDP per capita, civil war, internal armed conflict, coups d'etat, existence of regional governments, horizontal accountability (checks and balances).
 
 * The last four added are direct presidential elections, whether hos is the same as hog, whether lower chamber legislates in practice, and the polity revised combined score of democracy
 
 // Notes
-// HOG turnover is coded as 0 for the same HOG, 1 for a diff individual or a change in coalition (parli) or leadership, 2 for a loss of position- diff person and diff party, in parli new party, or if first for newly ind.
+// HOG turnover is coded as 0 for the same HOG, 1 for a diff individual or a change in coalition (parliamentary) or leadership, 2 for a loss of position- diff person and diff party, in parli system new party, or if first for newly ind.
 // Same applies for HOS turnover
 // Exec turnover- change in both head of state and govt. 0 for same hos and hog, 1 for change in individual for either hog or hos- in parli if hog ruling coalition change semi-prez cohabitation, 2 if hos and hog lost positions- in presidential new prez and party, in parli- new party for hog, in semi-prez end of cohabitation or total change
 // Lower Chamber turnover- 0 if majority the same parties, 1 if minority assumes the lead but is dependent, or if some old and new, 2 if incumbent lost the majority or plurality dom position
@@ -46,12 +57,12 @@ label var e_polity2 "Polity Democracy Score (v2)"
 // Internal armed conflict binary
 // Coups d'etat- 0 for no attempts, 1 for unsuccessful, 2 for successful
 // Regional government existence 0 or 1
-// Horizontal accoutnability and checks and balances- a normalized scale representing checks and balances
+// Horizontal accountability and checks and balances- a normalized scale representing checks and balances
 
 * Ranges and notes for the last few
 * direct presidential elections are 0 for indirect, 1 for direct, adn 2 for mixed.
 * whether hos is the same as hog is binary 0 no 1 yes
-* whether lower chamber legislates in practice, is a 0 for no, one for usuallly, and 2 for always
+* whether lower chamber legislates in practice, is a 0 for no, one for usually, and 2 for always
 * the polity revised combined score of democracy goes from -10 autocratic to 10 democratic
 
 // Create aggregate GDP from per capita values and population
@@ -66,9 +77,9 @@ duplicates drop
 // Get a sense of the data
 sum
 // Missing data analysis
-// Turnover events appear to be coded as missing in years with no elections, which is good. Unfortunately NO upper chamber turnover observations are available for this period- but hopely lower chamber values will suffice. World governance indicator values for political violence are for recent dates only. Coup data from PIPE is not fully available. GDP data is very broad in coverage. Population is often missing. Internal conflict and civil war data has some gaps. Finally, coverage for the vdem PT coup variable is very good.
+// Turnover events appear to be coded as missing in years with no elections, which is good. Unfortunately NO upper chamber turnover observations are available for this period- but hopefully lower chamber values will suffice. World governance indicator values for political violence are for recent dates only. Coup data from PIPE is not fully available. GDP data is very broad in coverage. Population is often missing. Internal conflict and civil war data has some gaps. Finally, coverage for the vdem PT coup variable is very good.
 // Min-Max sense check
-// Country name and year appear to be in order. Turnover events appear to be in the correct 0 to 2 range. Regional government binary is in order. Tertiary schooling percentages are logical if high for nome nations. Horizonal acc and WGI indices appear to be in anticipated ragnes. Coups ranges are good. gdp per capita ranges from 134 to 220717 which seems somewhat high but not unrealistic. Populaiton clocks in the correct ranges up to a billion. Civil war and internal conflict variables also appear to be in correct ranges.
+// Country name and year appear to be in order. Turnover events appear to be in the correct 0 to 2 range. Regional government binary is in order. Tertiary schooling percentages are logical if high for nome nations. Horizontal acc and WGI indices appear to be in anticipated ranges. Coups ranges are good. gdp per capita ranges from 134 to 220717 which seems somewhat high but not unrealistic. Population clocks in the correct ranges up to a billion. Civil war and internal conflict variables also appear to be in correct ranges.
 
 * Of the new additions direct presidential elections data is actually missing in this edition.
 * whether hos is the same as hog is in correct range
@@ -95,13 +106,12 @@ gen b2v2eltvrig = (v2eltvrig > 1) if v2eltvrig != .
 egen mwbgi = median(e_wbgi_pve)
 gen b2e_wbgi_pve = (e_wbgi_pve >= mwbgi) if e_wbgi_pve != .
 
-save Clean_VDem, replace
+save "${Intermediate_Data}/Clean_VDem", replace
 
-// From PIPE- actually not super necessary
-* autocoups did_not_run salterl
+*****************************************************************************
 
 // DPI checks and balances and federalism
-use DPI2017_stata13, clear
+use "${Input}/DPI2017_stata13", clear
 ren countryname country_name
 drop if country_name == ""
 drop if year < 1970
@@ -120,7 +130,7 @@ replace `variable' = . if `variable' == -999
 sum
 // Indices appear to be in correct range for min and max. Large number of author observations are missing, as expected.
 duplicates report
-// No dups.
+// No duplicates.
 
 // Align country names
 replace country_name = "Bosnia and Herzegovina" if country_name == "Bosnia-Herz"
@@ -152,6 +162,8 @@ replace country_name = "United Kingdom" if country_name == "UK"
 replace country_name = "United States of America" if country_name == "USA"
 
 save Clean_DPI, replace
+
+*****************************************************************************
 
 // Visser's index of corporatism
 import excel Visser_Corp, sheet("ICTWSS6.0") firstrow clear
