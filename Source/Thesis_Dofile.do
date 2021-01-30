@@ -259,7 +259,7 @@ save "${Intermediate_Data}/Clean_Garriga_CBI", replace
 * save Clean_Grilli_CBI, replace
 
 // Governor Turnover from Axel, Strum De Haan
-. import excel "${Input}/Axel Sturm De Haan Gov Turnover.xlsx", sheet("data v2018") firstrow clear
+import excel "${Input}/Axel Sturm De Haan Gov Turnover.xlsx", sheet("data v2018") firstrow clear
 
 // Tidy up variables
 drop countcentralbanks codewdi
