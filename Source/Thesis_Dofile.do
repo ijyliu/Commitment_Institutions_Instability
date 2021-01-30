@@ -950,7 +950,7 @@ eststo clear
 
 *Go back and look at c results and maybe chuck some controls.
 
-save OLS_FEanalysis_Ready, replace
+save "${Intermediate_Data}/OLS_FEanalysis_Ready", replace
 
 *****************************************************************************
 
@@ -1092,6 +1092,7 @@ eststo ifivs2_instabEvent
 
 esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Regressions}/ifivs2.tex", label replace compress
 
+/*
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust
 eststo ifivs3_v2elturnhog
@@ -1105,6 +1106,7 @@ ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust nocons
 eststo ifivs3_instabEvent
 
 esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Regressions}/ifivs3.tex", label replace compress
+*/
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP), robust
@@ -1127,7 +1129,7 @@ esttab miniLH miniWB using "${Regressions}/miniRRIVs.tex", label replace compres
 
 *xtivreg: I don't think this is doable, as a lot of the first stages don't work out anymore.
 
-save IV_Analysis_Ready, replace
+save "${Intermediate_Data}/IV_Analysis_Ready", replace
 
 *****************************************************************************
 
@@ -1199,7 +1201,7 @@ esttab ikmiFEDF_v2elturnhog ikmiFEDF_v2elturnhos ikmiFEDF_v2eltvrig ikmiFEDF_e_w
 
 eststo clear
 
-save capaccount_Analysis_Ready,  replace
+save "${Intermediate_Data}/capaccount_Analysis_Ready",  replace
 
 *****************************************************************************
 
