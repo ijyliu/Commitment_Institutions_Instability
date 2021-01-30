@@ -1092,7 +1092,6 @@ eststo ifivs2_instabEvent
 
 esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Regressions}/ifivs2.tex", label replace compress
 
-/*
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust
 eststo ifivs3_v2elturnhog
@@ -1106,7 +1105,6 @@ ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust nocons
 eststo ifivs3_instabEvent
 
 esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Regressions}/ifivs3.tex", label replace compress
-*/
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP), robust
@@ -1918,6 +1916,7 @@ eststo hoshogfivs2_instabEvent
 
 esttab hoshogfivs2_v2elturnhog hoshogfivs2_v2elturnhos hoshogfivs2_v2eltvrig hoshogfivs2_e_wbgi_pve hoshogfivs2_instabEvent using "${Regressions}/hoshogfivs2.tex", label replace compress
 
+/*
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs3_v2elturnhog
@@ -1931,6 +1930,7 @@ ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog 
 eststo hoshogfivs3_instabEvent
 
 esttab hoshogfivs3_v2elturnhog hoshogfivs3_v2elturnhos hoshogfivs3_v2eltvrig hoshogfivs3_e_wbgi_pve hoshogfivs3_instabEvent using "${Regressions}/hoshogfivs3.tex", label replace compress
+*/
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust
