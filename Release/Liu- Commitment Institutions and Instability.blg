@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Liu- Commitment Institutions and Instability.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: dcu.bst
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+Database file #1: Com_Inst_Instability_Refs.bib
+You've used 13 entries,
+            2921 wiz_defined-function locations,
+            712 strings with 8015 characters,
+and the built_in function-call counts, 40905 in all, are:
+= -- 6632
+> -- 473
+< -- 0
++ -- 3064
+- -- 140
+* -- 3366
+:= -- 8500
+add.period$ -- 26
+call.type$ -- 13
+change.case$ -- 181
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 146
+empty$ -- 347
+format.name$ -- 180
+if$ -- 7283
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 67
+num.names$ -- 132
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 195
+quote$ -- 0
+skip$ -- 142
+stack$ -- 0
+substring$ -- 9203
+swap$ -- 9
+text.length$ -- 182
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 50
+warning$ -- 0
+while$ -- 279
+width$ -- 0
+write$ -- 181
