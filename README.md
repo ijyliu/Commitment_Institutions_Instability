@@ -14,7 +14,7 @@ Contains input data from various sources, as well as [codebooks](Input/Codebooks
 
 ### [Output]()
 
-Stores output from the stata code, including [intermediate/cleaned data](Output/Intermediate_Data) and [regression tables](Output/Regressions).
+Stores output from the stata code, including [intermediate/cleaned data](Output/Intermediate_Data) and [tables](Output/Tables).
 
 ### [Release](Release)
 
