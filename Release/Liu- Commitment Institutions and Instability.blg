@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Liu- Commitment Institutions and Instability.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: aea.bst
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+Database file #1: Com_Inst_Instability_Refs.bib
+Warning--empty publisher in friedman_essays_1953
+Warning--empty booktitle in lewis-beck_economic_2000
+Warning--empty booktitle in rogoff_optimal_1985
+You've used 30 entries,
+            2695 wiz_defined-function locations,
+            768 strings with 10738 characters,
+and the built_in function-call counts, 146116 in all, are:
+= -- 24293
+> -- 1524
+< -- 0
++ -- 11674
+- -- 468
+* -- 12906
+:= -- 29046
+add.period$ -- 198
+call.type$ -- 30
+change.case$ -- 390
+chr.to.int$ -- 30
+cite$ -- 33
+duplicate$ -- 413
+empty$ -- 1032
+format.name$ -- 471
+if$ -- 26064
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 97
+num.names$ -- 330
+pop$ -- 43
+preamble$ -- 1
+purify$ -- 450
+quote$ -- 0
+skip$ -- 330
+stack$ -- 0
+substring$ -- 34713
+swap$ -- 163
+text.length$ -- 420
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 112
+warning$ -- 3
+while$ -- 737
+width$ -- 0
+write$ -- 140
+(There were 3 warnings)
