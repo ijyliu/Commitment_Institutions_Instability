@@ -829,7 +829,7 @@ eststo cbinstabEventDJ
 esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace compress
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo mlf_binstabEventDJ: margins, dydx(`primCommInstVarsDJ') post
-esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", label replace compress
+esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(De Jure CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress
 
 * DF
 xtlogit binstabEvent `primCommInstVarsDF', fe
@@ -837,7 +837,7 @@ eststo cbinstabEventDF
 esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace compress
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
-esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", label replace compress
+esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(De Facto CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress
 
 *****************************************************************************
 

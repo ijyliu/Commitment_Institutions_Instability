@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.11)  21 MAR 2021 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.11)  21 MAR 2021 17:55
 entering extended mode
 **"c:/Users/ijyliu/repo/Commitment_Institutions_Instability/Release/Liu- Commitment Institutions and Instability.tex"
 ("c:/Users/ijyliu/repo/Commitment_Institutions_Instability/Release/Liu- Commitment Institutions and Instability.tex"
@@ -821,80 +821,204 @@ Overfull \hbox (1.07828pt too wide) in paragraph at lines 206--207
 \T1/pplx/m/n/10 Here I abstract from technical assistance programs provided by the IMF and other organizations that may substitute
  []
 
-[12] [13] [14] (../Output/Tables/multIndOLSDJ.tex) (../Output/Tables/multIndFEDJ.tex)
-Overfull \hbox (474.0394pt too wide) in paragraph at lines 3--258
+[12] [13] [14] (../Output/Tables/multIndOLSDJ.tex) (../Output/Tables/multIndOLSDF.tex) (../Output/Tables/multIndFEDJ.tex) (../Output/Tables/multIndFEDF.tex)
+Overfull \hbox (474.0394pt too wide) in paragraph at lines 3--260
 [][]
  []
 
 
-Overfull \hbox (474.0394pt too wide) in paragraph at lines 3--258
+Overfull \hbox (506.90938pt too wide) in paragraph at lines 3--260
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--258
+Overfull \hbox (474.0394pt too wide) in paragraph at lines 3--260
+[]
+ []
+
+
+Overfull \hbox (506.90938pt too wide) in paragraph at lines 3--260
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--260
 
  []
 
-[15] [16] [17] [18] [19] [20] [21] [22] [23]
-Overfull \hbox (8.84569pt too wide) in paragraph at lines 347--348
+[15] [16] [17] (../Output/Tables/ifivs.tex) (../Output/Tables/ifivs2.tex)
+Overfull \hbox (474.0394pt too wide) in paragraph at lines 3--285
+[][]
+ []
+
+
+Overfull \hbox (506.90938pt too wide) in paragraph at lines 3--285
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--285
+
+ []
+
+[18] (../Output/Tables/ifivs3.tex) (../Output/Tables/ifivs4.tex)
+Overfull \hbox (474.0394pt too wide) in paragraph at lines 3--291
+[][]
+ []
+
+
+Overfull \hbox (378.78943pt too wide) in paragraph at lines 3--291
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--291
+
+ []
+
+[19] (../Output/Tables/lagsDJ.tex) (../Output/Tables/lagsDF.tex)
+Overfull \hbox (492.6494pt too wide) in paragraph at lines 3--300
+[][]
+ []
+
+
+Overfull \hbox (525.51938pt too wide) in paragraph at lines 3--300
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--300
+
+ []
+
+[20]
+Overfull \vbox (293.25435pt too high) has occurred while \output is active []
+
+ [21]
+Overfull \vbox (293.25435pt too high) has occurred while \output is active []
+
+ [22] (../Output/Tables/lagordLogLogDJ.tex) (../Output/Tables/lagordLogLogDF.tex)
+Overfull \hbox (286.92944pt too wide) in paragraph at lines 3--305
+[][]
+ []
+
+
+Overfull \hbox (319.79942pt too wide) in paragraph at lines 3--305
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--305
+
+ []
+
+[23]
+Overfull \vbox (489.85432pt too high) has occurred while \output is active []
+
+ [24]
+Overfull \vbox (489.85432pt too high) has occurred while \output is active []
+
+ [25] (../Output/Tables/intlagsDJ.tex) (../Output/Tables/intlagsDF.tex)
+Overfull \hbox (492.6494pt too wide) in paragraph at lines 3--312
+[][]
+ []
+
+
+Overfull \hbox (525.51938pt too wide) in paragraph at lines 3--312
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--312
+
+ []
+
+[26]
+Overfull \vbox (733.25435pt too high) has occurred while \output is active []
+
+ [27]
+Overfull \vbox (733.25435pt too high) has occurred while \output is active []
+
+ [28] (../Output/Tables/intlagordLogLogDJ.tex) (../Output/Tables/intlagordLogLogDF.tex)
+Overfull \hbox (286.92944pt too wide) in paragraph at lines 3--319
+[][]
+ []
+
+
+Overfull \hbox (319.79942pt too wide) in paragraph at lines 3--319
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--319
+
+ []
+
+[29]
+Overfull \vbox (929.85432pt too high) has occurred while \output is active []
+
+ [30]
+Overfull \vbox (929.85432pt too high) has occurred while \output is active []
+
+ [31] [32] [33] [34] [35] [36] [37] [38]
+Overfull \hbox (8.84569pt too wide) in paragraph at lines 405--406
 []\T1/pplx/m/n/10 A few minor adjustments to methodology were also considered but have not yet been implemented. The applicability
  []
 
 
-Overfull \hbox (12.94969pt too wide) in paragraph at lines 349--350
+Overfull \hbox (12.94969pt too wide) in paragraph at lines 407--408
 []\T1/pplx/m/n/10 Previous literature made use of adjustment for endogenous election calling, particularly in parliamentary democracies
  []
 
 
-Overfull \hbox (5.2497pt too wide) in paragraph at lines 351--352
+Overfull \hbox (5.2497pt too wide) in paragraph at lines 409--410
 \T1/pplx/m/n/10 given levels of polity executive constraints or electoral versus political stability given levels of polity competitiveness,
  []
 
-[24] [25] ("c:/Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.bbl"
+[39] [40] ("c:/Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.bbl"
 Underfull \hbox (badness 1400) in paragraph at lines 9--12
 []\T1/pplx/b/n/10 Alesina, Alberto, and Lawrence H. Summers. \T1/pplx/m/n/10 1993. ``Central Bank Independence and Macroeconomic
  []
 
-[26
+[41
 
 ]
 Underfull \hbox (badness 2229) in paragraph at lines 191--194
 []\T1/pplx/b/n/10 Gallagher, Kevin. \T1/pplx/m/n/10 2010. ``Capital controls back in IMF toolkit | Kevin Gallagher.'' Library Catalog:
  []
 
-[27]
+[42]
 Underfull \hbox (badness 2343) in paragraph at lines 270--272
 []\T1/pplx/b/n/10 Jones, Erik, and Matthias Matthijs. \T1/pplx/m/n/10 2019. ``Rethinking Central-Bank Independence.'' Library Catalog:
  []
 
-[28] [29]) [30] (../Output/Tables/sumstatsAll.tex) [31
+[43] [44]) [45] (../Output/Tables/sumstatsAll.tex) [46
 
 ]
 Overfull \vbox (898.7317pt too high) has occurred while \output is active []
 
- [32]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
+ [47]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
  ("c:/Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
 Package rerunfilecheck Info: File `"Liu- Commitment Institutions and Instability".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
  ) 
 Here is how much of TeX's memory you used:
- 21893 strings out of 481212
- 409012 string characters out of 2905503
- 688351 words of memory out of 3000000
- 36838 multiletter control sequences out of 15000+200000
+ 21964 strings out of 481212
+ 411307 string characters out of 2905503
+ 714351 words of memory out of 3000000
+ 36852 multiletter control sequences out of 15000+200000
  591121 words of font info for 132 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,96p,1990b,656s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ijyliu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/ijyliu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ijyliu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ijyliu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ijyliu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ijyliu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "c:/Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.pdf" (32 pages, 372502 bytes).
+Output written on "c:/Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.pdf" (47 pages, 413834 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
+ 658 PDF objects out of 1000 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

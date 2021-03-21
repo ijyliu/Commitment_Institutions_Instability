@@ -401,8 +401,12 @@ INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fp
 INPUT ..\Output\Tables\multIndOLSDJ.tex
 INPUT ..\Output\Tables\multIndOLSDJ.tex
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri9e.tfm
+INPUT ..\Output\Tables\multIndOLSDF.tex
+INPUT ..\Output\Tables\multIndOLSDF.tex
 INPUT ..\Output\Tables\multIndFEDJ.tex
 INPUT ..\Output\Tables\multIndFEDJ.tex
+INPUT ..\Output\Tables\multIndFEDF.tex
+INPUT ..\Output\Tables\multIndFEDF.tex
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplri9e.vf
@@ -413,6 +417,30 @@ INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.t
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
+INPUT ..\Output\Tables\ifivs.tex
+INPUT ..\Output\Tables\ifivs.tex
+INPUT ..\Output\Tables\ifivs2.tex
+INPUT ..\Output\Tables\ifivs2.tex
+INPUT ..\Output\Tables\ifivs3.tex
+INPUT ..\Output\Tables\ifivs3.tex
+INPUT ..\Output\Tables\ifivs4.tex
+INPUT ..\Output\Tables\ifivs4.tex
+INPUT ..\Output\Tables\lagsDJ.tex
+INPUT ..\Output\Tables\lagsDJ.tex
+INPUT ..\Output\Tables\lagsDF.tex
+INPUT ..\Output\Tables\lagsDF.tex
+INPUT ..\Output\Tables\lagordLogLogDJ.tex
+INPUT ..\Output\Tables\lagordLogLogDJ.tex
+INPUT ..\Output\Tables\lagordLogLogDF.tex
+INPUT ..\Output\Tables\lagordLogLogDF.tex
+INPUT ..\Output\Tables\intlagsDJ.tex
+INPUT ..\Output\Tables\intlagsDJ.tex
+INPUT ..\Output\Tables\intlagsDF.tex
+INPUT ..\Output\Tables\intlagsDF.tex
+INPUT ..\Output\Tables\intlagordLogLogDJ.tex
+INPUT ..\Output\Tables\intlagordLogLogDJ.tex
+INPUT ..\Output\Tables\intlagordLogLogDF.tex
+INPUT ..\Output\Tables\intlagordLogLogDF.tex
 INPUT c:\Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.bbl
 INPUT c:\Users\ijyliu\repo\Commitment_Institutions_Instability\Release\Liu- Commitment Institutions and Instability.bbl
 INPUT C:\Users\ijyliu\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb9e.tfm
