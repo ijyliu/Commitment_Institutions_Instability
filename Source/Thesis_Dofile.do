@@ -774,9 +774,9 @@ eststo clear
     xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, fe cluster(country)
     eststo imiFEDJ_`stabVar'
 }
-esttab imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "${Tables}/imultIndOLSDJ.tex", label replace compress
+esttab imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "${Tables}/imultIndOLSDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDJ}) label replace compress
 
-esttab imiFEDJ_v2elturnhog imiFEDJ_v2elturnhos imiFEDJ_v2eltvrig imiFEDJ_e_wbgi_pve imiFEDJ_instabEvent using "${Tables}/imultIndFEDJ.tex", label replace compress
+esttab imiFEDJ_v2elturnhog imiFEDJ_v2elturnhos imiFEDJ_v2eltvrig imiFEDJ_e_wbgi_pve imiFEDJ_instabEvent using "${Tables}/imultIndFEDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDJ}) label replace compress
 
 eststo clear
 
@@ -787,9 +787,9 @@ eststo imiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd#c.RRrate, fe cluster(country)
 eststo imiFEDF_`stabVar'
 }
-esttab imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_wbgi_pve imiolsDF_instabEvent using "${Tables}/imultIndOLSDF.tex", label replace compress
+esttab imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_wbgi_pve imiolsDF_instabEvent using "${Tables}/imultIndOLSDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDF}) label replace compress
 
-esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "${Tables}/imultIndFEDF.tex", label replace compress
+esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "${Tables}/imultIndFEDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDF}) label replace compress
 
 eststo clear
 
