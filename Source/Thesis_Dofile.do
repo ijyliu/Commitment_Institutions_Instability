@@ -723,9 +723,9 @@ foreach stabVar in `StabVars' {
     eststo miFEDJ_`stabVar'
 }
 
-esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", label replace compress
+esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress
 
-esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", label replace compress
+esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", title(De Jure CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDJ}) label replace compress
 
 eststo clear
 
@@ -735,11 +735,13 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF', fe cluster(country)
     eststo miFEDF_`stabVar'
 }
-esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", label replace compress
+esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress
 
-esttab miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", label replace compress
+esttab miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", title(De Facto CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDF}) label replace compress
 
 eststo clear
+
+*****************************************************************************
 
 * Interaction terms:
 * First, Check interrelation of CBI and Fixed Rates- complement/subsitutute?
