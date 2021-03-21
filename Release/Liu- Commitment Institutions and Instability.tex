@@ -11,7 +11,7 @@
 \usepackage{color}
 \usepackage[margin=.75in, tmargin=0.71in, bmargin=0.71in]{geometry}
 \usepackage{url}
-\usepackage{subfig}
+
 \usepackage{appendix}
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -21,6 +21,8 @@
 \usepackage{caption}%
 \usepackage{bbm}
 \usepackage{comment}
+
+\usepackage{subcaption}
 
 \usepackage{babel}
 \usepackage[autostyle, english = american]{csquotes}
@@ -131,11 +133,21 @@
 
     The key merit in the reduced form approach to the question is that of the ability to take a step back from literature on specific mechanisms mentioned above. It could be the case that certain mechanisms are true and others false: partisan or opportunistic political business cycles, or action and limits through only fiscal or monetary policy. Mechanisms could be further tangled between each other in complex causal relationships such as substitutions between regimes (central banks and fixed rates) or kinds of policy. The reduced form approach allows for overall focus on whether the regimes weigh on instability, adjudicating whether basic intuitions are reasonable.
 
-    Effects of Limiting Institutions on Instability
-    Welfare Model
-    De Jure Independent CB/Fixed Exchange Rate (Welfare) Net Social Benefits from Commitment Despite Potential Cost to Flexibility (Economic Voting Theory) Net Less Turnover/Instability
-    Political Business Cycle Model
-    De Jure Independent CB/Fixed Exchange Rate  (PBC Theory) Net Less PBC Manipulation (Economic Voting Theory) Net More Turnover/Instability
+	\begin{figure}[h!]
+		\centering
+		\caption{Effects of Limiting Institutions on Instability}
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=\linewidth,keepaspectratio=true]{../Output/Figures/Social_Welfare_Model.png}
+				\caption{Welfare Model}
+			\end{subfigure}
+            \vskip\baselineskip
+			\begin{subfigure}{.5\textwidth}
+				\centering
+				\includegraphics[width=\linewidth,keepaspectratio=true]{../Output/Figures/Political_Business_Cycle_Model.png}
+				\caption{Political Business Cycle Model}
+			\end{subfigure}
+	\end{figure}
 
     Similar work has examined the use of monetary commitments to increase the durability of cabinets (as a share of maximum legal duration) in the face of growing international economic openness and globalization for 16 parliamentary democracies from 1972 to 1998 \citep{bernhard_political_2002-1}. These commitments are hypothesized to allow for the management of diverse interests and improve policy efficacy by providing information, justifying hard decisions, and providing a focus for negotiations, in line with the social welfare strand. In OLS results, independent central banks were found to increase cabinet duration by nearly three months, and fixed exchange rates by about five. Coalition governments saw stronger benefits, while openness to trade had a mixed impact on the scale of effects. 
     
