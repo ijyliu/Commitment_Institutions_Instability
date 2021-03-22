@@ -1,21 +1,21 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular*}{\linewidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
-\hline\hline
+\toprule
                 &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
                 &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\hline
+\midrule
 (Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -0.102         &  -0.0450         &   -0.103         & -0.00125         &   0.0193         \\
                 &  (-1.21)         &  (-0.62)         &  (-1.03)         &  (-0.03)         &   (0.87)         \\
-[1em]
+\addlinespace
 Exchange Rate Classification (RR inverted, higher = more fixed)&-0.000613         &  -0.0187\sym{*}  &-0.000295         &   0.0235\sym{*}  &  0.00934         \\
                 &  (-0.05)         &  (-2.18)         &  (-0.02)         &   (2.16)         &   (1.63)         \\
-[1em]
+\addlinespace
 Constant        &    0.748\sym{***}&    0.538\sym{***}&    0.787\sym{***}&   -0.694\sym{***}&    0.264\sym{***}\\
                 &   (6.44)         &   (5.43)         &   (6.75)         &  (-6.51)         &   (5.40)         \\
-\hline
+\midrule
 Observations    &      827         &      828         &      654         &     1146         &     2604         \\
-\hline\hline
+\bottomrule
 \multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular*}
