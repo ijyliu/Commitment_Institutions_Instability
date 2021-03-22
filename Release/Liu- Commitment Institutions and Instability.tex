@@ -525,6 +525,10 @@
 
     \input{../Output/Tables/llpintlagordLogDJ.tex}
 
-    \input{../Output/Tables/llpintlagordLogDF.tex}
+    {
+        \let\oldcentering\centering
+        \renewcommand\centering{\tiny\oldcentering}
+        \input{../Output/Tables/llpintlagordLogDF.tex}
+    }
 
 \end{document}

@@ -1327,14 +1327,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDJ_`stabVar'
 }
-esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", label replace compress booktabs longtable
+esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDF_`stabVar'
 }
-esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", label replace compress booktabs longtable
+esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", label replace compress longtable
 eststo clear
 
 * Ordinal regression (logistic), random effects
@@ -1378,7 +1378,7 @@ eststo lagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDJ
 
-esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", label replace compress booktabs longtable
+esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", label replace compress longtable
 eststo clear
 
 *DF
@@ -1395,7 +1395,7 @@ eststo lagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDF
 
-esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", label replace compress booktabs longtable
+esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", label replace compress longtable
 eststo clear
 
 * Lagged Bin Stab Logit: Margins computation does not run.
@@ -1498,7 +1498,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).DFinteraction, fe vce(cluster country)
 eststo intlagsDF`stabVar'
 }
-esttab intlagsDFv2elturnhog intlagsDFv2elturnhos intlagsDFv2eltvrig intlagsDFe_wbgi_pve intlagsDFinstabEvent using "${Tables}/intlagsDF.tex", label replace compress booktabs longtable
+esttab intlagsDFv2elturnhog intlagsDFv2elturnhos intlagsDFv2eltvrig intlagsDFe_wbgi_pve intlagsDFinstabEvent using "${Tables}/intlagsDF.tex", label replace compress longtable
 eststo clear
 
 *XT Logit models
@@ -1516,7 +1516,7 @@ eststo intlagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, vce(cluster country)
 eststo intlaglogInstabDJ
 
-esttab intlagordLogv2elturnhogDJ intlagordLogv2elturnhosDJ intlagordLogv2eltvrigDJ intlaglogInstabDJ using "${Tables}/intlagordLogLogDJ.tex", label replace compress booktabs longtable
+esttab intlagordLogv2elturnhogDJ intlagordLogv2elturnhosDJ intlagordLogv2eltvrigDJ intlaglogInstabDJ using "${Tables}/intlagordLogLogDJ.tex", label replace compress longtable
 eststo clear
 
 *DF
@@ -1533,7 +1533,7 @@ eststo intlagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).DFinteraction, vce(cluster country)
 eststo intlaglogInstabDF
 
-esttab intlagordLogv2elturnhogDF intlagordLogv2elturnhosDF intlagordLogv2eltvrigDF intlaglogInstabDF using "${Tables}/intlagordLogLogDF.tex", label replace compress booktabs longtable
+esttab intlagordLogv2elturnhogDF intlagordLogv2elturnhosDF intlagordLogv2eltvrigDF intlaglogInstabDF using "${Tables}/intlagordLogLogDF.tex", label replace compress longtable
 eststo clear
 
 * IVs split sample always
@@ -1778,14 +1778,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' e_polity2 demDJinteraction demRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDJinteraction L(1/10).demRRinteraction, fe vce(cluster country)
 eststo demintlagsDJ_`stabVar'
 }
-esttab demintlagsDJ_v2elturnhog demintlagsDJ_v2elturnhos demintlagsDJ_v2eltvrig demintlagsDJ_e_wbgi_pve demintlagsDJ_instabEvent using "${Tables}/demintlagsDJ.tex", label replace compress booktabs longtable
+esttab demintlagsDJ_v2elturnhog demintlagsDJ_v2elturnhos demintlagsDJ_v2eltvrig demintlagsDJ_e_wbgi_pve demintlagsDJ_instabEvent using "${Tables}/demintlagsDJ.tex", label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' demDFinteraction demRRinteraction e_polity2 L(1/10).irregtd L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDFinteraction L(1/10).demRRinteraction, fe vce(cluster country)
 eststo demintlagsDF_`stabVar'
 }
-esttab demintlagsDF_v2elturnhog demintlagsDF_v2elturnhos demintlagsDF_v2eltvrig demintlagsDF_e_wbgi_pve demintlagsDF_instabEvent using "${Tables}/demintlagsDF.tex", label replace compress booktabs longtable
+esttab demintlagsDF_v2elturnhog demintlagsDF_v2elturnhos demintlagsDF_v2eltvrig demintlagsDF_e_wbgi_pve demintlagsDF_instabEvent using "${Tables}/demintlagsDF.tex", label replace compress longtable
 eststo clear
 
 *XT Logit models
@@ -1803,7 +1803,7 @@ eststo demintlagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' e_polity2 demDJinteraction demRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDJinteraction L(1/10).demRRinteraction, vce(cluster country)
 eststo demintlaglogInstabDJ
 
-esttab demIntLOLogHOGDJ demIntLOLogHOSDJ demintlagordLogLHDJ demintlaglogInstabDJ using "${Tables}/demintlagordLogLogDJ.tex", label replace compress booktabs longtable
+esttab demIntLOLogHOGDJ demIntLOLogHOSDJ demintlagordLogLHDJ demintlaglogInstabDJ using "${Tables}/demintlagordLogLogDJ.tex", label replace compress longtable
 eststo clear
 
 *DF
@@ -1820,7 +1820,7 @@ eststo demintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' e_polity2 demDFinteraction demRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDFinteraction L(1/10).demRRinteraction, vce(cluster country)
 eststo demintlaglogInstabDF
 
-esttab demintlagordLogHOGDF demintlagordLogHOSDF demintlagordLogLHDF demintlaglogInstabDF using "${Tables}/demintlagordLogLogDF.tex", label replace compress booktabs longtable
+esttab demintlagordLogHOGDF demintlagordLogHOSDF demintlagordLogLHDF demintlaglogInstabDF using "${Tables}/demintlagordLogLogDF.tex", label replace compress longtable
 eststo clear
 
 * Lags and a cap controls investigation
@@ -1842,14 +1842,14 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDJ' ka_open kapDJinteraction kapRRinteraction DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).ka_open L(1/10).kapDJinteraction L(1/10).kapRRinteraction L(1/10).DJinteraction, fe vce(cluster country)
     eststo kapintlagsDJ_`stabVar'
 }
-esttab kapintlagsDJ_v2elturnhog kapintlagsDJ_v2elturnhos kapintlagsDJ_v2eltvrig kapintlagsDJ_e_wbgi_pve kapintlagsDJ_instabEvent using "${Tables}/kapintlagsDJ.tex", label replace compress booktabs longtable
+esttab kapintlagsDJ_v2elturnhog kapintlagsDJ_v2elturnhos kapintlagsDJ_v2eltvrig kapintlagsDJ_e_wbgi_pve kapintlagsDJ_instabEvent using "${Tables}/kapintlagsDJ.tex", label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF' ka_open kapDFinteraction kapRRinteraction DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).ka_open L(1/10).kapDFinteraction L(1/10).kapRRinteraction L(1/10).DFinteraction, fe vce(cluster country)
     eststo kapintlagsDF_`stabVar'
 }
-esttab kapintlagsDF_v2elturnhog kapintlagsDF_v2elturnhos kapintlagsDF_v2eltvrig kapintlagsDF_e_wbgi_pve kapintlagsDF_instabEvent using "${Tables}/kapintlagsDF.tex", label replace compress booktabs longtable
+esttab kapintlagsDF_v2elturnhog kapintlagsDF_v2elturnhos kapintlagsDF_v2eltvrig kapintlagsDF_e_wbgi_pve kapintlagsDF_instabEvent using "${Tables}/kapintlagsDF.tex", label replace compress longtable
 eststo clear
 
 *XT Logit models
@@ -1867,7 +1867,7 @@ eststo kapintlagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' ka_open kapDJinteraction kapRRinteraction DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).ka_open L(1/10).kapDJinteraction L(1/10).kapRRinteraction L(1/10).DJinteraction, vce(cluster country)
 eststo kapintlaglogInstabDJ
 
-esttab kapintlagordLogHOGDJ kapintlagordLogHOSDJ kapintlagordLogLHDJ kapintlaglogInstabDJ using "${Tables}/kapintlagordLogLogDJ.tex", label replace compress booktabs longtable
+esttab kapintlagordLogHOGDJ kapintlagordLogHOSDJ kapintlagordLogLHDJ kapintlaglogInstabDJ using "${Tables}/kapintlagordLogLogDJ.tex", label replace compress longtable
 eststo clear
 
 *DF
@@ -1884,7 +1884,7 @@ eststo kapintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' ka_open kapDFinteraction kapRRinteraction DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).ka_open L(1/10).kapDFinteraction L(1/10).kapRRinteraction L(1/10).DFinteraction, vce(cluster country)
 eststo kapintlaglogInstabDF
 
-esttab kapintlagordLogHOGDF kapintlagordLogHOSDF kapintlagordLogLHDF kapintlaglogInstabDF using "${Tables}/kapintlagordLogLogDF.tex", label replace compress booktabs longtable
+esttab kapintlagordLogHOGDF kapintlagordLogHOSDF kapintlagordLogLHDF kapintlaglogInstabDF using "${Tables}/kapintlagordLogLogDF.tex", label replace compress longtable
 eststo clear
 
 * IVs HOS=HOG (v2exhoshog)
@@ -2019,14 +2019,14 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDJ' v2exhoshog hoshogDJinteraction hoshogRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDJinteraction L(1/10).hoshogRRinteraction, fe vce(cluster country)
     eststo sglagDJ_`stabVar'
 }
-esttab sglagDJ_v2elturnhog sglagDJ_v2elturnhos sglagDJ_v2eltvrig sglagDJ_e_wbgi_pve sglagDJ_instabEvent using "${Tables}/hoshogintlagsDJ.tex", label replace compress booktabs longtable
+esttab sglagDJ_v2elturnhog sglagDJ_v2elturnhos sglagDJ_v2eltvrig sglagDJ_e_wbgi_pve sglagDJ_instabEvent using "${Tables}/hoshogintlagsDJ.tex", label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF' hoshogDFinteraction hoshogRRinteraction v2exhoshog L(1/10).irregtd L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDFinteraction L(1/10).hoshogRRinteraction, fe vce(cluster country)
     eststo sglagDF_`stabVar'
 }
-esttab sglagDF_v2elturnhog sglagDF_v2elturnhos sglagDF_v2eltvrig sglagDF_e_wbgi_pve sglagDF_instabEvent using "${Tables}/hoshogintlagsDF.tex", label replace compress booktabs longtable
+esttab sglagDF_v2elturnhog sglagDF_v2elturnhos sglagDF_v2eltvrig sglagDF_e_wbgi_pve sglagDF_instabEvent using "${Tables}/hoshogintlagsDF.tex", label replace compress longtable
 eststo clear
 
 *XT Logit models
@@ -2044,7 +2044,7 @@ eststo sglagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' v2exhoshog hoshogDJinteraction hoshogRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDJinteraction L(1/10).hoshogRRinteraction, vce(cluster country)
 eststo sglaglogInstabDJ
 
-esttab sglagordLogHOGDJ sglagordLogHOSDJ sglagordLogLHDJ sglaglogInstabDJ using "${Tables}/hoshogintlagordLogLogDJ.tex", label replace compress booktabs longtable
+esttab sglagordLogHOGDJ sglagordLogHOSDJ sglagordLogLHDJ sglaglogInstabDJ using "${Tables}/hoshogintlagordLogLogDJ.tex", label replace compress longtable
 eststo clear
 
 *DF
@@ -2061,7 +2061,7 @@ eststo sglagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' v2exhoshog hoshogDFinteraction hoshogRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDFinteraction L(1/10).hoshogRRinteraction, vce(cluster country)
 eststo sglaglogInstabDF
 
-esttab sglagordLogHOGDF sglagordLogHOSDF sglagordLogLHDF sglaglogInstabDF using "${Tables}/hoshogintlagordLogLogDF.tex", label replace compress booktabs longtable
+esttab sglagordLogHOGDF sglagordLogHOSDF sglagordLogLHDF sglaglogInstabDF using "${Tables}/hoshogintlagordLogLogDF.tex", label replace compress longtable
 eststo clear
 
 * Lags LHPractice (v2lglegplo)
@@ -2079,14 +2079,14 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDJ' v2lglegplo llpDJinteraction llpRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDJinteraction L(1/10).llpRRinteraction, fe vce(cluster country)
     eststo llpintlagsDJ_`stabVar'
 }
-esttab llpintlagsDJ_v2elturnhog llpintlagsDJ_v2elturnhos llpintlagsDJ_v2eltvrig llpintlagsDJ_e_wbgi_pve llpintlagsDJ_instabEvent using "${Tables}/llpintlagsDJ.tex", label replace compress booktabs longtable
+esttab llpintlagsDJ_v2elturnhog llpintlagsDJ_v2elturnhos llpintlagsDJ_v2eltvrig llpintlagsDJ_e_wbgi_pve llpintlagsDJ_instabEvent using "${Tables}/llpintlagsDJ.tex", label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' llpDFinteraction llpRRinteraction v2lglegplo L(1/10).irregtd L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDFinteraction L(1/10).llpRRinteraction, fe vce(cluster country)
 eststo llpintlagsDF_`stabVar'
 }
-esttab llpintlagsDF_v2elturnhog llpintlagsDF_v2elturnhos llpintlagsDF_v2eltvrig llpintlagsDF_e_wbgi_pve llpintlagsDF_instabEvent using "${Tables}/llpintlagsDF.tex", label replace compress booktabs longtable
+esttab llpintlagsDF_v2elturnhog llpintlagsDF_v2elturnhos llpintlagsDF_v2eltvrig llpintlagsDF_e_wbgi_pve llpintlagsDF_instabEvent using "${Tables}/llpintlagsDF.tex", label replace compress longtable
 eststo clear
 
 *XT Logit models
@@ -2104,7 +2104,7 @@ eststo llpintlagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' v2lglegplo llpDJinteraction llpRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDJinteraction L(1/10).llpRRinteraction, vce(cluster country)
 eststo llpintlaglogInstabDJ
 
-esttab llpintlagordLogHOGDJ llpintlagordLogHOSDJ llpintlagordLogLHDJ llpintlaglogInstabDJ using "${Tables}/llpintlagordLogDJ.tex", label replace compress booktabs longtable
+esttab llpintlagordLogHOGDJ llpintlagordLogHOSDJ llpintlagordLogLHDJ llpintlaglogInstabDJ using "${Tables}/llpintlagordLogDJ.tex", label replace compress longtable
 eststo clear
 
 *DF
@@ -2121,7 +2121,7 @@ eststo llpintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' v2lglegplo llpDFinteraction llpRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDFinteraction L(1/10).llpRRinteraction, vce(cluster country)
 eststo llpintlaglogInstabDF
 
-esttab llpintlagordLogHOGDF llpintlagordLogHOSDF llpintlagordLogLHDF llpintlaglogInstabDF using "${Tables}/llpintlagordLogDF.tex", label replace compress booktabs longtable
+esttab llpintlagordLogHOGDF llpintlagordLogHOSDF llpintlagordLogLHDF llpintlaglogInstabDF using "${Tables}/llpintlagordLogDF.tex", label replace compress longtable
 eststo clear
 
 save "${Intermediate_Data}/CR_Adequate", replace
