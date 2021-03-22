@@ -1409,7 +1409,7 @@ eststo clear
 
 * Summary Statistics for the entire dataset
 estpost sum
-esttab . using "${Tables}/sumstatsAll.tex", label cells("mean sd count") noobs replace longtable
+esttab . using "${Tables}/sumstatsAll.tex", label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
 
 use "${Intermediate_Data}/latepriorities_Ready", clear
 
