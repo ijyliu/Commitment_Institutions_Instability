@@ -1125,7 +1125,7 @@ ivregress 2sls v2eltvrig (RRrate = ivaggGDP), robust
 eststo miniLH
 ivregress 2sls e_wbgi_pve (RRrate = ivaggGDP), robust
 eststo miniWB
-esttab miniLH miniWB using "${Tables}/miniRRIVs.tex", title(\label{miniRRIVs}) label replace compress booktabs wrap varwidth(40)
+esttab miniLH miniWB using "${Tables}/miniRRIVs.tex", title(Instrument of Aggregate GDP for Fixed Exchange Rates, Robust Standard Errors \label{miniRRIVs}) label replace compress booktabs wrap varwidth(40)
 
 *xtivreg: I don't think this is doable, as a lot of the first stages don't work out anymore.
 
@@ -1327,14 +1327,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDJ_`stabVar'
 }
-esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", title(\label{lagsDJ}) label replace compress longtable
+esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", title(Lagged Independent Variables, Fixed Effects, Clustered Standard Errors \label{lagsDJ}) label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDF_`stabVar'
 }
-esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", title(\label{lagsDF}) label replace compress longtable
+esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", title(Lagged Independent Variables, Fixed Effects, Clustered Standard Errors \label{lagsDF}) label replace compress longtable
 eststo clear
 
 * Ordinal regression (logistic), random effects
@@ -1378,7 +1378,7 @@ eststo lagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDJ
 
-esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", title(\label{lagordLogLogDJ}) label replace compress longtable
+esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", title(Lagged Independent Variables, Ordinal Logit and Logit Specification Coefficients, Random Effects, Clustered Standard Errors \label{lagordLogLogDJ}) label replace compress longtable
 eststo clear
 
 *DF
@@ -1395,7 +1395,7 @@ eststo lagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDF
 
-esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", title(\label{lagordLogLogDF}) label replace compress longtable
+esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", title(Lagged Independent Variables, Ordinal Logit and Logit Specification Coefficients, Random Effects, Clustered Standard Errors \label{lagordLogLogDF}) label replace compress longtable
 eststo clear
 
 * Lagged Bin Stab Logit: Margins computation does not run.
@@ -1491,14 +1491,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, fe vce(cluster country)
 eststo intlagsDJ`stabVar'
 }
-esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", title(\label{intlagsDJ}) label replace compress booktabs wrap varwidth(40)
+esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", title(Lagged Institutional Interaction Terms, Fixed Effects, Clustered Standard Errors \label{intlagsDJ}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).DFinteraction, fe vce(cluster country)
 eststo intlagsDF`stabVar'
 }
-esttab intlagsDFv2elturnhog intlagsDFv2elturnhos intlagsDFv2eltvrig intlagsDFe_wbgi_pve intlagsDFinstabEvent using "${Tables}/intlagsDF.tex", title(\label{intlagsDF}) label replace compress longtable
+esttab intlagsDFv2elturnhog intlagsDFv2elturnhos intlagsDFv2eltvrig intlagsDFe_wbgi_pve intlagsDFinstabEvent using "${Tables}/intlagsDF.tex", title(Lagged Institutional Interaction Terms, Fixed Effects, Clustered Standard Errors \label{intlagsDF}) label replace compress longtable
 eststo clear
 
 *XT Logit models
@@ -1516,7 +1516,7 @@ eststo intlagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, vce(cluster country)
 eststo intlaglogInstabDJ
 
-esttab intlagordLogv2elturnhogDJ intlagordLogv2elturnhosDJ intlagordLogv2eltvrigDJ intlaglogInstabDJ using "${Tables}/intlagordLogLogDJ.tex", title(\label{intlagordLogLogDJ}) label replace compress longtable
+esttab intlagordLogv2elturnhogDJ intlagordLogv2elturnhosDJ intlagordLogv2eltvrigDJ intlaglogInstabDJ using "${Tables}/intlagordLogLogDJ.tex", title(Lagged Institutional Interaction Terms, Ordinal Logit Model, Random Effects, Clustered Standard Errors \label{intlagordLogLogDJ}) label replace compress longtable
 eststo clear
 
 *DF
@@ -1820,7 +1820,7 @@ eststo demintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' e_polity2 demDFinteraction demRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDFinteraction L(1/10).demRRinteraction, vce(cluster country)
 eststo demintlaglogInstabDF
 
-esttab demintlagordLogHOGDF demintlagordLogHOSDF demintlagordLogLHDF demintlaglogInstabDF using "${Tables}/demintlagordLogLogDF.tex", title(\label{demintlagordLogLogDF}) label replace compress longtable
+esttab demintlagordLogHOGDF demintlagordLogHOSDF demintlagordLogLHDF demintlaglogInstabDF using "${Tables}/demintlagordLogLogDF.tex", title(Lagged Institutional Interaction Terms, Ordinal Logit Model, Random Effects, Clustered Standard Errors \label{demintlagordLogLogDF}) label replace compress longtable
 eststo clear
 
 * Lags and a cap controls investigation
