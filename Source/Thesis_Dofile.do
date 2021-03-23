@@ -723,9 +723,9 @@ foreach stabVar in `StabVars' {
     eststo miFEDJ_`stabVar'
 }
 
-esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap
+esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
 
-esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", title(De Jure CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDJ}) label replace compress booktabs wrap
+esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", title(De Jure CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -735,9 +735,9 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF', fe cluster(country)
     eststo miFEDF_`stabVar'
 }
-esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap
+esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
 
-esttab miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", title(De Facto CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDF}) label replace compress booktabs wrap
+esttab miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", title(De Facto CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -757,9 +757,9 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, fe cluster(country)
     eststo imiFE_`stabVar'
 }
-esttab imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "${Tables}/imultIndOLS.tex", label replace compress booktabs wrap
+esttab imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "${Tables}/imultIndOLS.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiFE_instabEvent using "${Tables}/imultIndFE.tex", label replace compress booktabs wrap
+esttab imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiFE_instabEvent using "${Tables}/imultIndFE.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -774,9 +774,9 @@ eststo clear
     xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, fe cluster(country)
     eststo imiFEDJ_`stabVar'
 }
-esttab imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "${Tables}/imultIndOLSDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDJ}) label replace compress booktabs wrap
+esttab imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "${Tables}/imultIndOLSDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
 
-esttab imiFEDJ_v2elturnhog imiFEDJ_v2elturnhos imiFEDJ_v2eltvrig imiFEDJ_e_wbgi_pve imiFEDJ_instabEvent using "${Tables}/imultIndFEDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDJ}) label replace compress booktabs wrap
+esttab imiFEDJ_v2elturnhog imiFEDJ_v2elturnhos imiFEDJ_v2eltvrig imiFEDJ_e_wbgi_pve imiFEDJ_instabEvent using "${Tables}/imultIndFEDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -787,9 +787,9 @@ eststo imiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd#c.RRrate, fe cluster(country)
 eststo imiFEDF_`stabVar'
 }
-esttab imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_wbgi_pve imiolsDF_instabEvent using "${Tables}/imultIndOLSDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDF}) label replace compress booktabs wrap
+esttab imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_wbgi_pve imiolsDF_instabEvent using "${Tables}/imultIndOLSDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDF}) label replace compress booktabs wrap varwidth(40)
 
-esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "${Tables}/imultIndFEDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDF}) label replace compress booktabs wrap
+esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "${Tables}/imultIndFEDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -805,9 +805,9 @@ xtlogit `stabVar' `primCommInstVarsDJ', fe
 eststo lFDJ_`stabVar'
 }
 
-esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", label replace compress booktabs wrap
+esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", label replace compress booktabs wrap
+esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `bStabVars' {
@@ -815,9 +815,9 @@ xtlogit `stabVar' `primCommInstVarsDF', fe
 eststo lFDF_`stabVar'
 }
 
-esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", label replace compress booktabs wrap
+esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", label replace compress booktabs wrap
+esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", label replace compress booktabs wrap varwidth(40)
 
 *****************************************************************************
 
@@ -826,18 +826,18 @@ esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve 
 * DJ
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo cbinstabEventDJ
-esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace compress booktabs wrap
+esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace compress booktabs wrap varwidth(40)
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo mlf_binstabEventDJ: margins, dydx(`primCommInstVarsDJ') post
-esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(De Jure CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap
+esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(De Jure CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
 
 * DF
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo cbinstabEventDF
-esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace compress booktabs wrap
+esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace compress booktabs wrap varwidth(40)
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
-esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(De Facto CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap
+esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(De Facto CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
 
 *****************************************************************************
 
@@ -854,8 +854,8 @@ eststo bolsDJ_`stabVar'
 xtreg `stabVar' wHighCBI fixed_rate, fe cluster(country)
 eststo bFEDJ_`stabVar'
 }
-esttab bolsDJ_v2elturnhog bolsDJ_v2elturnhos bolsDJ_v2eltvrig bolsDJ_e_wbgi_pve bolsDJ_instabEvent using "${Tables}/binaryIndOLSDJ.tex", label replace compress booktabs wrap
-esttab bFEDJ_v2elturnhog bFEDJ_v2elturnhos bFEDJ_v2eltvrig bFEDJ_e_wbgi_pve bFEDJ_instabEvent using "${Tables}/binaryIndFEDJ.tex", label replace compress booktabs wrap
+esttab bolsDJ_v2elturnhog bolsDJ_v2elturnhos bolsDJ_v2eltvrig bolsDJ_e_wbgi_pve bolsDJ_instabEvent using "${Tables}/binaryIndOLSDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab bFEDJ_v2elturnhog bFEDJ_v2elturnhos bFEDJ_v2eltvrig bFEDJ_e_wbgi_pve bFEDJ_instabEvent using "${Tables}/binaryIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -866,8 +866,8 @@ eststo bolsDF_`stabVar'
 xtreg `stabVar' irregtd fixed_rate, fe cluster(country)
 eststo bFEDF_`stabVar'
 }
-esttab bolsDF_v2elturnhog bolsDF_v2elturnhos bolsDF_v2eltvrig bolsDF_e_wbgi_pve bolsDF_instabEvent using "${Tables}/binaryIndOLSDF.tex", label replace compress booktabs wrap
-esttab bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "${Tables}/binaryIndFEDF.tex", label replace compress booktabs wrap
+esttab bolsDF_v2elturnhog bolsDF_v2elturnhos bolsDF_v2eltvrig bolsDF_e_wbgi_pve bolsDF_instabEvent using "${Tables}/binaryIndOLSDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "${Tables}/binaryIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -893,9 +893,9 @@ eststo fullcmiolsDJ_`stabVar'
 xtreg `stabVar' `primCommInstVarsDJ' `fullcontrols', fe cluster(country)
 eststo fullcmiFEDJ_`stabVar'
 }
-esttab fullcmiolsDJ_v2elturnhog fullcmiolsDJ_v2elturnhos fullcmiolsDJ_v2eltvrig fullcmiolsDJ_e_wbgi_pve fullcmiolsDJ_instabEvent using "${Tables}/fullcmultIndOLSDJ.tex", label replace compress booktabs wrap
+esttab fullcmiolsDJ_v2elturnhog fullcmiolsDJ_v2elturnhos fullcmiolsDJ_v2eltvrig fullcmiolsDJ_e_wbgi_pve fullcmiolsDJ_instabEvent using "${Tables}/fullcmultIndOLSDJ.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab fullcmiFEDJ_v2elturnhog fullcmiFEDJ_v2elturnhos fullcmiFEDJ_v2eltvrig fullcmiFEDJ_e_wbgi_pve fullcmiFEDJ_instabEvent using "${Tables}/fullcmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab fullcmiFEDJ_v2elturnhog fullcmiFEDJ_v2elturnhos fullcmiFEDJ_v2eltvrig fullcmiFEDJ_e_wbgi_pve fullcmiFEDJ_instabEvent using "${Tables}/fullcmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -906,9 +906,9 @@ eststo fullcmiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' `fullcontrols', fe cluster(country)
 eststo fullcmiFEDF_`stabVar'
 }
-esttab fullcmiolsDF_v2elturnhog fullcmiolsDF_v2elturnhos fullcmiolsDF_v2eltvrig fullcmiolsDF_e_wbgi_pve fullcmiolsDF_instabEvent using "${Tables}/fullcmultIndOLSDF.tex", label replace compress booktabs wrap
+esttab fullcmiolsDF_v2elturnhog fullcmiolsDF_v2elturnhos fullcmiolsDF_v2eltvrig fullcmiolsDF_e_wbgi_pve fullcmiolsDF_instabEvent using "${Tables}/fullcmultIndOLSDF.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig fullcmiFEDF_e_wbgi_pve fullcmiFEDF_instabEvent using "${Tables}/fullcmultIndFEDF.tex", label replace compress booktabs wrap
+esttab fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig fullcmiFEDF_e_wbgi_pve fullcmiFEDF_instabEvent using "${Tables}/fullcmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -923,9 +923,9 @@ eststo nccmiolsDJ_`stabVar'
 xtreg `stabVar' `primCommInstVarsDJ' `noCorpControls', fe cluster(country)
 eststo nccmiFEDJ_`stabVar'
 }
-esttab nccmiolsDJ_v2elturnhog nccmiolsDJ_v2elturnhos nccmiolsDJ_v2eltvrig nccmiolsDJ_e_wbgi_pve nccmiolsDJ_instabEvent using "${Tables}/nccmultIndOLSDJ.tex", label replace compress booktabs wrap
+esttab nccmiolsDJ_v2elturnhog nccmiolsDJ_v2elturnhos nccmiolsDJ_v2eltvrig nccmiolsDJ_e_wbgi_pve nccmiolsDJ_instabEvent using "${Tables}/nccmultIndOLSDJ.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab nccmiFEDJ_v2elturnhog nccmiFEDJ_v2elturnhos nccmiFEDJ_v2eltvrig nccmiFEDJ_e_wbgi_pve nccmiFEDJ_instabEvent using "${Tables}/nccmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab nccmiFEDJ_v2elturnhog nccmiFEDJ_v2elturnhos nccmiFEDJ_v2eltvrig nccmiFEDJ_e_wbgi_pve nccmiFEDJ_instabEvent using "${Tables}/nccmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -936,9 +936,9 @@ eststo nccmiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' `noCorpControls', fe cluster(country)
 eststo nccmiFEDF_`stabVar'
 }
-esttab nccmiolsDF_v2elturnhog nccmiolsDF_v2elturnhos nccmiolsDF_v2eltvrig nccmiolsDF_e_wbgi_pve nccmiolsDF_instabEvent using "${Tables}/nccmultIndOLSDF.tex", label replace compress booktabs wrap
+esttab nccmiolsDF_v2elturnhog nccmiolsDF_v2elturnhos nccmiolsDF_v2eltvrig nccmiolsDF_e_wbgi_pve nccmiolsDF_instabEvent using "${Tables}/nccmultIndOLSDF.tex", label replace compress booktabs wrap varwidth(40)
 
-esttab nccmiFEDF_v2elturnhog nccmiFEDF_v2elturnhos nccmiFEDF_v2eltvrig nccmiFEDF_e_wbgi_pve nccmiFEDF_instabEvent using "${Tables}/nccmultIndFEDF.tex", label replace compress booktabs wrap
+esttab nccmiFEDF_v2elturnhog nccmiFEDF_v2elturnhos nccmiFEDF_v2eltvrig nccmiFEDF_e_wbgi_pve nccmiFEDF_instabEvent using "${Tables}/nccmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1056,7 +1056,7 @@ reg RRrate iwbaggGDP, robust
 *ivregress 2sls `stabVar' (lvaw_gar irregtd RRrate = se_ter_enrr v2petersch ssbizaggGDP aggGDP), robust
 *eststo fivs_`stabVar'
 *}
-*esttab fivs_v2elturnhog fivs_v2elturnhos fivs_v2eltvrig fivs_e_wbgi_pve fivs_instabEvent using "${Tables}/fivs.tex", replace compress wrap tex
+*esttab fivs_v2elturnhog fivs_v2elturnhos fivs_v2eltvrig fivs_e_wbgi_pve fivs_instabEvent using "${Tables}/fivs.tex", replace compress wrap varwidth(40) tex
 
 * All instruments treatment with interpolated.
 * First need to cut issbizagg as an instrument since observation problems. Also deal with world bank rather than vdem gdp data. Also for now look only at de jure cbi and rates.
@@ -1078,7 +1078,7 @@ eststo ifivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP), robust
 eststo ifivs_instabEvent
 
-esttab ifivs_v2elturnhog ifivs_v2elturnhos ifivs_v2eltvrig ifivs_e_wbgi_pve ifivs_instabEvent using "${Tables}/ifivs.tex", label replace compress booktabs wrap
+esttab ifivs_v2elturnhog ifivs_v2elturnhos ifivs_v2eltvrig ifivs_e_wbgi_pve ifivs_instabEvent using "${Tables}/ifivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP), robust
@@ -1092,7 +1092,7 @@ eststo ifivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP), robust
 eststo ifivs2_instabEvent
 
-esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Tables}/ifivs2.tex", label replace compress booktabs wrap
+esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Tables}/ifivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust
@@ -1106,7 +1106,7 @@ eststo ifivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust noconstant
 eststo ifivs3_instabEvent
 
-esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Tables}/ifivs3.tex", label replace compress booktabs wrap
+esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Tables}/ifivs3.tex", label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP), robust
@@ -1118,14 +1118,14 @@ eststo ifivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP), robust
 eststo ifivs4_e_wbgi_pve
 
-esttab ifivs4_v2elturnhog ifivs4_v2elturnhos ifivs4_v2eltvrig ifivs4_e_wbgi_pve using "${Tables}/ifivs4.tex", label replace compress booktabs wrap
+esttab ifivs4_v2elturnhog ifivs4_v2elturnhos ifivs4_v2eltvrig ifivs4_e_wbgi_pve using "${Tables}/ifivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 * Mini regressions for RRrate standalone
 ivregress 2sls v2eltvrig (RRrate = ivaggGDP), robust
 eststo miniLH
 ivregress 2sls e_wbgi_pve (RRrate = ivaggGDP), robust
 eststo miniWB
-esttab miniLH miniWB using "${Tables}/miniRRIVs.tex", label replace compress booktabs wrap
+esttab miniLH miniWB using "${Tables}/miniRRIVs.tex", label replace compress booktabs wrap varwidth(40)
 
 *xtivreg: I don't think this is doable, as a lot of the first stages don't work out anymore.
 
@@ -1149,7 +1149,7 @@ xtreg `stabVar' `primCommInstVarsDJ' if highka_open, fe cluster(country)
 eststo hkmiFEDJ_`stabVar'
 }
 
-esttab hkmiFEDJ_v2elturnhog hkmiFEDJ_v2elturnhos hkmiFEDJ_v2eltvrig hkmiFEDJ_e_wbgi_pve hkmiFEDJ_instabEvent using "${Tables}/hkmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab hkmiFEDJ_v2elturnhog hkmiFEDJ_v2elturnhos hkmiFEDJ_v2eltvrig hkmiFEDJ_e_wbgi_pve hkmiFEDJ_instabEvent using "${Tables}/hkmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 *DF High
 foreach stabVar in `StabVars' {
@@ -1157,7 +1157,7 @@ xtreg `stabVar' `primCommInstVarsDF' if highka_open, fe cluster(country)
 eststo hkmiFEDF_`stabVar'
 }
 
-esttab hkmiFEDF_v2elturnhog hkmiFEDF_v2elturnhos hkmiFEDF_v2eltvrig hkmiFEDF_e_wbgi_pve hkmiFEDF_instabEvent using "${Tables}/hkmultIndFEDF.tex", label replace compress booktabs wrap
+esttab hkmiFEDF_v2elturnhog hkmiFEDF_v2elturnhos hkmiFEDF_v2eltvrig hkmiFEDF_e_wbgi_pve hkmiFEDF_instabEvent using "${Tables}/hkmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 *DJ Low
 foreach stabVar in `StabVars' {
@@ -1165,7 +1165,7 @@ xtreg `stabVar' `primCommInstVarsDJ' if !highka_open, fe cluster(country)
 eststo lkmiFEDJ_`stabVar'
 }
 
-esttab lkmiFEDJ_v2elturnhog lkmiFEDJ_v2elturnhos lkmiFEDJ_v2eltvrig lkmiFEDJ_e_wbgi_pve lkmiFEDJ_instabEvent using "${Tables}/lkmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab lkmiFEDJ_v2elturnhog lkmiFEDJ_v2elturnhos lkmiFEDJ_v2eltvrig lkmiFEDJ_e_wbgi_pve lkmiFEDJ_instabEvent using "${Tables}/lkmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1175,7 +1175,7 @@ xtreg `stabVar' `primCommInstVarsDF' if !highka_open, fe cluster(country)
 eststo lkmiFEDF_`stabVar'
 }
 
-esttab lkmiFEDF_v2elturnhog lkmiFEDF_v2elturnhos lkmiFEDF_v2eltvrig lkmiFEDF_e_wbgi_pve lkmiFEDF_instabEvent using "${Tables}/lkmultIndFEDF.tex", label replace compress booktabs wrap
+esttab lkmiFEDF_v2elturnhog lkmiFEDF_v2elturnhos lkmiFEDF_v2eltvrig lkmiFEDF_e_wbgi_pve lkmiFEDF_instabEvent using "${Tables}/lkmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1187,7 +1187,7 @@ xtreg `stabVar' c.lvaw_gar##c.ka_open c.RRrate##c.ka_open, fe cluster(country)
 eststo ikmiFEDJ_`stabVar'
 }
 
-esttab ikmiFEDJ_v2elturnhog ikmiFEDJ_v2elturnhos ikmiFEDJ_v2eltvrig ikmiFEDJ_e_wbgi_pve ikmiFEDJ_instabEvent using "${Tables}/ikmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab ikmiFEDJ_v2elturnhog ikmiFEDJ_v2elturnhos ikmiFEDJ_v2eltvrig ikmiFEDJ_e_wbgi_pve ikmiFEDJ_instabEvent using "${Tables}/ikmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1197,7 +1197,7 @@ xtreg `stabVar' i.irregtd##c.ka_open c.RRrate##c.ka_open, fe cluster(country)
 eststo ikmiFEDF_`stabVar'
 }
 
-esttab ikmiFEDF_v2elturnhog ikmiFEDF_v2elturnhos ikmiFEDF_v2eltvrig ikmiFEDF_e_wbgi_pve ikmiFEDF_instabEvent using "${Tables}/ikmultIndFEDF.tex", label replace compress booktabs wrap
+esttab ikmiFEDF_v2elturnhog ikmiFEDF_v2elturnhos ikmiFEDF_v2eltvrig ikmiFEDF_e_wbgi_pve ikmiFEDF_instabEvent using "${Tables}/ikmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1214,14 +1214,14 @@ foreach stabVar in `HOSHOGStabVars' {
 xtreg `stabVar' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDJ_`stabVar'
 }
-esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `HOSHOGStabVars' {
 xtreg `stabVar' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDF_`stabVar'
 }
-esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", label replace compress booktabs wrap
+esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 * WHAT IN THE WORLD IS GOING ON?
 browse if v2exhoshog == 0
@@ -1232,11 +1232,11 @@ eststo clear
 *DJ
 xtreg v2eltvrig c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
 eststo llpFEDJ_v2eltvrig
-esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", label replace compress booktabs wrap
+esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 *DF
 xtreg v2eltvrig i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
 eststo llpFEDF_v2eltvrig
-esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", label replace compress booktabs wrap
+esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 * Polity combined scores
 * Note factor variables may not contain negative values hence
@@ -1252,14 +1252,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo idemcmiFEDJ_`stabVar'
 }
-esttab idemcmiFEDJ_v2elturnhog idemcmiFEDJ_v2elturnhos idemcmiFEDJ_v2eltvrig idemcmiFEDJ_e_wbgi_pve idemcmiFEDJ_instabEvent using "${Tables}/binarydemcmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab idemcmiFEDJ_v2elturnhog idemcmiFEDJ_v2elturnhos idemcmiFEDJ_v2eltvrig idemcmiFEDJ_e_wbgi_pve idemcmiFEDJ_instabEvent using "${Tables}/binarydemcmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo idemcmiFEDF_`stabVar'
 }
-esttab idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "${Tables}/binarydemcmultIndFEDF.tex", label replace compress booktabs wrap
+esttab idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "${Tables}/binarydemcmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 *****************************************************************************
 
@@ -1270,13 +1270,13 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' if deme_polity2 == 1, fe cluster(country)
 eststo demFEDJ_`stabVar'
 }
-esttab demFEDJ_v2elturnhog demFEDJ_v2elturnhos demFEDJ_v2eltvrig demFEDJ_e_wbgi_pve demFEDJ_instabEvent using "${Tables}/democraciesFEDJ.tex", label replace compress booktabs wrap
+esttab demFEDJ_v2elturnhog demFEDJ_v2elturnhos demFEDJ_v2eltvrig demFEDJ_e_wbgi_pve demFEDJ_instabEvent using "${Tables}/democraciesFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 * DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' if deme_polity2 == 1, fe cluster(country)
 eststo demFEDF_`stabVar'
 }
-esttab demFEDF_v2elturnhog demFEDF_v2elturnhos demFEDF_v2eltvrig demFEDF_e_wbgi_pve demFEDF_instabEvent using "${Tables}/democraciesFEDF.tex", label replace compress booktabs wrap
+esttab demFEDF_v2elturnhog demFEDF_v2elturnhos demFEDF_v2eltvrig demFEDF_e_wbgi_pve demFEDF_instabEvent using "${Tables}/democraciesFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 * Nondemocracies
 * DJ
@@ -1284,13 +1284,13 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' if deme_polity2 == 0, fe cluster(country)
 eststo nondemFEDJ_`stabVar'
 }
-esttab nondemFEDJ_v2elturnhog nondemFEDJ_v2elturnhos nondemFEDJ_v2eltvrig nondemFEDJ_e_wbgi_pve nondemFEDJ_instabEvent using "${Tables}/nondemocraciesFEDJ.tex", label replace compress booktabs wrap
+esttab nondemFEDJ_v2elturnhog nondemFEDJ_v2elturnhos nondemFEDJ_v2eltvrig nondemFEDJ_e_wbgi_pve nondemFEDJ_instabEvent using "${Tables}/nondemocraciesFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 * DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' if deme_polity2 == 0, fe cluster(country)
 eststo nondemFEDF_`stabVar'
 }
-esttab nondemFEDF_v2elturnhog nondemFEDF_v2elturnhos nondemFEDF_v2eltvrig nondemFEDF_e_wbgi_pve nondemFEDF_instabEvent using "${Tables}/nondemocraciesFEDF.tex", label replace compress booktabs wrap
+esttab nondemFEDF_v2elturnhog nondemFEDF_v2elturnhos nondemFEDF_v2eltvrig nondemFEDF_e_wbgi_pve nondemFEDF_instabEvent using "${Tables}/nondemocraciesFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 * Bring all of these together edit for binary democracy
 *DJ
@@ -1298,7 +1298,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo c.lvaw_gar##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo ifullicmiFEDJ_`stabVar'
 }
-esttab ifullicmiFEDJ_v2elturnhog ifullicmiFEDJ_v2elturnhos ifullicmiFEDJ_v2eltvrig ifullicmiFEDJ_e_wbgi_pve ifullicmiFEDJ_instabEvent using "${Tables}/ifullicmultIndFEDJ.tex", label replace compress booktabs wrap
+esttab ifullicmiFEDJ_v2elturnhog ifullicmiFEDJ_v2elturnhos ifullicmiFEDJ_v2eltvrig ifullicmiFEDJ_e_wbgi_pve ifullicmiFEDJ_instabEvent using "${Tables}/ifullicmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1307,7 +1307,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo i.irregtd##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo ifullicmiFEDF_`stabVar'
 }
-esttab ifullicmiFEDF_v2elturnhog ifullicmiFEDF_v2elturnhos ifullicmiFEDF_v2eltvrig ifullicmiFEDF_e_wbgi_pve ifullicmiFEDF_instabEvent using "${Tables}/ifullicmultIndFEDF.tex", label replace compress booktabs wrap
+esttab ifullicmiFEDF_v2elturnhog ifullicmiFEDF_v2elturnhos ifullicmiFEDF_v2eltvrig ifullicmiFEDF_e_wbgi_pve ifullicmiFEDF_instabEvent using "${Tables}/ifullicmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1348,7 +1348,7 @@ eststo ordLogv2elturnhosDJ: margins, dydx(`primCommInstVarsDJ') post
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo ordLogv2eltvrigDJ: margins, dydx(`primCommInstVarsDJ') post
 
-esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", label replace compress booktabs wrap
+esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *DF
@@ -1360,7 +1360,7 @@ eststo ordLogv2elturnhosDF: margins, dydx(`primCommInstVarsDF') post
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo ordLogv2eltvrigDF: margins, dydx(`primCommInstVarsDF') post
 
-esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", label replace compress booktabs wrap
+esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 * Lagged Ordinal Logit: Margins computation does not run.
@@ -1401,7 +1401,7 @@ eststo clear
 * Lagged Bin Stab Logit: Margins computation does not run.
 *xtlogit binstabEvent `primCommInstVars' L(1/10).lvaw_gar L(1/10).RRrate L(1/10).irregtd, fe
 *eststo mlaglf_binstabEvent: margins, dydx(`primCommInstVars' L(1/10).lvaw_gar L(1/10).RRrate L(1/10).irregtd) post
-*esttab laglf_binstabEvent using "${Tables}/laglogBinInstabEvent.tex", label replace compress booktabs wrap
+*esttab laglf_binstabEvent using "${Tables}/laglogBinInstabEvent.tex", label replace compress booktabs wrap varwidth(40)
 
 * Arellano Bond Specification
 
@@ -1418,26 +1418,26 @@ reg v2elturnhog irregtd, robust
 eststo a11
 xtreg v2elturnhog irregtd, fe vce(cluster country)
 eststo a12
-esttab a11 a12 using "${Tables}/irregtdHOGalone.tex", label replace compress booktabs wrap
+esttab a11 a12 using "${Tables}/irregtdHOGalone.tex", label replace compress booktabs wrap varwidth(40)
 
 reg v2elturnhog tinoff, robust
 eststo a21
 xtreg v2elturnhog tinoff, fe vce(cluster country)
 eststo a22
-esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", label replace compress booktabs wrap
+esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", label replace compress booktabs wrap varwidth(40)
 
 * Recreating more appendix tables: RRrate and WB alone, RRrate and instabevent alone
 reg e_wbgi_pve RRrate, robust
 eststo wbRROLS
 xtreg e_wbgi_pve RRrate, fe vce(cluster country)
 eststo wbRRFE
-esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", label replace compress booktabs wrap
+esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", label replace compress booktabs wrap varwidth(40)
 
 reg instabEvent RRrate, robust
 eststo instabRROLS
 xtreg instabEvent RRrate, fe vce(cluster country)
 eststo instabRRFE
-esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", label replace compress booktabs wrap
+esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", label replace compress booktabs wrap varwidth(40)
 
 * Capture ordered logit coeffs
 duplicates drop country year, force
@@ -1451,7 +1451,7 @@ eststo cordLogv2elturnhosDJ
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo cordLogv2eltvrigDJ
 
-esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", label replace compress booktabs wrap
+esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *DF
@@ -1462,7 +1462,7 @@ eststo cordLogv2elturnhosDF
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo cordLogv2eltvrigDF
 
-esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", label replace compress booktabs wrap
+esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *****************************************************************************
@@ -1491,7 +1491,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, fe vce(cluster country)
 eststo intlagsDJ`stabVar'
 }
-esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", label replace compress booktabs wrap
+esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", label replace compress booktabs wrap varwidth(40)
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
@@ -1552,7 +1552,7 @@ eststo demIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs_instabEvent
 
-esttab demIfivs_v2elturnhog demIfivs_v2elturnhos demIfivs_v2eltvrig demIfivs_e_wbgi_pve demIfivs_instabEvent using "${Tables}/demIfivs.tex", label replace compress booktabs wrap
+esttab demIfivs_v2elturnhog demIfivs_v2elturnhos demIfivs_v2eltvrig demIfivs_e_wbgi_pve demIfivs_instabEvent using "${Tables}/demIfivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
@@ -1566,7 +1566,7 @@ eststo demIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs2_instabEvent
 
-esttab demIfivs2_v2elturnhog demIfivs2_v2elturnhos demIfivs2_v2eltvrig demIfivs2_e_wbgi_pve demIfivs2_instabEvent using "${Tables}/demIfivs2.tex", label replace compress booktabs wrap
+esttab demIfivs2_v2elturnhog demIfivs2_v2elturnhos demIfivs2_v2eltvrig demIfivs2_e_wbgi_pve demIfivs2_instabEvent using "${Tables}/demIfivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
@@ -1580,7 +1580,7 @@ eststo demIfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust noconstant
 eststo demIfivs3_instabEvent
 
-esttab demIfivs3_v2elturnhog demIfivs3_v2elturnhos demIfivs3_v2eltvrig demIfivs3_e_wbgi_pve demIfivs3_instabEvent using "${Tables}/demIfivs3.tex", label replace compress booktabs wrap
+esttab demIfivs3_v2elturnhog demIfivs3_v2elturnhos demIfivs3_v2eltvrig demIfivs3_e_wbgi_pve demIfivs3_instabEvent using "${Tables}/demIfivs3.tex", label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
@@ -1592,7 +1592,7 @@ eststo demIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs4_e_wbgi_pve
 
-esttab demIfivs4_v2elturnhog demIfivs4_v2elturnhos demIfivs4_v2eltvrig demIfivs4_e_wbgi_pve using "${Tables}/demIfivs4.tex", label replace compress booktabs wrap
+esttab demIfivs4_v2elturnhog demIfivs4_v2elturnhos demIfivs4_v2eltvrig demIfivs4_e_wbgi_pve using "${Tables}/demIfivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 *Nondemocracies
 * De jure independence check
@@ -1607,7 +1607,7 @@ eststo ndemIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
 eststo ndemIfivs_instabEvent
 
-esttab ndemIfivs_v2elturnhog ndemIfivs_v2elturnhos ndemIfivs_v2eltvrig ndemIfivs_e_wbgi_pve ndemIfivs_instabEvent using "${Tables}/ndemIfivs.tex", label replace compress booktabs wrap
+esttab ndemIfivs_v2elturnhog ndemIfivs_v2elturnhos ndemIfivs_v2eltvrig ndemIfivs_e_wbgi_pve ndemIfivs_instabEvent using "${Tables}/ndemIfivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
@@ -1621,7 +1621,7 @@ eststo ndemIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
 eststo ndemIfivs2_instabEvent
 
-esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIfivs2_e_wbgi_pve ndemIfivs2_instabEvent using "${Tables}/ndemIfivs2.tex", label replace compress booktabs wrap
+esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIfivs2_e_wbgi_pve ndemIfivs2_instabEvent using "${Tables}/ndemIfivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 * NO OBSERVATIONS!!!
@@ -1636,7 +1636,7 @@ esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIf
 *ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 0, robust noconstant
 *eststo ndemIfivs3_instabEvent
 
-*esttab ndemIfivs3_v2elturnhog ndemIfivs3_v2elturnhos ndemIfivs3_v2eltvrig ndemIfivs3_e_wbgi_pve ndemIfivs3_instabEvent using "${Tables}/ndemIfivs3.tex", label replace compress booktabs wrap
+*esttab ndemIfivs3_v2elturnhog ndemIfivs3_v2elturnhos ndemIfivs3_v2eltvrig ndemIfivs3_e_wbgi_pve ndemIfivs3_instabEvent using "${Tables}/ndemIfivs3.tex", label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 *ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 0, robust
@@ -1648,7 +1648,7 @@ esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIf
 *ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 0, robust
 *eststo ndemIfivs4_e_wbgi_pve
 
-*esttab ndemIfivs4_v2elturnhog ndemIfivs4_v2elturnhos ndemIfivs4_v2eltvrig ndemIfivs4_e_wbgi_pve using "${Tables}/ndemIfivs4.tex", label replace compress booktabs wrap
+*esttab ndemIfivs4_v2elturnhog ndemIfivs4_v2elturnhos ndemIfivs4_v2eltvrig ndemIfivs4_e_wbgi_pve using "${Tables}/ndemIfivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 
 * IVs and a cap controls investigation
@@ -1666,7 +1666,7 @@ eststo hiKfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if highka_open, robust
 eststo hiKfivs_instabEvent
 
-esttab hiKfivs_v2elturnhog hiKfivs_v2elturnhos hiKfivs_v2eltvrig hiKfivs_e_wbgi_pve hiKfivs_instabEvent using "${Tables}/hiKfivs.tex", label replace compress booktabs wrap
+esttab hiKfivs_v2elturnhog hiKfivs_v2elturnhos hiKfivs_v2eltvrig hiKfivs_e_wbgi_pve hiKfivs_instabEvent using "${Tables}/hiKfivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if highka_open, robust
@@ -1680,7 +1680,7 @@ eststo hiKfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if highka_open, robust
 eststo hiKfivs2_instabEvent
 
-esttab hiKfivs2_v2elturnhog hiKfivs2_v2elturnhos hiKfivs2_v2eltvrig hiKfivs2_e_wbgi_pve hiKfivs2_instabEvent using "${Tables}/hiKfivs2.tex", label replace compress booktabs wrap
+esttab hiKfivs2_v2elturnhog hiKfivs2_v2elturnhos hiKfivs2_v2eltvrig hiKfivs2_e_wbgi_pve hiKfivs2_instabEvent using "${Tables}/hiKfivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if highka_open, robust
@@ -1694,7 +1694,7 @@ eststo hiKfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if highka_open, robust noconstant
 eststo hiKfivs3_instabEvent
 
-esttab hiKfivs3_v2elturnhog hiKfivs3_v2elturnhos hiKfivs3_v2eltvrig hiKfivs3_e_wbgi_pve hiKfivs3_instabEvent using "${Tables}/hiKfivs3.tex", label replace compress booktabs wrap
+esttab hiKfivs3_v2elturnhog hiKfivs3_v2elturnhos hiKfivs3_v2eltvrig hiKfivs3_e_wbgi_pve hiKfivs3_instabEvent using "${Tables}/hiKfivs3.tex", label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if highka_open, robust
@@ -1706,7 +1706,7 @@ eststo hiKfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if highka_open, robust
 eststo hiKfivs4_e_wbgi_pve
 
-esttab hiKfivs4_v2elturnhog hiKfivs4_v2elturnhos hiKfivs4_v2eltvrig hiKfivs4_e_wbgi_pve using "${Tables}/hiKfivs4.tex", label replace compress booktabs wrap
+esttab hiKfivs4_v2elturnhog hiKfivs4_v2elturnhos hiKfivs4_v2eltvrig hiKfivs4_e_wbgi_pve using "${Tables}/hiKfivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 * Low Kaopen
 * De jure independence check
@@ -1721,7 +1721,7 @@ eststo lowKIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs_instabEvent
 
-esttab lowKIfivs_v2elturnhog lowKIfivs_v2elturnhos lowKIfivs_v2eltvrig lowKIfivs_e_wbgi_pve lowKIfivs_instabEvent using "${Tables}/lowKIfivs.tex", label replace compress booktabs wrap
+esttab lowKIfivs_v2elturnhog lowKIfivs_v2elturnhos lowKIfivs_v2eltvrig lowKIfivs_e_wbgi_pve lowKIfivs_instabEvent using "${Tables}/lowKIfivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if !highka_open, robust
@@ -1735,7 +1735,7 @@ eststo lowKIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs2_instabEvent
 
-esttab lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIfivs2_e_wbgi_pve lowKIfivs2_instabEvent using "${Tables}/lowKIfivs2.tex", label replace compress booktabs wrap
+esttab lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIfivs2_e_wbgi_pve lowKIfivs2_instabEvent using "${Tables}/lowKIfivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 *ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
@@ -1749,7 +1749,7 @@ esttab lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIf
 *ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if !highka_open, robust noconstant
 *eststo lowKIfivs3_instabEvent
 
-*esttab lowKIfivs3_v2elturnhog lowKIfivs3_v2elturnhos lowKIfivs3_v2eltvrig lowKIfivs3_e_wbgi_pve lowKIfivs3_instabEvent using "${Tables}/lowKIfivs3.tex", label replace compress booktabs wrap
+*esttab lowKIfivs3_v2elturnhog lowKIfivs3_v2elturnhos lowKIfivs3_v2eltvrig lowKIfivs3_e_wbgi_pve lowKIfivs3_instabEvent using "${Tables}/lowKIfivs3.tex", label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
@@ -1761,7 +1761,7 @@ eststo lowKIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs4_e_wbgi_pve
 
-esttab lowKIfivs4_v2elturnhog lowKIfivs4_v2elturnhos lowKIfivs4_v2eltvrig lowKIfivs4_e_wbgi_pve using "${Tables}/lowKIfivs4.tex", label replace compress booktabs wrap
+esttab lowKIfivs4_v2elturnhog lowKIfivs4_v2elturnhos lowKIfivs4_v2eltvrig lowKIfivs4_e_wbgi_pve using "${Tables}/lowKIfivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 * Lags and a democracy investigation
 
@@ -1902,7 +1902,7 @@ eststo hoshogfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs_instabEvent
 
-esttab hoshogfivs_v2elturnhog hoshogfivs_v2elturnhos hoshogfivs_v2eltvrig hoshogfivs_e_wbgi_pve hoshogfivs_instabEvent using "${Tables}/hoshogfivs.tex", label replace compress booktabs wrap
+esttab hoshogfivs_v2elturnhog hoshogfivs_v2elturnhos hoshogfivs_v2eltvrig hoshogfivs_e_wbgi_pve hoshogfivs_instabEvent using "${Tables}/hoshogfivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 1, robust
@@ -1916,7 +1916,7 @@ eststo hoshogfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs2_instabEvent
 
-esttab hoshogfivs2_v2elturnhog hoshogfivs2_v2elturnhos hoshogfivs2_v2eltvrig hoshogfivs2_e_wbgi_pve hoshogfivs2_instabEvent using "${Tables}/hoshogfivs2.tex", label replace compress booktabs wrap
+esttab hoshogfivs2_v2elturnhog hoshogfivs2_v2elturnhos hoshogfivs2_v2eltvrig hoshogfivs2_e_wbgi_pve hoshogfivs2_instabEvent using "${Tables}/hoshogfivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 /*
 * Try the OECD instrument, with de jure cbi
@@ -1931,7 +1931,7 @@ eststo hoshogfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust noconstant
 eststo hoshogfivs3_instabEvent
 
-esttab hoshogfivs3_v2elturnhog hoshogfivs3_v2elturnhos hoshogfivs3_v2eltvrig hoshogfivs3_e_wbgi_pve hoshogfivs3_instabEvent using "${Tables}/hoshogfivs3.tex", label replace compress booktabs wrap
+esttab hoshogfivs3_v2elturnhog hoshogfivs3_v2elturnhos hoshogfivs3_v2eltvrig hoshogfivs3_e_wbgi_pve hoshogfivs3_instabEvent using "${Tables}/hoshogfivs3.tex", label replace compress booktabs wrap varwidth(40)
 */
 
 * OECD instrument with de facto cbi
@@ -1944,7 +1944,7 @@ eststo hoshogfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs4_e_wbgi_pve
 
-esttab hoshogfivs4_v2elturnhog hoshogfivs4_v2elturnhos hoshogfivs4_v2eltvrig hoshogfivs4_e_wbgi_pve using "${Tables}/hoshogfivs4.tex", label replace compress booktabs wrap
+esttab hoshogfivs4_v2elturnhog hoshogfivs4_v2elturnhos hoshogfivs4_v2eltvrig hoshogfivs4_e_wbgi_pve using "${Tables}/hoshogfivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 *HOS NOT HOG
 * De jure independence check
@@ -1959,7 +1959,7 @@ eststo NOhoshogIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs_instabEvent
 
-esttab NOhoshogIfivs_v2elturnhog NOhoshogIfivs_v2elturnhos NOhoshogIfivs_v2eltvrig NOhoshogIfivs_e_wbgi_pve NOhoshogIfivs_instabEvent using "${Tables}/NOhoshogIfivs.tex", label replace compress booktabs wrap
+esttab NOhoshogIfivs_v2elturnhog NOhoshogIfivs_v2elturnhos NOhoshogIfivs_v2eltvrig NOhoshogIfivs_e_wbgi_pve NOhoshogIfivs_instabEvent using "${Tables}/NOhoshogIfivs.tex", label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 0, robust
@@ -1973,7 +1973,7 @@ eststo NOhoshogIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs2_instabEvent
 
-esttab NOhoshogIfivs2_v2elturnhog NOhoshogIfivs2_v2elturnhos NOhoshogIfivs2_v2eltvrig NOhoshogIfivs2_e_wbgi_pve NOhoshogIfivs2_instabEvent using "${Tables}/NOhoshogIfivs2.tex", label replace compress booktabs wrap
+esttab NOhoshogIfivs2_v2elturnhog NOhoshogIfivs2_v2elturnhos NOhoshogIfivs2_v2eltvrig NOhoshogIfivs2_e_wbgi_pve NOhoshogIfivs2_instabEvent using "${Tables}/NOhoshogIfivs2.tex", label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
@@ -1987,7 +1987,7 @@ eststo NOhoshogIfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust noconstant
 eststo NOhoshogIfivs3_instabEvent
 
-esttab NOhoshogIfivs3_v2elturnhog NOhoshogIfivs3_v2elturnhos NOhoshogIfivs3_v2eltvrig NOhoshogIfivs3_e_wbgi_pve NOhoshogIfivs3_instabEvent using "${Tables}/NOhoshogIfivs3.tex", label replace compress booktabs wrap
+esttab NOhoshogIfivs3_v2elturnhog NOhoshogIfivs3_v2elturnhos NOhoshogIfivs3_v2eltvrig NOhoshogIfivs3_e_wbgi_pve NOhoshogIfivs3_instabEvent using "${Tables}/NOhoshogIfivs3.tex", label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
@@ -1999,7 +1999,7 @@ eststo NOhoshogIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs4_e_wbgi_pve
 
-esttab NOhoshogIfivs4_v2elturnhog NOhoshogIfivs4_v2elturnhos NOhoshogIfivs4_v2eltvrig NOhoshogIfivs4_e_wbgi_pve using "${Tables}/NOhoshogIfivs4.tex", label replace compress booktabs wrap
+esttab NOhoshogIfivs4_v2elturnhog NOhoshogIfivs4_v2elturnhos NOhoshogIfivs4_v2eltvrig NOhoshogIfivs4_e_wbgi_pve using "${Tables}/NOhoshogIfivs4.tex", label replace compress booktabs wrap varwidth(40)
 
 * IVS LHPractice
 * SADLY LOWER CHAMBER LEGISLATES IN PRACTICE IS A CONTINUOUS VARIABLE- figure out interaction term and IV simultaneously? Or make it binary and split sample.
