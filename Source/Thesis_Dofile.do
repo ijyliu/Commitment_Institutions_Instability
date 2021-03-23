@@ -1078,7 +1078,7 @@ eststo ifivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP), robust
 eststo ifivs_instabEvent
 
-esttab ifivs_v2elturnhog ifivs_v2elturnhos ifivs_v2eltvrig ifivs_e_wbgi_pve ifivs_instabEvent using "${Tables}/ifivs.tex", title(\label{ifivs}) label replace compress booktabs wrap varwidth(40)
+esttab ifivs_v2elturnhog ifivs_v2elturnhos ifivs_v2eltvrig ifivs_e_wbgi_pve ifivs_instabEvent using "${Tables}/ifivs.tex", title(Instruments of Tertiary Education Enrollment Rate and Aggregate GDP, Robust Standard Errors \label{ifivs}) label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP), robust
@@ -1092,7 +1092,7 @@ eststo ifivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP), robust
 eststo ifivs2_instabEvent
 
-esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Tables}/ifivs2.tex", title(\label{ifivs2}) label replace compress booktabs wrap varwidth(40)
+esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Tables}/ifivs2.tex", title(Instruments of Tertiary Education Enrollment Rate and Aggregate GDP, Robust Standard Errors \label{ifivs2}) label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust
@@ -1106,7 +1106,7 @@ eststo ifivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust noconstant
 eststo ifivs3_instabEvent
 
-esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Tables}/ifivs3.tex", title(\label{ifivs3}) label replace compress booktabs wrap varwidth(40)
+esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Tables}/ifivs3.tex", title(Instruments of Social Science/Business Graduates Population Share and Aggregate GDP, Robust Standard Errors \label{ifivs3}) label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP), robust
@@ -1118,7 +1118,7 @@ eststo ifivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP), robust
 eststo ifivs4_e_wbgi_pve
 
-esttab ifivs4_v2elturnhog ifivs4_v2elturnhos ifivs4_v2eltvrig ifivs4_e_wbgi_pve using "${Tables}/ifivs4.tex", title(\label{ifivs4}) label replace compress booktabs wrap varwidth(40)
+esttab ifivs4_v2elturnhog ifivs4_v2elturnhos ifivs4_v2eltvrig ifivs4_e_wbgi_pve using "${Tables}/ifivs4.tex", title(Instruments of Social Science/Business Graduates Population Share and Aggregate GDP, Robust Standard Errors \label{ifivs4}) label replace compress booktabs wrap varwidth(40)
 
 * Mini regressions for RRrate standalone
 ivregress 2sls v2eltvrig (RRrate = ivaggGDP), robust
