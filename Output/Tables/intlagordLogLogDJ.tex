@@ -1,45 +1,132 @@
-                    &intlagordLogv2elturnhogDJ&intlagordLogv2elturnhosDJ&intlagordLogv2eltvrigDJ&intlaglogInstabDJ\\
-                    &           b&           b&           b&           b\\
-main                &            &            &            &            \\
-De Jure CBI (CNW Index)&    1.945938&   -.6924951&    3.236098&    3.681742\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0568392&   -.3890883&    .0113069&    .1274464\\
-De Jure CBI * More Fixed Rate&   -.1115923&    .3974437&   -.0285923&   -.2233873\\
-L.De Jure CBI (CNW Index)&    3.868477&    7.553988&    -1.56757&   -.9718949\\
-L2.De Jure CBI (CNW Index)&   -7.220978&    -7.73914&    .7868017&   -1.722702\\
-L3.De Jure CBI (CNW Index)&   -.1923818&   -2.363034&   -5.221936&    3.174414\\
-L4.De Jure CBI (CNW Index)&    1.554354&    4.117794&    3.682784&    -1.92954\\
-L5.De Jure CBI (CNW Index)&    4.196578&    3.870613&    1.730303&   -1.036936\\
-L6.De Jure CBI (CNW Index)&   -6.363334&   -1.672438&   -2.567652&    3.570576\\
-L7.De Jure CBI (CNW Index)&    4.339674&   -1.680226&     3.48993&   -.1407588\\
-L8.De Jure CBI (CNW Index)&   -4.057822&    .8433862&   -2.014187&    5.557466\\
-L9.De Jure CBI (CNW Index)&    1.072621&    1.280384&   -.8945962&    2.201404\\
-L10.De Jure CBI (CNW Index)&     1.46476&   -2.014661&    1.754697&    .4728363\\
-L.Exchange Rate Classification (RR inverted, higher = more fixed)&    .1962859&    .5980664&    .0104322&   -.0145592\\
-L2.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.2894114&     -.58016&    .1004129&   -.1212966\\
-L3.Exchange Rate Classification (RR inverted, higher = more fixed)&    .0121328&    .0447993&   -.3054792&   -.1247743\\
-L4.Exchange Rate Classification (RR inverted, higher = more fixed)&    .0760652&    .2736335&    .2287938&   -.0834943\\
-L5.Exchange Rate Classification (RR inverted, higher = more fixed)&    .0898601&    .0539726&    .1156707&   -.0565936\\
-L6.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.2599389&   -.1691353&   -.2447908&    .0687745\\
-L7.Exchange Rate Classification (RR inverted, higher = more fixed)&    .2095851&    .1437107&    .2195933&   -.0764686\\
-L8.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0247155&    .0420165&   -.2413049&    .0209175\\
-L9.Exchange Rate Classification (RR inverted, higher = more fixed)&    .0139807&   -.1253399&    .0893148&   -.0177323\\
-L10.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0109512&   -.0023131&    .0824332&    .0100781\\
-L.De Jure CBI * More Fixed Rate&   -.2380982&   -.8752923&   -.0232162&    .0932466\\
-L2.De Jure CBI * More Fixed Rate&     .499313&    .9317752&    -.174984&     .305806\\
-L3.De Jure CBI * More Fixed Rate&   -.0133144&   -.1109513&    .5975634&    .1347892\\
-L4.De Jure CBI * More Fixed Rate&    .0207609&   -.2880318&   -.4561703&    .0997327\\
-L5.De Jure CBI * More Fixed Rate&   -.3472624&   -.2441029&   -.1164861&     .218374\\
-L6.De Jure CBI * More Fixed Rate&    .5456542&    .2489933&    .3712721&   -.1472072\\
-L7.De Jure CBI * More Fixed Rate&   -.2781597&   -.1203755&   -.3063795&    .1677894\\
-L8.De Jure CBI * More Fixed Rate&   -.0543308&   -.1165732&    .3559722&    -.012045\\
-L9.De Jure CBI * More Fixed Rate&    .0107018&     .195663&   -.1908136&    .1321206\\
-L10.De Jure CBI * More Fixed Rate&   -.0259163&    .0512358&   -.1277014&   -.0854086\\
-_cons               &            &            &            &   -5.110895\\
-cut1                &            &            &            &            \\
-_cons               &    .5767587&    2.258774&    1.546162&            \\
-cut2                &            &            &            &            \\
-_cons               &    .9975289&    2.838537&    2.933255&            \\
-sigma2_u            &            &            &            &            \\
-_cons               &    .9859843&    3.129049&    .6643518&            \\
-/                   &            &            &            &            \\
-lnsig2u             &            &            &            &    2.313679\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+main                &                     &                     &                     &                     \\
+De Jure CBI (CNW    &       1.946         &      -0.692         &       3.236\sym{*}  &       3.682         \\
+Index)              &      (0.78)         &     (-0.24)         &      (2.19)         &      (1.80)         \\
+[1em]
+Exchange Rate       &     -0.0568         &      -0.389\sym{*}  &      0.0113         &       0.127         \\
+Classification (RR inverted, higher = more fixed)&     (-0.41)         &     (-2.00)         &      (0.07)         &      (1.28)         \\
+[1em]
+De Jure CBI * More  &      -0.112         &       0.397         &     -0.0286         &      -0.223         \\
+Fixed Rate          &     (-0.47)         &      (1.38)         &     (-0.10)         &     (-1.19)         \\
+[1em]
+L.De Jure CBI (CNW  &       3.868         &       7.554         &      -1.568         &      -0.972         \\
+Index)              &      (1.13)         &      (1.95)         &     (-0.63)         &     (-0.80)         \\
+[1em]
+L2.De Jure CBI (CNW &      -7.221         &      -7.739\sym{*}  &       0.787         &      -1.723         \\
+Index)              &     (-1.93)         &     (-2.00)         &      (0.28)         &     (-0.89)         \\
+[1em]
+L3.De Jure CBI (CNW &      -0.192         &      -2.363         &      -5.222\sym{*}  &       3.174         \\
+Index)              &     (-0.07)         &     (-0.64)         &     (-1.98)         &      (1.94)         \\
+[1em]
+L4.De Jure CBI (CNW &       1.554         &       4.118         &       3.683         &      -1.930         \\
+Index)              &      (0.56)         &      (1.34)         &      (0.79)         &     (-1.51)         \\
+[1em]
+L5.De Jure CBI (CNW &       4.197         &       3.871         &       1.730         &      -1.037         \\
+Index)              &      (1.65)         &      (1.51)         &      (0.46)         &     (-0.85)         \\
+[1em]
+L6.De Jure CBI (CNW &      -6.363\sym{*}  &      -1.672         &      -2.568         &       3.571\sym{*}  \\
+Index)              &     (-2.37)         &     (-0.44)         &     (-1.39)         &      (2.03)         \\
+[1em]
+L7.De Jure CBI (CNW &       4.340         &      -1.680         &       3.490         &      -0.141         \\
+Index)              &      (1.56)         &     (-0.44)         &      (1.20)         &     (-0.15)         \\
+[1em]
+L8.De Jure CBI (CNW &      -4.058         &       0.843         &      -2.014         &       5.557\sym{*}  \\
+Index)              &     (-1.65)         &      (0.25)         &     (-0.74)         &      (2.29)         \\
+[1em]
+L9.De Jure CBI (CNW &       1.073         &       1.280         &      -0.895         &       2.201         \\
+Index)              &      (0.43)         &      (0.43)         &     (-0.37)         &      (1.07)         \\
+[1em]
+L10.De Jure CBI (CNW&       1.465         &      -2.015         &       1.755         &       0.473         \\
+Index)              &      (0.66)         &     (-0.93)         &      (0.91)         &      (0.16)         \\
+[1em]
+L.Exchange Rate     &       0.196         &       0.598\sym{*}  &      0.0104         &     -0.0146         \\
+Classification (RR inverted, higher = more fixed)&      (1.09)         &      (2.42)         &      (0.05)         &     (-0.23)         \\
+[1em]
+L2.Exchange Rate    &      -0.289         &      -0.580\sym{**} &       0.100         &      -0.121         \\
+Classification (RR inverted, higher = more fixed)&     (-1.69)         &     (-2.92)         &      (0.70)         &     (-1.56)         \\
+[1em]
+L3.Exchange Rate    &      0.0121         &      0.0448         &      -0.305\sym{*}  &      -0.125         \\
+Classification (RR inverted, higher = more fixed)&      (0.09)         &      (0.26)         &     (-2.54)         &     (-1.24)         \\
+[1em]
+L4.Exchange Rate    &      0.0761         &       0.274         &       0.229         &     -0.0835         \\
+Classification (RR inverted, higher = more fixed)&      (0.50)         &      (1.52)         &      (1.22)         &     (-1.28)         \\
+[1em]
+L5.Exchange Rate    &      0.0899         &      0.0540         &       0.116         &     -0.0566         \\
+Classification (RR inverted, higher = more fixed)&      (0.69)         &      (0.36)         &      (0.66)         &     (-1.01)         \\
+[1em]
+L6.Exchange Rate    &      -0.260\sym{*}  &      -0.169         &      -0.245\sym{**} &      0.0688         \\
+Classification (RR inverted, higher = more fixed)&     (-2.14)         &     (-0.92)         &     (-2.69)         &      (0.91)         \\
+[1em]
+L7.Exchange Rate    &       0.210         &       0.144         &       0.220         &     -0.0765         \\
+Classification (RR inverted, higher = more fixed)&      (1.60)         &      (0.76)         &      (1.53)         &     (-1.02)         \\
+[1em]
+L8.Exchange Rate    &     -0.0247         &      0.0420         &      -0.241         &      0.0209         \\
+Classification (RR inverted, higher = more fixed)&     (-0.24)         &      (0.29)         &     (-1.66)         &      (0.22)         \\
+[1em]
+L9.Exchange Rate    &      0.0140         &      -0.125         &      0.0893         &     -0.0177         \\
+Classification (RR inverted, higher = more fixed)&      (0.15)         &     (-0.91)         &      (0.61)         &     (-0.23)         \\
+[1em]
+L10.Exchange Rate   &     -0.0110         &    -0.00231         &      0.0824         &      0.0101         \\
+Classification (RR inverted, higher = more fixed)&     (-0.12)         &     (-0.02)         &      (0.91)         &      (0.13)         \\
+[1em]
+L.De Jure CBI * More&      -0.238         &      -0.875\sym{*}  &     -0.0232         &      0.0932         \\
+Fixed Rate          &     (-0.74)         &     (-2.26)         &     (-0.07)         &      (0.76)         \\
+[1em]
+L2.De Jure CBI *    &       0.499         &       0.932\sym{**} &      -0.175         &       0.306         \\
+More Fixed Rate     &      (1.44)         &      (2.65)         &     (-0.65)         &      (1.89)         \\
+[1em]
+L3.De Jure CBI *    &     -0.0133         &      -0.111         &       0.598\sym{*}  &       0.135         \\
+More Fixed Rate     &     (-0.05)         &     (-0.34)         &      (2.47)         &      (0.74)         \\
+[1em]
+L4.De Jure CBI *    &      0.0208         &      -0.288         &      -0.456         &      0.0997         \\
+More Fixed Rate     &      (0.08)         &     (-0.90)         &     (-1.13)         &      (0.86)         \\
+[1em]
+L5.De Jure CBI *    &      -0.347         &      -0.244         &      -0.116         &       0.218         \\
+More Fixed Rate     &     (-1.44)         &     (-0.87)         &     (-0.33)         &      (1.58)         \\
+[1em]
+L6.De Jure CBI *    &       0.546\sym{*}  &       0.249         &       0.371\sym{*}  &      -0.147         \\
+More Fixed Rate     &      (2.07)         &      (0.67)         &      (2.49)         &     (-0.94)         \\
+[1em]
+L7.De Jure CBI *    &      -0.278         &      -0.120         &      -0.306         &       0.168         \\
+More Fixed Rate     &     (-1.10)         &     (-0.32)         &     (-1.23)         &      (1.03)         \\
+[1em]
+L8.De Jure CBI *    &     -0.0543         &      -0.117         &       0.356         &     -0.0120         \\
+More Fixed Rate     &     (-0.28)         &     (-0.47)         &      (1.25)         &     (-0.05)         \\
+[1em]
+L9.De Jure CBI *    &      0.0107         &       0.196         &      -0.191         &       0.132         \\
+More Fixed Rate     &      (0.06)         &      (0.96)         &     (-0.74)         &      (0.65)         \\
+[1em]
+L10.De Jure CBI *   &     -0.0259         &      0.0512         &      -0.128         &     -0.0854         \\
+More Fixed Rate     &     (-0.15)         &      (0.28)         &     (-0.77)         &     (-0.45)         \\
+[1em]
+Constant            &                     &                     &                     &      -5.111\sym{**} \\
+                    &                     &                     &                     &     (-3.19)         \\
+\hline
+cut1                &                     &                     &                     &                     \\
+Constant            &       0.577         &       2.259\sym{*}  &       1.546\sym{*}  &                     \\
+                    &      (0.94)         &      (2.54)         &      (2.26)         &                     \\
+\hline
+cut2                &                     &                     &                     &                     \\
+Constant            &       0.998         &       2.839\sym{**} &       2.933\sym{***}&                     \\
+                    &      (1.61)         &      (3.20)         &      (4.12)         &                     \\
+\hline
+sigma2\_u            &                     &                     &                     &                     \\
+Constant            &       0.986\sym{***}&       3.129\sym{***}&       0.664\sym{**} &                     \\
+                    &      (3.53)         &      (4.14)         &      (3.16)         &                     \\
+\hline
+/                   &                     &                     &                     &                     \\
+lnsig2u             &                     &                     &                     &       2.314\sym{***}\\
+                    &                     &                     &                     &      (7.01)         \\
+\hline
+Observations        &         969         &         969         &         799         &        2679         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

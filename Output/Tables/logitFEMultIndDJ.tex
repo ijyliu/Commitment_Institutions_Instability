@@ -1,5 +1,20 @@
-                    &lFDJ_bv2elturnhog&lFDJ_bv2elturnhos&lFDJ_bv2eltvrig&lFDJ_be_wbgi_pve&lFDJ_binstabEvent\\
-                    &           b&           b&           b&           b&           b\\
-main                &            &            &            &            &            \\
-De Jure CBI (CNW Index)&    .7022745&     1.38733&     1.45081&   -3.569017&    6.085248\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0404274&   -.0856744&   -.0224639&    .1354907&    .0366241\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                    &\multicolumn{1}{c}{bv2elturnhog}&\multicolumn{1}{c}{bv2elturnhos}&\multicolumn{1}{c}{bv2eltvrig}&\multicolumn{1}{c}{be\_wbgi\_pve}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+main                &                     &                     &                     &                     &                     \\
+De Jure CBI (CNW    &       0.702         &       1.387\sym{*}  &       1.451\sym{**} &      -3.569\sym{**} &       6.085\sym{***}\\
+Index)              &      (1.60)         &      (2.50)         &      (3.00)         &     (-2.91)         &     (15.42)         \\
+[1em]
+Exchange Rate       &     -0.0404         &     -0.0857\sym{**} &     -0.0225         &       0.135\sym{*}  &      0.0366\sym{**} \\
+Classification (RR inverted, higher = more fixed)&     (-1.74)         &     (-2.91)         &     (-0.94)         &      (2.52)         &      (2.67)         \\
+\hline
+Observations        &        1208         &         842         &         991         &         760         &        3912         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

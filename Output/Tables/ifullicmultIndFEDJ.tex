@@ -1,27 +1,88 @@
-                    &ifullicmiFEDJ_v2elturnhog&ifullicmiFEDJ_v2elturnhos&ifullicmiFEDJ_v2eltvrig&ifullicmiFEDJ_e_wbgi_pve&ifullicmiFEDJ_instabEvent\\
-                    &           b&           b&           b&           b&           b\\
-De Jure CBI (CNW Index)&    .4567569&   -.1236579&    1.060327&    -.499613&    .7977676\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&    .0237904&   -.0091675&   -.0106191&     .023375&    .0104276\\
-De Jure CBI (CNW Index)&           0&           0&           0&           0&           0\\
-No                  &           0&           0&           0&           0&           0\\
-Yes                 &    .3640697&    .4339804&    .2555211&    .1021923&   -.0511749\\
-No $\times$ De Jure CBI (CNW Index)&           0&           0&           0&           0&           0\\
-Yes $\times$ De Jure CBI (CNW Index)&   -.6617791&   -.5518029&   -.4356132&   -.0584764&    .1460126\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
-No $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
-Yes $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0304294&   -.0198504&   -.0359718&   -.0120506&    -.015618\\
-De Jure CBI (CNW Index)&           0&           0&           0&           0&           0\\
-Legislative Efficacy&   -.0366209&   -.0119917&   -.1182254&    .2102282&     .050783\\
-De Jure CBI (CNW Index) $\times$ Legislative Efficacy&    .1154814&    .0335749&    .2544155&   -.0644128&   -.0134478\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
-Legislative Efficacy&           0&           0&           0&           0&           0\\
-Exchange Rate Classification (RR inverted, higher = more fixed) $\times$ Legislative Efficacy&    .0143091&    .0047491&    -.003567&   -.0015761&   -.0086105\\
-De Jure CBI (CNW Index)&           0&           0&           0&           0&           0\\
-deme_polity2=0      &           0&           0&           0&           0&           0\\
-deme_polity2=1      &     1.04331&    .4870611&    .7869693&    .1923628&   -.0814409\\
-deme_polity2=0 $\times$ De Jure CBI (CNW Index)&           0&           0&           0&           0&           0\\
-deme_polity2=1 $\times$ De Jure CBI (CNW Index)&   -.4281617&    .2859907&    -1.13446&    .1664257&    .1396397\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
-deme_polity2=0 $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
-deme_polity2=1 $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0384091&   -.0067093&    .0292124&   -.0140513&    .0160633\\
-_cons               &   -.1387454&    .0686806&    .0161386&   -.2261488&   -.1080942\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+De Jure CBI (CNW    &       0.457         &      -0.124         &       1.060\sym{*}  &      -0.500         &       0.798\sym{**} \\
+Index)              &      (1.40)         &     (-0.35)         &      (2.31)         &     (-1.82)         &      (2.80)         \\
+[1em]
+Exchange Rate       &      0.0238\sym{*}  &    -0.00917         &     -0.0106         &      0.0234\sym{*}  &      0.0104         \\
+Classification (RR inverted, higher = more fixed)&      (2.35)         &     (-1.05)         &     (-0.73)         &      (2.45)         &      (1.35)         \\
+[1em]
+De Jure CBI (CNW    &           0         &           0         &           0         &           0         &           0         \\
+Index)              &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+No                  &           0         &           0         &           0         &           0         &           0         \\
+                    &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Yes                 &       0.364\sym{*}  &       0.434\sym{*}  &       0.256         &       0.102         &     -0.0512         \\
+                    &      (2.00)         &      (2.06)         &      (1.14)         &      (0.58)         &     (-0.42)         \\
+[1em]
+No $\times$ De Jure &           0         &           0         &           0         &           0         &           0         \\
+CBI (CNW Index)     &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Yes $\times$ De Jure&      -0.662         &      -0.552         &      -0.436         &     -0.0585         &       0.146         \\
+CBI (CNW Index)     &     (-1.95)         &     (-1.78)         &     (-1.15)         &     (-0.18)         &      (0.70)         \\
+[1em]
+Exchange Rate       &           0         &           0         &           0         &           0         &           0         \\
+Classification (RR inverted, higher = more fixed)&         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+No $\times$ Exchange&           0         &           0         &           0         &           0         &           0         \\
+Rate Classification (RR inverted, higher = more fixed)&         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Yes $\times$        &     -0.0304\sym{**} &     -0.0199         &     -0.0360\sym{*}  &     -0.0121         &     -0.0156         \\
+Exchange Rate Classification (RR inverted, higher = more fixed)&     (-2.66)         &     (-1.72)         &     (-2.24)         &     (-0.86)         &     (-1.90)         \\
+[1em]
+De Jure CBI (CNW    &           0         &           0         &           0         &           0         &           0         \\
+Index)              &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Legislative Efficacy&     -0.0366         &     -0.0120         &      -0.118         &       0.210         &      0.0508         \\
+                    &     (-0.40)         &     (-0.14)         &     (-1.03)         &      (1.74)         &      (0.82)         \\
+[1em]
+De Jure CBI (CNW    &       0.115         &      0.0336         &       0.254         &     -0.0644         &     -0.0134         \\
+Index) $\times$ Legislative Efficacy&      (0.63)         &      (0.19)         &      (1.09)         &     (-0.38)         &     (-0.12)         \\
+[1em]
+Exchange Rate       &           0         &           0         &           0         &           0         &           0         \\
+Classification (RR inverted, higher = more fixed)&         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Legislative Efficacy&           0         &           0         &           0         &           0         &           0         \\
+                    &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Exchange Rate       &      0.0143\sym{**} &     0.00475         &    -0.00357         &    -0.00158         &    -0.00861         \\
+Classification (RR inverted, higher = more fixed) $\times$ Legislative Efficacy&      (2.71)         &      (0.85)         &     (-0.49)         &     (-0.22)         &     (-1.86)         \\
+[1em]
+De Jure CBI (CNW    &           0         &           0         &           0         &           0         &           0         \\
+Index)              &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+deme\_polity2=0      &           0         &           0         &           0         &           0         &           0         \\
+                    &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+deme\_polity2=1      &       1.043\sym{***}&       0.487\sym{*}  &       0.787\sym{**} &       0.192         &     -0.0814         \\
+                    &      (4.43)         &      (1.99)         &      (3.13)         &      (0.81)         &     (-0.54)         \\
+[1em]
+deme\_polity2=0      &           0         &           0         &           0         &           0         &           0         \\
+$\times$ De Jure CBI (CNW Index)&         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+deme\_polity2=1      &      -0.428         &       0.286         &      -1.134\sym{*}  &       0.166         &       0.140         \\
+$\times$ De Jure CBI (CNW Index)&     (-1.03)         &      (0.60)         &     (-2.18)         &      (0.38)         &      (0.41)         \\
+[1em]
+Exchange Rate       &           0         &           0         &           0         &           0         &           0         \\
+Classification (RR inverted, higher = more fixed)&         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+deme\_polity2=0      &           0         &           0         &           0         &           0         &           0         \\
+$\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+deme\_polity2=1      &     -0.0384\sym{**} &    -0.00671         &      0.0292         &     -0.0141         &      0.0161         \\
+$\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&     (-2.97)         &     (-0.52)         &      (1.66)         &     (-1.16)         &      (1.66)         \\
+[1em]
+Constant            &      -0.139         &      0.0687         &      0.0161         &      -0.226         &      -0.108         \\
+                    &     (-0.77)         &      (0.38)         &      (0.07)         &     (-1.41)         &     (-0.89)         \\
+\hline
+Observations        &        1258         &        1258         &        1053         &        1942         &        3602         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

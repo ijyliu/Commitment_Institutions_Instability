@@ -1,9 +1,34 @@
-                    &ikmiFEDJ_v2elturnhog&ikmiFEDJ_v2elturnhos&ikmiFEDJ_v2eltvrig&ikmiFEDJ_e_wbgi_pve&ikmiFEDJ_instabEvent\\
-                    &           b&           b&           b&           b&           b\\
-De Jure CBI (CNW Index)&    .5271628&    .4635765&     .579888&   -.7032242&    .5774056\\
-Chinn-Ito index, normalized&   -.0999182&    .1735048&   -.2831894&   -.1569422&    .0587746\\
-De Jure CBI (CNW Index) $\times$ Chinn-Ito index, normalized&   -.2552021&   -.2268136&    -.239938&    .5296145&    .6622352\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0156749&   -.0264952&     -.01643&    .0138224&    .0151231\\
-Chinn-Ito index, normalized&           0&           0&           0&           0&           0\\
-Exchange Rate Classification (RR inverted, higher = more fixed) $\times$ Chinn-Ito index, normalized&     .009024&    .0026052&    .0279114&   -.0108101&   -.0285636\\
-_cons               &     .606113&    .3223853&    .6042794&    .1294573&   -.0526984\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+De Jure CBI (CNW    &       0.527         &       0.464         &       0.580         &      -0.703\sym{**} &       0.577\sym{*}  \\
+Index)              &      (1.34)         &      (1.57)         &      (1.48)         &     (-2.84)         &      (2.46)         \\
+[1em]
+Chinn-Ito index,    &     -0.0999         &       0.174         &      -0.283         &      -0.157         &      0.0588         \\
+normalized          &     (-0.33)         &      (0.99)         &     (-1.06)         &     (-0.65)         &      (0.39)         \\
+[1em]
+De Jure CBI (CNW    &      -0.255         &      -0.227         &      -0.240         &       0.530         &       0.662\sym{*}  \\
+Index) $\times$ Chinn-Ito index, normalized&     (-0.51)         &     (-0.63)         &     (-0.48)         &      (1.67)         &      (2.08)         \\
+[1em]
+Exchange Rate       &     -0.0157         &     -0.0265\sym{*}  &     -0.0164         &      0.0138         &      0.0151         \\
+Classification (RR inverted, higher = more fixed)&     (-1.11)         &     (-2.47)         &     (-1.23)         &      (1.63)         &      (1.87)         \\
+[1em]
+Chinn-Ito index,    &           0         &           0         &           0         &           0         &           0         \\
+normalized          &         (.)         &         (.)         &         (.)         &         (.)         &         (.)         \\
+[1em]
+Exchange Rate       &     0.00902         &     0.00261         &      0.0279         &     -0.0108         &     -0.0286         \\
+Classification (RR inverted, higher = more fixed) $\times$ Chinn-Ito index, normalized&      (0.42)         &      (0.15)         &      (1.51)         &     (-0.72)         &     (-1.93)         \\
+[1em]
+Constant            &       0.606\sym{**} &       0.322\sym{*}  &       0.604\sym{**} &       0.129         &     -0.0527         \\
+                    &      (2.77)         &      (2.14)         &      (3.11)         &      (0.82)         &     (-0.50)         \\
+\hline
+Observations        &        1305         &        1305         &        1068         &        2061         &        3933         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

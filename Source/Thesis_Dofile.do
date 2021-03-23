@@ -723,9 +723,9 @@ foreach stabVar in `StabVars' {
     eststo miFEDJ_`stabVar'
 }
 
-estout miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace wrap style(tex)   
+esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace tex wrap    
 
-estout miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", title(De Jure CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDJ}) label replace wrap style(tex)   
+esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", title(De Jure CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDJ}) label replace tex wrap    
 
 eststo clear
 
@@ -735,9 +735,9 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF', fe cluster(country)
     eststo miFEDF_`stabVar'
 }
-estout miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace wrap style(tex)    
+esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace tex wrap     
 
-estout miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", title(De Facto CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDF}) label replace wrap style(tex)    
+esttab miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", title(De Facto CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDF}) label replace tex wrap     
 
 eststo clear
 
@@ -757,9 +757,9 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, fe cluster(country)
     eststo imiFE_`stabVar'
 }
-estout imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "${Tables}/imultIndOLS.tex", label replace wrap style(tex)   
+esttab imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "${Tables}/imultIndOLS.tex", label replace tex wrap    
 
-estout imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiFE_instabEvent using "${Tables}/imultIndFE.tex", label replace wrap style(tex)   
+esttab imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiFE_instabEvent using "${Tables}/imultIndFE.tex", label replace tex wrap    
 
 eststo clear
 
@@ -774,9 +774,9 @@ eststo clear
     xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar#c.RRrate, fe cluster(country)
     eststo imiFEDJ_`stabVar'
 }
-estout imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "${Tables}/imultIndOLSDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDJ}) label replace wrap style(tex)   
+esttab imiolsDJ_v2elturnhog imiolsDJ_v2elturnhos imiolsDJ_v2eltvrig imiolsDJ_e_wbgi_pve imiolsDJ_instabEvent using "${Tables}/imultIndOLSDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDJ}) label replace tex wrap    
 
-estout imiFEDJ_v2elturnhog imiFEDJ_v2elturnhos imiFEDJ_v2eltvrig imiFEDJ_e_wbgi_pve imiFEDJ_instabEvent using "${Tables}/imultIndFEDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDJ}) label replace wrap style(tex)   
+esttab imiFEDJ_v2elturnhog imiFEDJ_v2elturnhos imiFEDJ_v2eltvrig imiFEDJ_e_wbgi_pve imiFEDJ_instabEvent using "${Tables}/imultIndFEDJ.tex", title(De Jure CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDJ}) label replace tex wrap    
 
 eststo clear
 
@@ -787,9 +787,9 @@ eststo imiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd#c.RRrate, fe cluster(country)
 eststo imiFEDF_`stabVar'
 }
-estout imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_wbgi_pve imiolsDF_instabEvent using "${Tables}/imultIndOLSDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDF}) label replace wrap style(tex)   
+esttab imiolsDF_v2elturnhog imiolsDF_v2elturnhos imiolsDF_v2eltvrig imiolsDF_e_wbgi_pve imiolsDF_instabEvent using "${Tables}/imultIndOLSDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLSDF}) label replace tex wrap    
 
-estout imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "${Tables}/imultIndFEDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDF}) label replace wrap style(tex)   
+esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_pve imiFEDF_instabEvent using "${Tables}/imultIndFEDF.tex", title(De Facto CBI Interaction with Exchange Rate Regime, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFEDF}) label replace tex wrap    
 
 eststo clear
 
@@ -805,9 +805,9 @@ xtlogit `stabVar' `primCommInstVarsDJ', fe
 eststo lFDJ_`stabVar'
 }
 
-estout lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", label replace wrap style(tex)   
+esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", label replace tex wrap    
 
-estout lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", label replace wrap style(tex)   
+esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", label replace tex wrap    
 
 *DF
 foreach stabVar in `bStabVars' {
@@ -815,9 +815,9 @@ xtlogit `stabVar' `primCommInstVarsDF', fe
 eststo lFDF_`stabVar'
 }
 
-estout lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", label replace wrap style(tex)   
+esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", label replace tex wrap    
 
-estout lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", label replace wrap style(tex)   
+esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", label replace tex wrap    
 
 *****************************************************************************
 
@@ -826,18 +826,18 @@ estout lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve 
 * DJ
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo cbinstabEventDJ
-estout cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace wrap style(tex)   
+esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace tex wrap    
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo mlf_binstabEventDJ: margins, dydx(`primCommInstVarsDJ') post
-estout mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(De Jure CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace wrap style(tex)   
+esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(De Jure CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace tex wrap    
 
 * DF
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo cbinstabEventDF
-estout cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace wrap style(tex)   
+esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace tex wrap    
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
-estout mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(De Facto CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace wrap style(tex)   
+esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(De Facto CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace tex wrap    
 
 *****************************************************************************
 
@@ -854,8 +854,8 @@ eststo bolsDJ_`stabVar'
 xtreg `stabVar' wHighCBI fixed_rate, fe cluster(country)
 eststo bFEDJ_`stabVar'
 }
-estout bolsDJ_v2elturnhog bolsDJ_v2elturnhos bolsDJ_v2eltvrig bolsDJ_e_wbgi_pve bolsDJ_instabEvent using "${Tables}/binaryIndOLSDJ.tex", label replace wrap style(tex)   
-estout bFEDJ_v2elturnhog bFEDJ_v2elturnhos bFEDJ_v2eltvrig bFEDJ_e_wbgi_pve bFEDJ_instabEvent using "${Tables}/binaryIndFEDJ.tex", label replace wrap style(tex)   
+esttab bolsDJ_v2elturnhog bolsDJ_v2elturnhos bolsDJ_v2eltvrig bolsDJ_e_wbgi_pve bolsDJ_instabEvent using "${Tables}/binaryIndOLSDJ.tex", label replace tex wrap    
+esttab bFEDJ_v2elturnhog bFEDJ_v2elturnhos bFEDJ_v2eltvrig bFEDJ_e_wbgi_pve bFEDJ_instabEvent using "${Tables}/binaryIndFEDJ.tex", label replace tex wrap    
 
 eststo clear
 
@@ -866,8 +866,8 @@ eststo bolsDF_`stabVar'
 xtreg `stabVar' irregtd fixed_rate, fe cluster(country)
 eststo bFEDF_`stabVar'
 }
-estout bolsDF_v2elturnhog bolsDF_v2elturnhos bolsDF_v2eltvrig bolsDF_e_wbgi_pve bolsDF_instabEvent using "${Tables}/binaryIndOLSDF.tex", label replace wrap style(tex)   
-estout bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "${Tables}/binaryIndFEDF.tex", label replace wrap style(tex)   
+esttab bolsDF_v2elturnhog bolsDF_v2elturnhos bolsDF_v2eltvrig bolsDF_e_wbgi_pve bolsDF_instabEvent using "${Tables}/binaryIndOLSDF.tex", label replace tex wrap    
+esttab bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "${Tables}/binaryIndFEDF.tex", label replace tex wrap    
 
 eststo clear
 
@@ -893,9 +893,9 @@ eststo fullcmiolsDJ_`stabVar'
 xtreg `stabVar' `primCommInstVarsDJ' `fullcontrols', fe cluster(country)
 eststo fullcmiFEDJ_`stabVar'
 }
-estout fullcmiolsDJ_v2elturnhog fullcmiolsDJ_v2elturnhos fullcmiolsDJ_v2eltvrig fullcmiolsDJ_e_wbgi_pve fullcmiolsDJ_instabEvent using "${Tables}/fullcmultIndOLSDJ.tex", label replace wrap style(tex)   
+esttab fullcmiolsDJ_v2elturnhog fullcmiolsDJ_v2elturnhos fullcmiolsDJ_v2eltvrig fullcmiolsDJ_e_wbgi_pve fullcmiolsDJ_instabEvent using "${Tables}/fullcmultIndOLSDJ.tex", label replace tex wrap    
 
-estout fullcmiFEDJ_v2elturnhog fullcmiFEDJ_v2elturnhos fullcmiFEDJ_v2eltvrig fullcmiFEDJ_e_wbgi_pve fullcmiFEDJ_instabEvent using "${Tables}/fullcmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab fullcmiFEDJ_v2elturnhog fullcmiFEDJ_v2elturnhos fullcmiFEDJ_v2eltvrig fullcmiFEDJ_e_wbgi_pve fullcmiFEDJ_instabEvent using "${Tables}/fullcmultIndFEDJ.tex", label replace tex wrap    
 
 eststo clear
 
@@ -906,9 +906,9 @@ eststo fullcmiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' `fullcontrols', fe cluster(country)
 eststo fullcmiFEDF_`stabVar'
 }
-estout fullcmiolsDF_v2elturnhog fullcmiolsDF_v2elturnhos fullcmiolsDF_v2eltvrig fullcmiolsDF_e_wbgi_pve fullcmiolsDF_instabEvent using "${Tables}/fullcmultIndOLSDF.tex", label replace wrap style(tex)   
+esttab fullcmiolsDF_v2elturnhog fullcmiolsDF_v2elturnhos fullcmiolsDF_v2eltvrig fullcmiolsDF_e_wbgi_pve fullcmiolsDF_instabEvent using "${Tables}/fullcmultIndOLSDF.tex", label replace tex wrap    
 
-estout fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig fullcmiFEDF_e_wbgi_pve fullcmiFEDF_instabEvent using "${Tables}/fullcmultIndFEDF.tex", label replace wrap style(tex)   
+esttab fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig fullcmiFEDF_e_wbgi_pve fullcmiFEDF_instabEvent using "${Tables}/fullcmultIndFEDF.tex", label replace tex wrap    
 
 eststo clear
 
@@ -923,9 +923,9 @@ eststo nccmiolsDJ_`stabVar'
 xtreg `stabVar' `primCommInstVarsDJ' `noCorpControls', fe cluster(country)
 eststo nccmiFEDJ_`stabVar'
 }
-estout nccmiolsDJ_v2elturnhog nccmiolsDJ_v2elturnhos nccmiolsDJ_v2eltvrig nccmiolsDJ_e_wbgi_pve nccmiolsDJ_instabEvent using "${Tables}/nccmultIndOLSDJ.tex", label replace wrap style(tex)   
+esttab nccmiolsDJ_v2elturnhog nccmiolsDJ_v2elturnhos nccmiolsDJ_v2eltvrig nccmiolsDJ_e_wbgi_pve nccmiolsDJ_instabEvent using "${Tables}/nccmultIndOLSDJ.tex", label replace tex wrap    
 
-estout nccmiFEDJ_v2elturnhog nccmiFEDJ_v2elturnhos nccmiFEDJ_v2eltvrig nccmiFEDJ_e_wbgi_pve nccmiFEDJ_instabEvent using "${Tables}/nccmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab nccmiFEDJ_v2elturnhog nccmiFEDJ_v2elturnhos nccmiFEDJ_v2eltvrig nccmiFEDJ_e_wbgi_pve nccmiFEDJ_instabEvent using "${Tables}/nccmultIndFEDJ.tex", label replace tex wrap    
 
 eststo clear
 
@@ -936,9 +936,9 @@ eststo nccmiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' `noCorpControls', fe cluster(country)
 eststo nccmiFEDF_`stabVar'
 }
-estout nccmiolsDF_v2elturnhog nccmiolsDF_v2elturnhos nccmiolsDF_v2eltvrig nccmiolsDF_e_wbgi_pve nccmiolsDF_instabEvent using "${Tables}/nccmultIndOLSDF.tex", label replace wrap style(tex)   
+esttab nccmiolsDF_v2elturnhog nccmiolsDF_v2elturnhos nccmiolsDF_v2eltvrig nccmiolsDF_e_wbgi_pve nccmiolsDF_instabEvent using "${Tables}/nccmultIndOLSDF.tex", label replace tex wrap    
 
-estout nccmiFEDF_v2elturnhog nccmiFEDF_v2elturnhos nccmiFEDF_v2eltvrig nccmiFEDF_e_wbgi_pve nccmiFEDF_instabEvent using "${Tables}/nccmultIndFEDF.tex", label replace wrap style(tex)   
+esttab nccmiFEDF_v2elturnhog nccmiFEDF_v2elturnhos nccmiFEDF_v2eltvrig nccmiFEDF_e_wbgi_pve nccmiFEDF_instabEvent using "${Tables}/nccmultIndFEDF.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1056,7 +1056,7 @@ reg RRrate iwbaggGDP, robust
 *ivregress 2sls `stabVar' (lvaw_gar irregtd RRrate = se_ter_enrr v2petersch ssbizaggGDP aggGDP), robust
 *eststo fivs_`stabVar'
 *}
-*estout fivs_v2elturnhog fivs_v2elturnhos fivs_v2eltvrig fivs_e_wbgi_pve fivs_instabEvent using "${Tables}/fivs.tex", replace wrap style(tex) 
+*esttab fivs_v2elturnhog fivs_v2elturnhos fivs_v2eltvrig fivs_e_wbgi_pve fivs_instabEvent using "${Tables}/fivs.tex", replace tex wrap  
 
 * All instruments treatment with interpolated.
 * First need to cut issbizagg as an instrument since observation problems. Also deal with world bank rather than vdem gdp data. Also for now look only at de jure cbi and rates.
@@ -1078,7 +1078,7 @@ eststo ifivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP), robust
 eststo ifivs_instabEvent
 
-estout ifivs_v2elturnhog ifivs_v2elturnhos ifivs_v2eltvrig ifivs_e_wbgi_pve ifivs_instabEvent using "${Tables}/ifivs.tex", label replace wrap style(tex)   
+esttab ifivs_v2elturnhog ifivs_v2elturnhos ifivs_v2eltvrig ifivs_e_wbgi_pve ifivs_instabEvent using "${Tables}/ifivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP), robust
@@ -1092,7 +1092,7 @@ eststo ifivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP), robust
 eststo ifivs2_instabEvent
 
-estout ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Tables}/ifivs2.tex", label replace wrap style(tex)   
+esttab ifivs2_v2elturnhog ifivs2_v2elturnhos ifivs2_v2eltvrig ifivs2_e_wbgi_pve ifivs2_instabEvent using "${Tables}/ifivs2.tex", label replace tex wrap    
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust
@@ -1106,7 +1106,7 @@ eststo ifivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP), robust noconstant
 eststo ifivs3_instabEvent
 
-estout ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Tables}/ifivs3.tex", label replace wrap style(tex)   
+esttab ifivs3_v2elturnhog ifivs3_v2elturnhos ifivs3_v2eltvrig ifivs3_e_wbgi_pve ifivs3_instabEvent using "${Tables}/ifivs3.tex", label replace tex wrap    
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP), robust
@@ -1118,14 +1118,14 @@ eststo ifivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP), robust
 eststo ifivs4_e_wbgi_pve
 
-estout ifivs4_v2elturnhog ifivs4_v2elturnhos ifivs4_v2eltvrig ifivs4_e_wbgi_pve using "${Tables}/ifivs4.tex", label replace wrap style(tex)   
+esttab ifivs4_v2elturnhog ifivs4_v2elturnhos ifivs4_v2eltvrig ifivs4_e_wbgi_pve using "${Tables}/ifivs4.tex", label replace tex wrap    
 
 * Mini regressions for RRrate standalone
 ivregress 2sls v2eltvrig (RRrate = ivaggGDP), robust
 eststo miniLH
 ivregress 2sls e_wbgi_pve (RRrate = ivaggGDP), robust
 eststo miniWB
-estout miniLH miniWB using "${Tables}/miniRRIVs.tex", label replace wrap style(tex)   
+esttab miniLH miniWB using "${Tables}/miniRRIVs.tex", label replace tex wrap    
 
 *xtivreg: I don't think this is doable, as a lot of the first stages don't work out anymore.
 
@@ -1149,7 +1149,7 @@ xtreg `stabVar' `primCommInstVarsDJ' if highka_open, fe cluster(country)
 eststo hkmiFEDJ_`stabVar'
 }
 
-estout hkmiFEDJ_v2elturnhog hkmiFEDJ_v2elturnhos hkmiFEDJ_v2eltvrig hkmiFEDJ_e_wbgi_pve hkmiFEDJ_instabEvent using "${Tables}/hkmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab hkmiFEDJ_v2elturnhog hkmiFEDJ_v2elturnhos hkmiFEDJ_v2eltvrig hkmiFEDJ_e_wbgi_pve hkmiFEDJ_instabEvent using "${Tables}/hkmultIndFEDJ.tex", label replace tex wrap    
 
 *DF High
 foreach stabVar in `StabVars' {
@@ -1157,7 +1157,7 @@ xtreg `stabVar' `primCommInstVarsDF' if highka_open, fe cluster(country)
 eststo hkmiFEDF_`stabVar'
 }
 
-estout hkmiFEDF_v2elturnhog hkmiFEDF_v2elturnhos hkmiFEDF_v2eltvrig hkmiFEDF_e_wbgi_pve hkmiFEDF_instabEvent using "${Tables}/hkmultIndFEDF.tex", label replace wrap style(tex)   
+esttab hkmiFEDF_v2elturnhog hkmiFEDF_v2elturnhos hkmiFEDF_v2eltvrig hkmiFEDF_e_wbgi_pve hkmiFEDF_instabEvent using "${Tables}/hkmultIndFEDF.tex", label replace tex wrap    
 
 *DJ Low
 foreach stabVar in `StabVars' {
@@ -1165,7 +1165,7 @@ xtreg `stabVar' `primCommInstVarsDJ' if !highka_open, fe cluster(country)
 eststo lkmiFEDJ_`stabVar'
 }
 
-estout lkmiFEDJ_v2elturnhog lkmiFEDJ_v2elturnhos lkmiFEDJ_v2eltvrig lkmiFEDJ_e_wbgi_pve lkmiFEDJ_instabEvent using "${Tables}/lkmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab lkmiFEDJ_v2elturnhog lkmiFEDJ_v2elturnhos lkmiFEDJ_v2eltvrig lkmiFEDJ_e_wbgi_pve lkmiFEDJ_instabEvent using "${Tables}/lkmultIndFEDJ.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1175,7 +1175,7 @@ xtreg `stabVar' `primCommInstVarsDF' if !highka_open, fe cluster(country)
 eststo lkmiFEDF_`stabVar'
 }
 
-estout lkmiFEDF_v2elturnhog lkmiFEDF_v2elturnhos lkmiFEDF_v2eltvrig lkmiFEDF_e_wbgi_pve lkmiFEDF_instabEvent using "${Tables}/lkmultIndFEDF.tex", label replace wrap style(tex)   
+esttab lkmiFEDF_v2elturnhog lkmiFEDF_v2elturnhos lkmiFEDF_v2eltvrig lkmiFEDF_e_wbgi_pve lkmiFEDF_instabEvent using "${Tables}/lkmultIndFEDF.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1187,7 +1187,7 @@ xtreg `stabVar' c.lvaw_gar##c.ka_open c.RRrate##c.ka_open, fe cluster(country)
 eststo ikmiFEDJ_`stabVar'
 }
 
-estout ikmiFEDJ_v2elturnhog ikmiFEDJ_v2elturnhos ikmiFEDJ_v2eltvrig ikmiFEDJ_e_wbgi_pve ikmiFEDJ_instabEvent using "${Tables}/ikmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab ikmiFEDJ_v2elturnhog ikmiFEDJ_v2elturnhos ikmiFEDJ_v2eltvrig ikmiFEDJ_e_wbgi_pve ikmiFEDJ_instabEvent using "${Tables}/ikmultIndFEDJ.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1197,7 +1197,7 @@ xtreg `stabVar' i.irregtd##c.ka_open c.RRrate##c.ka_open, fe cluster(country)
 eststo ikmiFEDF_`stabVar'
 }
 
-estout ikmiFEDF_v2elturnhog ikmiFEDF_v2elturnhos ikmiFEDF_v2eltvrig ikmiFEDF_e_wbgi_pve ikmiFEDF_instabEvent using "${Tables}/ikmultIndFEDF.tex", label replace wrap style(tex)   
+esttab ikmiFEDF_v2elturnhog ikmiFEDF_v2elturnhos ikmiFEDF_v2eltvrig ikmiFEDF_e_wbgi_pve ikmiFEDF_instabEvent using "${Tables}/ikmultIndFEDF.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1214,14 +1214,14 @@ foreach stabVar in `HOSHOGStabVars' {
 xtreg `stabVar' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDJ_`stabVar'
 }
-estout hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", label replace tex wrap    
 
 *DF
 foreach stabVar in `HOSHOGStabVars' {
 xtreg `stabVar' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDF_`stabVar'
 }
-estout hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", label replace wrap style(tex)   
+esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", label replace tex wrap    
 
 * WHAT IN THE WORLD IS GOING ON?
 browse if v2exhoshog == 0
@@ -1232,11 +1232,11 @@ eststo clear
 *DJ
 xtreg v2eltvrig c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
 eststo llpFEDJ_v2eltvrig
-estout llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", label replace wrap style(tex)   
+esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", label replace tex wrap    
 *DF
 xtreg v2eltvrig i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
 eststo llpFEDF_v2eltvrig
-estout llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", label replace wrap style(tex)   
+esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", label replace tex wrap    
 
 * Polity combined scores
 * Note factor variables may not contain negative values hence
@@ -1252,14 +1252,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo idemcmiFEDJ_`stabVar'
 }
-estout idemcmiFEDJ_v2elturnhog idemcmiFEDJ_v2elturnhos idemcmiFEDJ_v2eltvrig idemcmiFEDJ_e_wbgi_pve idemcmiFEDJ_instabEvent using "${Tables}/binarydemcmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab idemcmiFEDJ_v2elturnhog idemcmiFEDJ_v2elturnhos idemcmiFEDJ_v2eltvrig idemcmiFEDJ_e_wbgi_pve idemcmiFEDJ_instabEvent using "${Tables}/binarydemcmultIndFEDJ.tex", label replace tex wrap    
 
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo idemcmiFEDF_`stabVar'
 }
-estout idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "${Tables}/binarydemcmultIndFEDF.tex", label replace wrap style(tex)   
+esttab idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "${Tables}/binarydemcmultIndFEDF.tex", label replace tex wrap    
 
 *****************************************************************************
 
@@ -1270,13 +1270,13 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' if deme_polity2 == 1, fe cluster(country)
 eststo demFEDJ_`stabVar'
 }
-estout demFEDJ_v2elturnhog demFEDJ_v2elturnhos demFEDJ_v2eltvrig demFEDJ_e_wbgi_pve demFEDJ_instabEvent using "${Tables}/democraciesFEDJ.tex", label replace wrap style(tex)   
+esttab demFEDJ_v2elturnhog demFEDJ_v2elturnhos demFEDJ_v2eltvrig demFEDJ_e_wbgi_pve demFEDJ_instabEvent using "${Tables}/democraciesFEDJ.tex", label replace tex wrap    
 * DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' if deme_polity2 == 1, fe cluster(country)
 eststo demFEDF_`stabVar'
 }
-estout demFEDF_v2elturnhog demFEDF_v2elturnhos demFEDF_v2eltvrig demFEDF_e_wbgi_pve demFEDF_instabEvent using "${Tables}/democraciesFEDF.tex", label replace wrap style(tex)   
+esttab demFEDF_v2elturnhog demFEDF_v2elturnhos demFEDF_v2eltvrig demFEDF_e_wbgi_pve demFEDF_instabEvent using "${Tables}/democraciesFEDF.tex", label replace tex wrap    
 
 * Nondemocracies
 * DJ
@@ -1284,13 +1284,13 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' if deme_polity2 == 0, fe cluster(country)
 eststo nondemFEDJ_`stabVar'
 }
-estout nondemFEDJ_v2elturnhog nondemFEDJ_v2elturnhos nondemFEDJ_v2eltvrig nondemFEDJ_e_wbgi_pve nondemFEDJ_instabEvent using "${Tables}/nondemocraciesFEDJ.tex", label replace wrap style(tex)   
+esttab nondemFEDJ_v2elturnhog nondemFEDJ_v2elturnhos nondemFEDJ_v2eltvrig nondemFEDJ_e_wbgi_pve nondemFEDJ_instabEvent using "${Tables}/nondemocraciesFEDJ.tex", label replace tex wrap    
 * DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' if deme_polity2 == 0, fe cluster(country)
 eststo nondemFEDF_`stabVar'
 }
-estout nondemFEDF_v2elturnhog nondemFEDF_v2elturnhos nondemFEDF_v2eltvrig nondemFEDF_e_wbgi_pve nondemFEDF_instabEvent using "${Tables}/nondemocraciesFEDF.tex", label replace wrap style(tex)   
+esttab nondemFEDF_v2elturnhog nondemFEDF_v2elturnhos nondemFEDF_v2eltvrig nondemFEDF_e_wbgi_pve nondemFEDF_instabEvent using "${Tables}/nondemocraciesFEDF.tex", label replace tex wrap    
 
 * Bring all of these together edit for binary democracy
 *DJ
@@ -1298,7 +1298,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo c.lvaw_gar##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo ifullicmiFEDJ_`stabVar'
 }
-estout ifullicmiFEDJ_v2elturnhog ifullicmiFEDJ_v2elturnhos ifullicmiFEDJ_v2eltvrig ifullicmiFEDJ_e_wbgi_pve ifullicmiFEDJ_instabEvent using "${Tables}/ifullicmultIndFEDJ.tex", label replace wrap style(tex)   
+esttab ifullicmiFEDJ_v2elturnhog ifullicmiFEDJ_v2elturnhos ifullicmiFEDJ_v2eltvrig ifullicmiFEDJ_e_wbgi_pve ifullicmiFEDJ_instabEvent using "${Tables}/ifullicmultIndFEDJ.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1307,7 +1307,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo i.irregtd##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo ifullicmiFEDF_`stabVar'
 }
-estout ifullicmiFEDF_v2elturnhog ifullicmiFEDF_v2elturnhos ifullicmiFEDF_v2eltvrig ifullicmiFEDF_e_wbgi_pve ifullicmiFEDF_instabEvent using "${Tables}/ifullicmultIndFEDF.tex", label replace wrap style(tex)   
+esttab ifullicmiFEDF_v2elturnhog ifullicmiFEDF_v2elturnhos ifullicmiFEDF_v2eltvrig ifullicmiFEDF_e_wbgi_pve ifullicmiFEDF_instabEvent using "${Tables}/ifullicmultIndFEDF.tex", label replace tex wrap    
 
 eststo clear
 
@@ -1327,14 +1327,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDJ_`stabVar'
 }
-estout lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", label replace wrap style(tex)  
+esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", label replace tex wrap   
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDF_`stabVar'
 }
-estout lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", label replace wrap style(tex)  
+esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", label replace tex wrap   
 eststo clear
 
 * Ordinal regression (logistic), random effects
@@ -1348,7 +1348,7 @@ eststo ordLogv2elturnhosDJ: margins, dydx(`primCommInstVarsDJ') post
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo ordLogv2eltvrigDJ: margins, dydx(`primCommInstVarsDJ') post
 
-estout ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", label replace wrap style(tex)   
+esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", label replace tex wrap    
 eststo clear
 
 *DF
@@ -1360,7 +1360,7 @@ eststo ordLogv2elturnhosDF: margins, dydx(`primCommInstVarsDF') post
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo ordLogv2eltvrigDF: margins, dydx(`primCommInstVarsDF') post
 
-estout ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", label replace wrap style(tex)   
+esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", label replace tex wrap    
 eststo clear
 
 * Lagged Ordinal Logit: Margins computation does not run.
@@ -1378,7 +1378,7 @@ eststo lagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDJ
 
-estout lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", label replace wrap style(tex)  
+esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", label replace tex wrap   
 eststo clear
 
 *DF
@@ -1395,13 +1395,13 @@ eststo lagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDF
 
-estout lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", label replace wrap style(tex)  
+esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", label replace tex wrap   
 eststo clear
 
 * Lagged Bin Stab Logit: Margins computation does not run.
 *xtlogit binstabEvent `primCommInstVars' L(1/10).lvaw_gar L(1/10).RRrate L(1/10).irregtd, fe
 *eststo mlaglf_binstabEvent: margins, dydx(`primCommInstVars' L(1/10).lvaw_gar L(1/10).RRrate L(1/10).irregtd) post
-*estout laglf_binstabEvent using "${Tables}/laglogBinInstabEvent.tex", label replace wrap style(tex)   
+*esttab laglf_binstabEvent using "${Tables}/laglogBinInstabEvent.tex", label replace tex wrap    
 
 * Arellano Bond Specification
 
@@ -1418,26 +1418,26 @@ reg v2elturnhog irregtd, robust
 eststo a11
 xtreg v2elturnhog irregtd, fe vce(cluster country)
 eststo a12
-estout a11 a12 using "${Tables}/irregtdHOGalone.tex", label replace wrap style(tex)   
+esttab a11 a12 using "${Tables}/irregtdHOGalone.tex", label replace tex wrap    
 
 reg v2elturnhog tinoff, robust
 eststo a21
 xtreg v2elturnhog tinoff, fe vce(cluster country)
 eststo a22
-estout a21 a22 using "${Tables}/timeinoffHOGalone.tex", label replace wrap style(tex)   
+esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", label replace tex wrap    
 
 * Recreating more appendix tables: RRrate and WB alone, RRrate and instabevent alone
 reg e_wbgi_pve RRrate, robust
 eststo wbRROLS
 xtreg e_wbgi_pve RRrate, fe vce(cluster country)
 eststo wbRRFE
-estout wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", label replace wrap style(tex)   
+esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", label replace tex wrap    
 
 reg instabEvent RRrate, robust
 eststo instabRROLS
 xtreg instabEvent RRrate, fe vce(cluster country)
 eststo instabRRFE
-estout instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", label replace wrap style(tex)   
+esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", label replace tex wrap    
 
 * Capture ordered logit coeffs
 duplicates drop country year, force
@@ -1451,7 +1451,7 @@ eststo cordLogv2elturnhosDJ
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo cordLogv2eltvrigDJ
 
-estout cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", label replace wrap style(tex)   
+esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", label replace tex wrap    
 eststo clear
 
 *DF
@@ -1462,7 +1462,7 @@ eststo cordLogv2elturnhosDF
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo cordLogv2eltvrigDF
 
-estout cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", label replace wrap style(tex)   
+esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", label replace tex wrap    
 eststo clear
 
 *****************************************************************************
@@ -1491,14 +1491,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, fe vce(cluster country)
 eststo intlagsDJ`stabVar'
 }
-estout intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", label replace wrap style(tex)   
+esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", label replace tex wrap    
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).DFinteraction, fe vce(cluster country)
 eststo intlagsDF`stabVar'
 }
-estout intlagsDFv2elturnhog intlagsDFv2elturnhos intlagsDFv2eltvrig intlagsDFe_wbgi_pve intlagsDFinstabEvent using "${Tables}/intlagsDF.tex", label replace wrap style(tex)  
+esttab intlagsDFv2elturnhog intlagsDFv2elturnhos intlagsDFv2eltvrig intlagsDFe_wbgi_pve intlagsDFinstabEvent using "${Tables}/intlagsDF.tex", label replace tex wrap   
 eststo clear
 
 *XT Logit models
@@ -1516,7 +1516,7 @@ eststo intlagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, vce(cluster country)
 eststo intlaglogInstabDJ
 
-estout intlagordLogv2elturnhogDJ intlagordLogv2elturnhosDJ intlagordLogv2eltvrigDJ intlaglogInstabDJ using "${Tables}/intlagordLogLogDJ.tex", label replace wrap style(tex)  
+esttab intlagordLogv2elturnhogDJ intlagordLogv2elturnhosDJ intlagordLogv2eltvrigDJ intlaglogInstabDJ using "${Tables}/intlagordLogLogDJ.tex", label replace tex wrap   
 eststo clear
 
 *DF
@@ -1533,7 +1533,7 @@ eststo intlagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).DFinteraction, vce(cluster country)
 eststo intlaglogInstabDF
 
-estout intlagordLogv2elturnhogDF intlagordLogv2elturnhosDF intlagordLogv2eltvrigDF intlaglogInstabDF using "${Tables}/intlagordLogLogDF.tex", label replace wrap style(tex)  
+esttab intlagordLogv2elturnhogDF intlagordLogv2elturnhosDF intlagordLogv2eltvrigDF intlaglogInstabDF using "${Tables}/intlagordLogLogDF.tex", label replace tex wrap   
 eststo clear
 
 * IVs split sample always
@@ -1552,7 +1552,7 @@ eststo demIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs_instabEvent
 
-estout demIfivs_v2elturnhog demIfivs_v2elturnhos demIfivs_v2eltvrig demIfivs_e_wbgi_pve demIfivs_instabEvent using "${Tables}/demIfivs.tex", label replace wrap style(tex)   
+esttab demIfivs_v2elturnhog demIfivs_v2elturnhos demIfivs_v2eltvrig demIfivs_e_wbgi_pve demIfivs_instabEvent using "${Tables}/demIfivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
@@ -1566,7 +1566,7 @@ eststo demIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs2_instabEvent
 
-estout demIfivs2_v2elturnhog demIfivs2_v2elturnhos demIfivs2_v2eltvrig demIfivs2_e_wbgi_pve demIfivs2_instabEvent using "${Tables}/demIfivs2.tex", label replace wrap style(tex)   
+esttab demIfivs2_v2elturnhog demIfivs2_v2elturnhos demIfivs2_v2eltvrig demIfivs2_e_wbgi_pve demIfivs2_instabEvent using "${Tables}/demIfivs2.tex", label replace tex wrap    
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
@@ -1580,7 +1580,7 @@ eststo demIfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust noconstant
 eststo demIfivs3_instabEvent
 
-estout demIfivs3_v2elturnhog demIfivs3_v2elturnhos demIfivs3_v2eltvrig demIfivs3_e_wbgi_pve demIfivs3_instabEvent using "${Tables}/demIfivs3.tex", label replace wrap style(tex)   
+esttab demIfivs3_v2elturnhog demIfivs3_v2elturnhos demIfivs3_v2eltvrig demIfivs3_e_wbgi_pve demIfivs3_instabEvent using "${Tables}/demIfivs3.tex", label replace tex wrap    
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
@@ -1592,7 +1592,7 @@ eststo demIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs4_e_wbgi_pve
 
-estout demIfivs4_v2elturnhog demIfivs4_v2elturnhos demIfivs4_v2eltvrig demIfivs4_e_wbgi_pve using "${Tables}/demIfivs4.tex", label replace wrap style(tex)   
+esttab demIfivs4_v2elturnhog demIfivs4_v2elturnhos demIfivs4_v2eltvrig demIfivs4_e_wbgi_pve using "${Tables}/demIfivs4.tex", label replace tex wrap    
 
 *Nondemocracies
 * De jure independence check
@@ -1607,7 +1607,7 @@ eststo ndemIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
 eststo ndemIfivs_instabEvent
 
-estout ndemIfivs_v2elturnhog ndemIfivs_v2elturnhos ndemIfivs_v2eltvrig ndemIfivs_e_wbgi_pve ndemIfivs_instabEvent using "${Tables}/ndemIfivs.tex", label replace wrap style(tex)   
+esttab ndemIfivs_v2elturnhog ndemIfivs_v2elturnhos ndemIfivs_v2eltvrig ndemIfivs_e_wbgi_pve ndemIfivs_instabEvent using "${Tables}/ndemIfivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
@@ -1621,7 +1621,7 @@ eststo ndemIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
 eststo ndemIfivs2_instabEvent
 
-estout ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIfivs2_e_wbgi_pve ndemIfivs2_instabEvent using "${Tables}/ndemIfivs2.tex", label replace wrap style(tex)   
+esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIfivs2_e_wbgi_pve ndemIfivs2_instabEvent using "${Tables}/ndemIfivs2.tex", label replace tex wrap    
 
 * Try the OECD instrument, with de jure cbi
 * NO OBSERVATIONS!!!
@@ -1636,7 +1636,7 @@ estout ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIf
 *ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 0, robust noconstant
 *eststo ndemIfivs3_instabEvent
 
-*estout ndemIfivs3_v2elturnhog ndemIfivs3_v2elturnhos ndemIfivs3_v2eltvrig ndemIfivs3_e_wbgi_pve ndemIfivs3_instabEvent using "${Tables}/ndemIfivs3.tex", label replace wrap style(tex)   
+*esttab ndemIfivs3_v2elturnhog ndemIfivs3_v2elturnhos ndemIfivs3_v2eltvrig ndemIfivs3_e_wbgi_pve ndemIfivs3_instabEvent using "${Tables}/ndemIfivs3.tex", label replace tex wrap    
 
 * OECD instrument with de facto cbi
 *ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 0, robust
@@ -1648,7 +1648,7 @@ estout ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIf
 *ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 0, robust
 *eststo ndemIfivs4_e_wbgi_pve
 
-*estout ndemIfivs4_v2elturnhog ndemIfivs4_v2elturnhos ndemIfivs4_v2eltvrig ndemIfivs4_e_wbgi_pve using "${Tables}/ndemIfivs4.tex", label replace wrap style(tex)   
+*esttab ndemIfivs4_v2elturnhog ndemIfivs4_v2elturnhos ndemIfivs4_v2eltvrig ndemIfivs4_e_wbgi_pve using "${Tables}/ndemIfivs4.tex", label replace tex wrap    
 
 
 * IVs and a cap controls investigation
@@ -1666,7 +1666,7 @@ eststo hiKfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if highka_open, robust
 eststo hiKfivs_instabEvent
 
-estout hiKfivs_v2elturnhog hiKfivs_v2elturnhos hiKfivs_v2eltvrig hiKfivs_e_wbgi_pve hiKfivs_instabEvent using "${Tables}/hiKfivs.tex", label replace wrap style(tex)   
+esttab hiKfivs_v2elturnhog hiKfivs_v2elturnhos hiKfivs_v2eltvrig hiKfivs_e_wbgi_pve hiKfivs_instabEvent using "${Tables}/hiKfivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if highka_open, robust
@@ -1680,7 +1680,7 @@ eststo hiKfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if highka_open, robust
 eststo hiKfivs2_instabEvent
 
-estout hiKfivs2_v2elturnhog hiKfivs2_v2elturnhos hiKfivs2_v2eltvrig hiKfivs2_e_wbgi_pve hiKfivs2_instabEvent using "${Tables}/hiKfivs2.tex", label replace wrap style(tex)   
+esttab hiKfivs2_v2elturnhog hiKfivs2_v2elturnhos hiKfivs2_v2eltvrig hiKfivs2_e_wbgi_pve hiKfivs2_instabEvent using "${Tables}/hiKfivs2.tex", label replace tex wrap    
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if highka_open, robust
@@ -1694,7 +1694,7 @@ eststo hiKfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if highka_open, robust noconstant
 eststo hiKfivs3_instabEvent
 
-estout hiKfivs3_v2elturnhog hiKfivs3_v2elturnhos hiKfivs3_v2eltvrig hiKfivs3_e_wbgi_pve hiKfivs3_instabEvent using "${Tables}/hiKfivs3.tex", label replace wrap style(tex)   
+esttab hiKfivs3_v2elturnhog hiKfivs3_v2elturnhos hiKfivs3_v2eltvrig hiKfivs3_e_wbgi_pve hiKfivs3_instabEvent using "${Tables}/hiKfivs3.tex", label replace tex wrap    
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if highka_open, robust
@@ -1706,7 +1706,7 @@ eststo hiKfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if highka_open, robust
 eststo hiKfivs4_e_wbgi_pve
 
-estout hiKfivs4_v2elturnhog hiKfivs4_v2elturnhos hiKfivs4_v2eltvrig hiKfivs4_e_wbgi_pve using "${Tables}/hiKfivs4.tex", label replace wrap style(tex)   
+esttab hiKfivs4_v2elturnhog hiKfivs4_v2elturnhos hiKfivs4_v2eltvrig hiKfivs4_e_wbgi_pve using "${Tables}/hiKfivs4.tex", label replace tex wrap    
 
 * Low Kaopen
 * De jure independence check
@@ -1721,7 +1721,7 @@ eststo lowKIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs_instabEvent
 
-estout lowKIfivs_v2elturnhog lowKIfivs_v2elturnhos lowKIfivs_v2eltvrig lowKIfivs_e_wbgi_pve lowKIfivs_instabEvent using "${Tables}/lowKIfivs.tex", label replace wrap style(tex)   
+esttab lowKIfivs_v2elturnhog lowKIfivs_v2elturnhos lowKIfivs_v2eltvrig lowKIfivs_e_wbgi_pve lowKIfivs_instabEvent using "${Tables}/lowKIfivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if !highka_open, robust
@@ -1735,7 +1735,7 @@ eststo lowKIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs2_instabEvent
 
-estout lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIfivs2_e_wbgi_pve lowKIfivs2_instabEvent using "${Tables}/lowKIfivs2.tex", label replace wrap style(tex)   
+esttab lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIfivs2_e_wbgi_pve lowKIfivs2_instabEvent using "${Tables}/lowKIfivs2.tex", label replace tex wrap    
 
 * Try the OECD instrument, with de jure cbi
 *ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
@@ -1749,7 +1749,7 @@ estout lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIf
 *ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if !highka_open, robust noconstant
 *eststo lowKIfivs3_instabEvent
 
-*estout lowKIfivs3_v2elturnhog lowKIfivs3_v2elturnhos lowKIfivs3_v2eltvrig lowKIfivs3_e_wbgi_pve lowKIfivs3_instabEvent using "${Tables}/lowKIfivs3.tex", label replace wrap style(tex)   
+*esttab lowKIfivs3_v2elturnhog lowKIfivs3_v2elturnhos lowKIfivs3_v2eltvrig lowKIfivs3_e_wbgi_pve lowKIfivs3_instabEvent using "${Tables}/lowKIfivs3.tex", label replace tex wrap    
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
@@ -1761,7 +1761,7 @@ eststo lowKIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs4_e_wbgi_pve
 
-estout lowKIfivs4_v2elturnhog lowKIfivs4_v2elturnhos lowKIfivs4_v2eltvrig lowKIfivs4_e_wbgi_pve using "${Tables}/lowKIfivs4.tex", label replace wrap style(tex)   
+esttab lowKIfivs4_v2elturnhog lowKIfivs4_v2elturnhos lowKIfivs4_v2eltvrig lowKIfivs4_e_wbgi_pve using "${Tables}/lowKIfivs4.tex", label replace tex wrap    
 
 * Lags and a democracy investigation
 
@@ -1778,14 +1778,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' e_polity2 demDJinteraction demRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDJinteraction L(1/10).demRRinteraction, fe vce(cluster country)
 eststo demintlagsDJ_`stabVar'
 }
-estout demintlagsDJ_v2elturnhog demintlagsDJ_v2elturnhos demintlagsDJ_v2eltvrig demintlagsDJ_e_wbgi_pve demintlagsDJ_instabEvent using "${Tables}/demintlagsDJ.tex", label replace wrap style(tex)  
+esttab demintlagsDJ_v2elturnhog demintlagsDJ_v2elturnhos demintlagsDJ_v2eltvrig demintlagsDJ_e_wbgi_pve demintlagsDJ_instabEvent using "${Tables}/demintlagsDJ.tex", label replace tex wrap   
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' demDFinteraction demRRinteraction e_polity2 L(1/10).irregtd L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDFinteraction L(1/10).demRRinteraction, fe vce(cluster country)
 eststo demintlagsDF_`stabVar'
 }
-estout demintlagsDF_v2elturnhog demintlagsDF_v2elturnhos demintlagsDF_v2eltvrig demintlagsDF_e_wbgi_pve demintlagsDF_instabEvent using "${Tables}/demintlagsDF.tex", label replace wrap style(tex)  
+esttab demintlagsDF_v2elturnhog demintlagsDF_v2elturnhos demintlagsDF_v2eltvrig demintlagsDF_e_wbgi_pve demintlagsDF_instabEvent using "${Tables}/demintlagsDF.tex", label replace tex wrap   
 eststo clear
 
 *XT Logit models
@@ -1803,7 +1803,7 @@ eststo demintlagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' e_polity2 demDJinteraction demRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDJinteraction L(1/10).demRRinteraction, vce(cluster country)
 eststo demintlaglogInstabDJ
 
-estout demIntLOLogHOGDJ demIntLOLogHOSDJ demintlagordLogLHDJ demintlaglogInstabDJ using "${Tables}/demintlagordLogLogDJ.tex", label replace wrap style(tex)  
+esttab demIntLOLogHOGDJ demIntLOLogHOSDJ demintlagordLogLHDJ demintlaglogInstabDJ using "${Tables}/demintlagordLogLogDJ.tex", label replace tex wrap   
 eststo clear
 
 *DF
@@ -1820,7 +1820,7 @@ eststo demintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' e_polity2 demDFinteraction demRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).e_polity2 L(1/10).demDFinteraction L(1/10).demRRinteraction, vce(cluster country)
 eststo demintlaglogInstabDF
 
-estout demintlagordLogHOGDF demintlagordLogHOSDF demintlagordLogLHDF demintlaglogInstabDF using "${Tables}/demintlagordLogLogDF.tex", label replace wrap style(tex)  
+esttab demintlagordLogHOGDF demintlagordLogHOSDF demintlagordLogLHDF demintlaglogInstabDF using "${Tables}/demintlagordLogLogDF.tex", label replace tex wrap   
 eststo clear
 
 * Lags and a cap controls investigation
@@ -1842,14 +1842,14 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDJ' ka_open kapDJinteraction kapRRinteraction DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).ka_open L(1/10).kapDJinteraction L(1/10).kapRRinteraction L(1/10).DJinteraction, fe vce(cluster country)
     eststo kapintlagsDJ_`stabVar'
 }
-estout kapintlagsDJ_v2elturnhog kapintlagsDJ_v2elturnhos kapintlagsDJ_v2eltvrig kapintlagsDJ_e_wbgi_pve kapintlagsDJ_instabEvent using "${Tables}/kapintlagsDJ.tex", label replace wrap style(tex)  
+esttab kapintlagsDJ_v2elturnhog kapintlagsDJ_v2elturnhos kapintlagsDJ_v2eltvrig kapintlagsDJ_e_wbgi_pve kapintlagsDJ_instabEvent using "${Tables}/kapintlagsDJ.tex", label replace tex wrap   
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF' ka_open kapDFinteraction kapRRinteraction DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).ka_open L(1/10).kapDFinteraction L(1/10).kapRRinteraction L(1/10).DFinteraction, fe vce(cluster country)
     eststo kapintlagsDF_`stabVar'
 }
-estout kapintlagsDF_v2elturnhog kapintlagsDF_v2elturnhos kapintlagsDF_v2eltvrig kapintlagsDF_e_wbgi_pve kapintlagsDF_instabEvent using "${Tables}/kapintlagsDF.tex", label replace wrap style(tex)  
+esttab kapintlagsDF_v2elturnhog kapintlagsDF_v2elturnhos kapintlagsDF_v2eltvrig kapintlagsDF_e_wbgi_pve kapintlagsDF_instabEvent using "${Tables}/kapintlagsDF.tex", label replace tex wrap   
 eststo clear
 
 *XT Logit models
@@ -1867,7 +1867,7 @@ eststo kapintlagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' ka_open kapDJinteraction kapRRinteraction DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).ka_open L(1/10).kapDJinteraction L(1/10).kapRRinteraction L(1/10).DJinteraction, vce(cluster country)
 eststo kapintlaglogInstabDJ
 
-estout kapintlagordLogHOGDJ kapintlagordLogHOSDJ kapintlagordLogLHDJ kapintlaglogInstabDJ using "${Tables}/kapintlagordLogLogDJ.tex", label replace wrap style(tex)  
+esttab kapintlagordLogHOGDJ kapintlagordLogHOSDJ kapintlagordLogLHDJ kapintlaglogInstabDJ using "${Tables}/kapintlagordLogLogDJ.tex", label replace tex wrap   
 eststo clear
 
 *DF
@@ -1884,7 +1884,7 @@ eststo kapintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' ka_open kapDFinteraction kapRRinteraction DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).ka_open L(1/10).kapDFinteraction L(1/10).kapRRinteraction L(1/10).DFinteraction, vce(cluster country)
 eststo kapintlaglogInstabDF
 
-estout kapintlagordLogHOGDF kapintlagordLogHOSDF kapintlagordLogLHDF kapintlaglogInstabDF using "${Tables}/kapintlagordLogLogDF.tex", label replace wrap style(tex)  
+esttab kapintlagordLogHOGDF kapintlagordLogHOSDF kapintlagordLogLHDF kapintlaglogInstabDF using "${Tables}/kapintlagordLogLogDF.tex", label replace tex wrap   
 eststo clear
 
 * IVs HOS=HOG (v2exhoshog)
@@ -1902,7 +1902,7 @@ eststo hoshogfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs_instabEvent
 
-estout hoshogfivs_v2elturnhog hoshogfivs_v2elturnhos hoshogfivs_v2eltvrig hoshogfivs_e_wbgi_pve hoshogfivs_instabEvent using "${Tables}/hoshogfivs.tex", label replace wrap style(tex)   
+esttab hoshogfivs_v2elturnhog hoshogfivs_v2elturnhos hoshogfivs_v2eltvrig hoshogfivs_e_wbgi_pve hoshogfivs_instabEvent using "${Tables}/hoshogfivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 1, robust
@@ -1916,7 +1916,7 @@ eststo hoshogfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs2_instabEvent
 
-estout hoshogfivs2_v2elturnhog hoshogfivs2_v2elturnhos hoshogfivs2_v2eltvrig hoshogfivs2_e_wbgi_pve hoshogfivs2_instabEvent using "${Tables}/hoshogfivs2.tex", label replace wrap style(tex)   
+esttab hoshogfivs2_v2elturnhog hoshogfivs2_v2elturnhos hoshogfivs2_v2eltvrig hoshogfivs2_e_wbgi_pve hoshogfivs2_instabEvent using "${Tables}/hoshogfivs2.tex", label replace tex wrap    
 
 /*
 * Try the OECD instrument, with de jure cbi
@@ -1931,7 +1931,7 @@ eststo hoshogfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust noconstant
 eststo hoshogfivs3_instabEvent
 
-estout hoshogfivs3_v2elturnhog hoshogfivs3_v2elturnhos hoshogfivs3_v2eltvrig hoshogfivs3_e_wbgi_pve hoshogfivs3_instabEvent using "${Tables}/hoshogfivs3.tex", label replace wrap style(tex)   
+esttab hoshogfivs3_v2elturnhog hoshogfivs3_v2elturnhos hoshogfivs3_v2eltvrig hoshogfivs3_e_wbgi_pve hoshogfivs3_instabEvent using "${Tables}/hoshogfivs3.tex", label replace tex wrap    
 */
 
 * OECD instrument with de facto cbi
@@ -1944,7 +1944,7 @@ eststo hoshogfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs4_e_wbgi_pve
 
-estout hoshogfivs4_v2elturnhog hoshogfivs4_v2elturnhos hoshogfivs4_v2eltvrig hoshogfivs4_e_wbgi_pve using "${Tables}/hoshogfivs4.tex", label replace wrap style(tex)   
+esttab hoshogfivs4_v2elturnhog hoshogfivs4_v2elturnhos hoshogfivs4_v2eltvrig hoshogfivs4_e_wbgi_pve using "${Tables}/hoshogfivs4.tex", label replace tex wrap    
 
 *HOS NOT HOG
 * De jure independence check
@@ -1959,7 +1959,7 @@ eststo NOhoshogIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs_instabEvent
 
-estout NOhoshogIfivs_v2elturnhog NOhoshogIfivs_v2elturnhos NOhoshogIfivs_v2eltvrig NOhoshogIfivs_e_wbgi_pve NOhoshogIfivs_instabEvent using "${Tables}/NOhoshogIfivs.tex", label replace wrap style(tex)   
+esttab NOhoshogIfivs_v2elturnhog NOhoshogIfivs_v2elturnhos NOhoshogIfivs_v2eltvrig NOhoshogIfivs_e_wbgi_pve NOhoshogIfivs_instabEvent using "${Tables}/NOhoshogIfivs.tex", label replace tex wrap    
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 0, robust
@@ -1973,7 +1973,7 @@ eststo NOhoshogIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs2_instabEvent
 
-estout NOhoshogIfivs2_v2elturnhog NOhoshogIfivs2_v2elturnhos NOhoshogIfivs2_v2eltvrig NOhoshogIfivs2_e_wbgi_pve NOhoshogIfivs2_instabEvent using "${Tables}/NOhoshogIfivs2.tex", label replace wrap style(tex)   
+esttab NOhoshogIfivs2_v2elturnhog NOhoshogIfivs2_v2elturnhos NOhoshogIfivs2_v2eltvrig NOhoshogIfivs2_e_wbgi_pve NOhoshogIfivs2_instabEvent using "${Tables}/NOhoshogIfivs2.tex", label replace tex wrap    
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
@@ -1987,7 +1987,7 @@ eststo NOhoshogIfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust noconstant
 eststo NOhoshogIfivs3_instabEvent
 
-estout NOhoshogIfivs3_v2elturnhog NOhoshogIfivs3_v2elturnhos NOhoshogIfivs3_v2eltvrig NOhoshogIfivs3_e_wbgi_pve NOhoshogIfivs3_instabEvent using "${Tables}/NOhoshogIfivs3.tex", label replace wrap style(tex)   
+esttab NOhoshogIfivs3_v2elturnhog NOhoshogIfivs3_v2elturnhos NOhoshogIfivs3_v2eltvrig NOhoshogIfivs3_e_wbgi_pve NOhoshogIfivs3_instabEvent using "${Tables}/NOhoshogIfivs3.tex", label replace tex wrap    
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
@@ -1999,7 +1999,7 @@ eststo NOhoshogIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs4_e_wbgi_pve
 
-estout NOhoshogIfivs4_v2elturnhog NOhoshogIfivs4_v2elturnhos NOhoshogIfivs4_v2eltvrig NOhoshogIfivs4_e_wbgi_pve using "${Tables}/NOhoshogIfivs4.tex", label replace wrap style(tex)   
+esttab NOhoshogIfivs4_v2elturnhog NOhoshogIfivs4_v2elturnhos NOhoshogIfivs4_v2eltvrig NOhoshogIfivs4_e_wbgi_pve using "${Tables}/NOhoshogIfivs4.tex", label replace tex wrap    
 
 * IVS LHPractice
 * SADLY LOWER CHAMBER LEGISLATES IN PRACTICE IS A CONTINUOUS VARIABLE- figure out interaction term and IV simultaneously? Or make it binary and split sample.
@@ -2019,14 +2019,14 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDJ' v2exhoshog hoshogDJinteraction hoshogRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDJinteraction L(1/10).hoshogRRinteraction, fe vce(cluster country)
     eststo sglagDJ_`stabVar'
 }
-estout sglagDJ_v2elturnhog sglagDJ_v2elturnhos sglagDJ_v2eltvrig sglagDJ_e_wbgi_pve sglagDJ_instabEvent using "${Tables}/hoshogintlagsDJ.tex", label replace wrap style(tex)  
+esttab sglagDJ_v2elturnhog sglagDJ_v2elturnhos sglagDJ_v2eltvrig sglagDJ_e_wbgi_pve sglagDJ_instabEvent using "${Tables}/hoshogintlagsDJ.tex", label replace tex wrap   
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF' hoshogDFinteraction hoshogRRinteraction v2exhoshog L(1/10).irregtd L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDFinteraction L(1/10).hoshogRRinteraction, fe vce(cluster country)
     eststo sglagDF_`stabVar'
 }
-estout sglagDF_v2elturnhog sglagDF_v2elturnhos sglagDF_v2eltvrig sglagDF_e_wbgi_pve sglagDF_instabEvent using "${Tables}/hoshogintlagsDF.tex", label replace wrap style(tex)  
+esttab sglagDF_v2elturnhog sglagDF_v2elturnhos sglagDF_v2eltvrig sglagDF_e_wbgi_pve sglagDF_instabEvent using "${Tables}/hoshogintlagsDF.tex", label replace tex wrap   
 eststo clear
 
 *XT Logit models
@@ -2044,7 +2044,7 @@ eststo sglagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' v2exhoshog hoshogDJinteraction hoshogRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDJinteraction L(1/10).hoshogRRinteraction, vce(cluster country)
 eststo sglaglogInstabDJ
 
-estout sglagordLogHOGDJ sglagordLogHOSDJ sglagordLogLHDJ sglaglogInstabDJ using "${Tables}/hoshogintlagordLogLogDJ.tex", label replace wrap style(tex)  
+esttab sglagordLogHOGDJ sglagordLogHOSDJ sglagordLogLHDJ sglaglogInstabDJ using "${Tables}/hoshogintlagordLogLogDJ.tex", label replace tex wrap   
 eststo clear
 
 *DF
@@ -2061,7 +2061,7 @@ eststo sglagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' v2exhoshog hoshogDFinteraction hoshogRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).v2exhoshog L(1/10).hoshogDFinteraction L(1/10).hoshogRRinteraction, vce(cluster country)
 eststo sglaglogInstabDF
 
-estout sglagordLogHOGDF sglagordLogHOSDF sglagordLogLHDF sglaglogInstabDF using "${Tables}/hoshogintlagordLogLogDF.tex", label replace wrap style(tex)  
+esttab sglagordLogHOGDF sglagordLogHOSDF sglagordLogLHDF sglaglogInstabDF using "${Tables}/hoshogintlagordLogLogDF.tex", label replace tex wrap   
 eststo clear
 
 * Lags LHPractice (v2lglegplo)
@@ -2079,14 +2079,14 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDJ' v2lglegplo llpDJinteraction llpRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDJinteraction L(1/10).llpRRinteraction, fe vce(cluster country)
     eststo llpintlagsDJ_`stabVar'
 }
-estout llpintlagsDJ_v2elturnhog llpintlagsDJ_v2elturnhos llpintlagsDJ_v2eltvrig llpintlagsDJ_e_wbgi_pve llpintlagsDJ_instabEvent using "${Tables}/llpintlagsDJ.tex", label replace wrap style(tex)  
+esttab llpintlagsDJ_v2elturnhog llpintlagsDJ_v2elturnhos llpintlagsDJ_v2eltvrig llpintlagsDJ_e_wbgi_pve llpintlagsDJ_instabEvent using "${Tables}/llpintlagsDJ.tex", label replace tex wrap   
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' llpDFinteraction llpRRinteraction v2lglegplo L(1/10).irregtd L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDFinteraction L(1/10).llpRRinteraction, fe vce(cluster country)
 eststo llpintlagsDF_`stabVar'
 }
-estout llpintlagsDF_v2elturnhog llpintlagsDF_v2elturnhos llpintlagsDF_v2eltvrig llpintlagsDF_e_wbgi_pve llpintlagsDF_instabEvent using "${Tables}/llpintlagsDF.tex", label replace wrap style(tex)  
+esttab llpintlagsDF_v2elturnhog llpintlagsDF_v2elturnhos llpintlagsDF_v2eltvrig llpintlagsDF_e_wbgi_pve llpintlagsDF_instabEvent using "${Tables}/llpintlagsDF.tex", label replace tex wrap   
 eststo clear
 
 *XT Logit models
@@ -2104,7 +2104,7 @@ eststo llpintlagordLogLHDJ
 xtlogit binstabEvent `primCommInstVarsDJ' v2lglegplo llpDJinteraction llpRRinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDJinteraction L(1/10).llpRRinteraction, vce(cluster country)
 eststo llpintlaglogInstabDJ
 
-estout llpintlagordLogHOGDJ llpintlagordLogHOSDJ llpintlagordLogLHDJ llpintlaglogInstabDJ using "${Tables}/llpintlagordLogDJ.tex", label replace wrap style(tex)  
+esttab llpintlagordLogHOGDJ llpintlagordLogHOSDJ llpintlagordLogLHDJ llpintlaglogInstabDJ using "${Tables}/llpintlagordLogDJ.tex", label replace tex wrap   
 eststo clear
 
 *DF
@@ -2121,7 +2121,7 @@ eststo llpintlagordLogLHDF
 xtlogit binstabEvent `primCommInstVarsDF' v2lglegplo llpDFinteraction llpRRinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).v2lglegplo L(1/10).llpDFinteraction L(1/10).llpRRinteraction, vce(cluster country)
 eststo llpintlaglogInstabDF
 
-estout llpintlagordLogHOGDF llpintlagordLogHOSDF llpintlagordLogLHDF llpintlaglogInstabDF using "${Tables}/llpintlagordLogDF.tex", label replace wrap style(tex)  
+esttab llpintlagordLogHOGDF llpintlagordLogHOSDF llpintlagordLogLHDF llpintlaglogInstabDF using "${Tables}/llpintlagordLogDF.tex", label replace tex wrap   
 eststo clear
 
 save "${Intermediate_Data}/CR_Adequate", replace

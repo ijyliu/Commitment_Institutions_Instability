@@ -1,10 +1,33 @@
-                    &ordLogv2elturnhogDJ&ordLogv2elturnhosDJ&ordLogv2eltvrigDJ\\
-                    &           b&           b&           b\\
-De Jure CBI (CNW Index)&            &            &            \\
-1._predict          &   -.1458306&   -.2079982&   -.3162625\\
-2._predict          &    .0152021&    .0389939&    .0979976\\
-3._predict          &    .1306285&    .1690043&    .2182649\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&            &            &            \\
-1._predict          &    .0079217&    .0089644&    .0039218\\
-2._predict          &   -.0008258&   -.0016806&   -.0012152\\
-3._predict          &   -.0070959&   -.0072839&   -.0027066\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{} &\multicolumn{1}{c}{} &\multicolumn{1}{c}{} \\
+\hline
+De Jure CBI (CNW Index)&                     &                     &                     \\
+1.\_predict          &      -0.146         &      -0.208\sym{***}&      -0.316\sym{***}\\
+                    &     (-1.93)         &     (-3.54)         &     (-3.65)         \\
+[1em]
+2.\_predict          &      0.0152         &      0.0390\sym{***}&      0.0980\sym{**} \\
+                    &      (1.80)         &      (3.32)         &      (3.21)         \\
+[1em]
+3.\_predict          &       0.131         &       0.169\sym{***}&       0.218\sym{***}\\
+                    &      (1.93)         &      (3.47)         &      (3.68)         \\
+\hline
+Exchange Rate Classification (RR inverted, higher = more fixed)&                     &                     &                     \\
+1.\_predict          &     0.00792\sym{*}  &     0.00896\sym{**} &     0.00392         \\
+                    &      (2.45)         &      (3.21)         &      (0.96)         \\
+[1em]
+2.\_predict          &   -0.000826\sym{*}  &    -0.00168\sym{**} &    -0.00122         \\
+                    &     (-2.22)         &     (-3.00)         &     (-0.96)         \\
+[1em]
+3.\_predict          &    -0.00710\sym{*}  &    -0.00728\sym{**} &    -0.00271         \\
+                    &     (-2.46)         &     (-3.18)         &     (-0.96)         \\
+\hline
+Observations        &        1399         &        1399         &        1141         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

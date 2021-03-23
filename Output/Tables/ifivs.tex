@@ -1,5 +1,22 @@
-                    &ifivs_v2elturnhog&ifivs_v2elturnhos&ifivs_v2eltvrig&ifivs_e_wbgi_pve&ifivs_instabEvent\\
-                    &           b&           b&           b&           b&           b\\
-De Jure CBI (CNW Index)&    .6286488&    -.477511&    .8470718&    6.975892&    .8346557\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0066935&    .0170952&    .0265665&    -.086539&   -.0295125\\
-_cons               &    .4012366&    .5758146&    .0635869&   -3.421503&    .2918424\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+De Jure CBI (CNW    &       0.629         &      -0.478         &       0.847\sym{*}  &       6.976\sym{***}&       0.835\sym{***}\\
+Index)              &      (1.55)         &     (-1.42)         &      (1.97)         &     (13.27)         &      (4.30)         \\
+[1em]
+Exchange Rate       &    -0.00669         &      0.0171         &      0.0266         &     -0.0865\sym{**} &     -0.0295         \\
+Classification (RR inverted, higher = more fixed)&     (-0.19)         &      (0.51)         &      (0.76)         &     (-2.84)         &     (-1.66)         \\
+[1em]
+Constant            &       0.401         &       0.576\sym{*}  &      0.0636         &      -3.422\sym{***}&       0.292         \\
+                    &      (1.28)         &      (2.01)         &      (0.22)         &     (-9.22)         &      (1.65)         \\
+\hline
+Observations        &         851         &         851         &         686         &        1865         &        2047         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

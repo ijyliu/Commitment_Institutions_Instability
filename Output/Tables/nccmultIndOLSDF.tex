@@ -1,10 +1,37 @@
-                    &nccmiolsDF_v2elturnhog&nccmiolsDF_v2elturnhos&nccmiolsDF_v2eltvrig&nccmiolsDF_e_wbgi_pve&nccmiolsDF_instabEvent\\
-                    &           b&           b&           b&           b&           b\\
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -.4173896&   -.3363115&   -.3733638&    .0349437&    .0462787\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0075532&   -.0298003&    .0205888&    .0231095&    .0154975\\
-Regional government exists   &    .0269012&    .1058407&   -.0907593&   -.2168101&    .1208701\\
-Horizontal accountability index&    .2609415&    .0956713&    .1977999&    .5833021&   -.0292294\\
-Checks and Balances &    .0115285&   -.0040285&    .0271397&   -.0619833&    .0018482\\
-Autonomous Regions  &    .1702702&     .050763&   -.0081665&    -.299595&    .0071405\\
-State Government Authority over Taxing, Spending, or Legislating&   -.2328654&   -.2806123&   -.1432611&   -.0379147&   -.0312708\\
-_cons               &    1.040835&    .9933582&    .7943915&   -.2535567&     .111703\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\hline
+(Lack of) Irregular &      -0.417\sym{***}&      -0.336\sym{**} &      -0.373\sym{**} &      0.0349         &      0.0463         \\
+CB Governor Turnover (higher = more de facto CBI)&     (-3.56)         &     (-3.08)         &     (-3.14)         &      (0.36)         &      (1.29)         \\
+[1em]
+Exchange Rate       &    -0.00755         &     -0.0298\sym{***}&      0.0206\sym{*}  &      0.0231\sym{***}&      0.0155\sym{***}\\
+Classification (RR inverted, higher = more fixed)&     (-0.89)         &     (-3.75)         &      (2.41)         &      (3.91)         &      (5.22)         \\
+[1em]
+Regional government &      0.0269         &       0.106         &     -0.0908         &      -0.217\sym{**} &       0.121\sym{***}\\
+exists              &      (0.22)         &      (1.06)         &     (-0.80)         &     (-2.86)         &      (3.33)         \\
+[1em]
+Horizontal          &       0.261\sym{***}&      0.0957\sym{**} &       0.198\sym{***}&       0.583\sym{***}&     -0.0292         \\
+accountability index&      (6.26)         &      (2.75)         &      (4.33)         &     (20.43)         &     (-1.83)         \\
+[1em]
+Checks and Balances &      0.0115         &    -0.00403         &      0.0271         &     -0.0620\sym{***}&     0.00185         \\
+                    &      (0.45)         &     (-0.24)         &      (1.18)         &     (-4.16)         &      (0.20)         \\
+[1em]
+Autonomous Regions  &       0.170         &      0.0508         &    -0.00817         &      -0.300\sym{***}&     0.00714         \\
+                    &      (1.45)         &      (0.48)         &     (-0.08)         &     (-4.94)         &      (0.18)         \\
+[1em]
+State Government    &      -0.233\sym{**} &      -0.281\sym{***}&      -0.143         &     -0.0379         &     -0.0313         \\
+Authority over Taxing, Spending, or Legislating&     (-2.64)         &     (-3.50)         &     (-1.52)         &     (-0.65)         &     (-1.03)         \\
+[1em]
+Constant            &       1.041\sym{***}&       0.993\sym{***}&       0.794\sym{***}&      -0.254         &       0.112\sym{*}  \\
+                    &      (6.17)         &      (6.54)         &      (4.81)         &     (-1.90)         &      (2.22)         \\
+\hline
+Observations        &         563         &         563         &         477         &         993         &        1416         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

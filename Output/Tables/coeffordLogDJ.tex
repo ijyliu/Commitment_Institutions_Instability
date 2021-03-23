@@ -1,11 +1,32 @@
-                    &cordLogv2elturnhogDJ&cordLogv2elturnhosDJ&cordLogv2eltvrigDJ\\
-                    &           b&           b&           b\\
-main                &            &            &            \\
-De Jure CBI (CNW Index)&    .7396378&    1.770663&    1.461196\\
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0401779&   -.0763131&   -.0181196\\
-cut1                &            &            &            \\
-_cons               &    .7180639&    2.233636&    .7613471\\
-cut2                &            &            &            \\
-_cons               &    1.119402&    2.747611&    2.077346\\
-sigma2_u            &            &            &            \\
-_cons               &    .7981592&    2.574562&    .5899596\\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}\\
+\hline
+main                &                     &                     &                     \\
+De Jure CBI (CNW    &       0.740         &       1.771\sym{***}&       1.461\sym{***}\\
+Index)              &      (1.90)         &      (3.59)         &      (3.60)         \\
+[1em]
+Exchange Rate       &     -0.0402\sym{*}  &     -0.0763\sym{**} &     -0.0181         \\
+Classification (RR inverted, higher = more fixed)&     (-2.42)         &     (-3.26)         &     (-0.96)         \\
+\hline
+cut1                &                     &                     &                     \\
+Constant            &       0.718\sym{**} &       2.234\sym{***}&       0.761\sym{**} \\
+                    &      (3.13)         &      (6.68)         &      (3.03)         \\
+\hline
+cut2                &                     &                     &                     \\
+Constant            &       1.119\sym{***}&       2.748\sym{***}&       2.077\sym{***}\\
+                    &      (4.75)         &      (8.23)         &      (8.12)         \\
+\hline
+sigma2\_u            &                     &                     &                     \\
+Constant            &       0.798\sym{***}&       2.575\sym{***}&       0.590\sym{***}\\
+                    &      (3.96)         &      (4.61)         &      (3.78)         \\
+\hline
+Observations        &        1399         &        1399         &        1141         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
