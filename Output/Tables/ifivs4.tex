@@ -1,21 +1,21 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular}{l*{4}{c}}
-\hline\hline
-                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
-                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}\\
-\hline
-(Lack of) Irregular &      -18.95         &      -5.278         &       19.37         &      -7.488         \\
-CB Governor Turnover (higher = more de facto CBI)&     (-0.83)         &     (-0.40)         &      (0.80)         &     (-0.66)         \\
-[1em]
-Exchange Rate       &      0.0129         &     -0.0133         &       0.131\sym{*}  &      0.0659         \\
-Classification (RR inverted, higher = more fixed)&      (0.22)         &     (-0.25)         &      (2.07)         &      (1.16)         \\
-[1em]
-Constant            &       19.38         &       5.799         &      -19.06         &       7.212         \\
-                    &      (0.85)         &      (0.44)         &     (-0.79)         &      (0.64)         \\
-\hline
-Observations        &          59         &          59         &          52         &         187         \\
-\hline\hline
+\toprule
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}\\
+\midrule
+(Lack of)       &   -18.95         &   -5.278         &    19.37         &   -7.488         \\
+Irregular CB Governor Turnover (higher = more de facto CBI)&  (-0.83)         &  (-0.40)         &   (0.80)         &  (-0.66)         \\
+\addlinespace
+Exchange Rate   &   0.0129         &  -0.0133         &    0.131\sym{*}  &   0.0659         \\
+Classification (RR inverted, higher = more fixed)&   (0.22)         &  (-0.25)         &   (2.07)         &   (1.16)         \\
+\addlinespace
+Constant        &    19.38         &    5.799         &   -19.06         &    7.212         \\
+                &   (0.85)         &   (0.44)         &  (-0.79)         &   (0.64)         \\
+\midrule
+Observations    &       59         &       59         &       52         &      187         \\
+\bottomrule
 \multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}

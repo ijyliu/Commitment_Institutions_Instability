@@ -1,21 +1,21 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular}{l*{5}{c}}
-\hline\hline
-                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
-                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\hline
-(Lack of) Irregular &       1.205         &      -0.435         &      -0.244         &      -7.957\sym{**} &       241.5         \\
-CB Governor Turnover (higher = more de facto CBI)&      (0.76)         &     (-0.48)         &     (-0.19)         &     (-3.03)         &      (0.01)         \\
-[1em]
-Exchange Rate       &     -0.0404         &      0.0184         &     -0.0473         &      -0.106         &      -16.01         \\
-Classification (RR inverted, higher = more fixed)&     (-0.75)         &      (0.53)         &     (-0.82)         &     (-1.22)         &     (-0.01)         \\
-[1em]
-Constant            &      0.0372         &       0.640         &       1.349         &       7.554\sym{**} &      -84.95         \\
-                    &      (0.02)         &      (0.71)         &      (1.10)         &      (2.89)         &     (-0.01)         \\
-\hline
-Observations        &         391         &         392         &         312         &         916         &        1010         \\
-\hline\hline
+\toprule
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\midrule
+(Lack of)       &    1.205         &   -0.435         &   -0.244         &   -7.957\sym{**} &    241.5         \\
+Irregular CB Governor Turnover (higher = more de facto CBI)&   (0.76)         &  (-0.48)         &  (-0.19)         &  (-3.03)         &   (0.01)         \\
+\addlinespace
+Exchange Rate   &  -0.0404         &   0.0184         &  -0.0473         &   -0.106         &   -16.01         \\
+Classification (RR inverted, higher = more fixed)&  (-0.75)         &   (0.53)         &  (-0.82)         &  (-1.22)         &  (-0.01)         \\
+\addlinespace
+Constant        &   0.0372         &    0.640         &    1.349         &    7.554\sym{**} &   -84.95         \\
+                &   (0.02)         &   (0.71)         &   (1.10)         &   (2.89)         &  (-0.01)         \\
+\midrule
+Observations    &      391         &      392         &      312         &      916         &     1010         \\
+\bottomrule
 \multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}

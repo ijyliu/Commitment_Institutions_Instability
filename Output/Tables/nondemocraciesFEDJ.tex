@@ -1,21 +1,21 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular}{l*{5}{c}}
-\hline\hline
-                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
-                    &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\hline
-De Jure CBI (CNW    &       0.245         &       0.127         &       0.297         &      -0.486         &       1.217\sym{**} \\
-Index)              &      (0.55)         &      (0.30)         &      (0.58)         &     (-1.61)         &      (3.30)         \\
-[1em]
-Exchange Rate       &     -0.0172         &     -0.0161\sym{*}  &     -0.0327\sym{*}  &      0.0278\sym{**} &    0.000476         \\
-Classification (RR inverted, higher = more fixed)&     (-1.65)         &     (-2.28)         &     (-2.38)         &      (2.70)         &      (0.06)         \\
-[1em]
-Constant            &       0.278         &       0.230         &       0.556\sym{*}  &      -0.554\sym{**} &      -0.133         \\
-                    &      (1.17)         &      (1.23)         &      (2.16)         &     (-3.31)         &     (-0.88)         \\
-\hline
-Observations        &         401         &         401         &         311         &         585         &        1710         \\
-\hline\hline
+\toprule
+                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
+\midrule
+De Jure CBI (CNW&    0.245         &    0.127         &    0.297         &   -0.486         &    1.217\sym{**} \\
+Index)          &   (0.55)         &   (0.30)         &   (0.58)         &  (-1.61)         &   (3.30)         \\
+\addlinespace
+Exchange Rate   &  -0.0172         &  -0.0161\sym{*}  &  -0.0327\sym{*}  &   0.0278\sym{**} & 0.000476         \\
+Classification (RR inverted, higher = more fixed)&  (-1.65)         &  (-2.28)         &  (-2.38)         &   (2.70)         &   (0.06)         \\
+\addlinespace
+Constant        &    0.278         &    0.230         &    0.556\sym{*}  &   -0.554\sym{**} &   -0.133         \\
+                &   (1.17)         &   (1.23)         &   (2.16)         &  (-3.31)         &  (-0.88)         \\
+\midrule
+Observations    &      401         &      401         &      311         &      585         &     1710         \\
+\bottomrule
 \multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
