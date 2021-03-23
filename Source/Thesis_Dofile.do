@@ -1214,14 +1214,14 @@ foreach stabVar in `HOSHOGStabVars' {
 xtreg `stabVar' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDJ_`stabVar'
 }
-esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", title(\label{hoshogmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `HOSHOGStabVars' {
 xtreg `stabVar' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDF_`stabVar'
 }
-esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", title(\label{hoshogmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 * WHAT IN THE WORLD IS GOING ON?
 browse if v2exhoshog == 0
@@ -1232,11 +1232,11 @@ eststo clear
 *DJ
 xtreg v2eltvrig c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
 eststo llpFEDJ_v2eltvrig
-esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", title(\label{llpFEDJ}) label replace compress booktabs wrap varwidth(40)
 *DF
 xtreg v2eltvrig i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
 eststo llpFEDF_v2eltvrig
-esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", title(\label{llpFEDF}) label replace compress booktabs wrap varwidth(40)
 
 * Polity combined scores
 * Note factor variables may not contain negative values hence
@@ -1252,14 +1252,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo idemcmiFEDJ_`stabVar'
 }
-esttab idemcmiFEDJ_v2elturnhog idemcmiFEDJ_v2elturnhos idemcmiFEDJ_v2eltvrig idemcmiFEDJ_e_wbgi_pve idemcmiFEDJ_instabEvent using "${Tables}/binarydemcmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab idemcmiFEDJ_v2elturnhog idemcmiFEDJ_v2elturnhos idemcmiFEDJ_v2eltvrig idemcmiFEDJ_e_wbgi_pve idemcmiFEDJ_instabEvent using "${Tables}/binarydemcmultIndFEDJ.tex", title(\label{binarydemcmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo idemcmiFEDF_`stabVar'
 }
-esttab idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "${Tables}/binarydemcmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab idemcmiFEDF_v2elturnhog idemcmiFEDF_v2elturnhos idemcmiFEDF_v2eltvrig idemcmiFEDF_e_wbgi_pve idemcmiFEDF_instabEvent using "${Tables}/binarydemcmultIndFEDF.tex", title(\label{binarydemcmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 *****************************************************************************
 
@@ -1270,13 +1270,13 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' if deme_polity2 == 1, fe cluster(country)
 eststo demFEDJ_`stabVar'
 }
-esttab demFEDJ_v2elturnhog demFEDJ_v2elturnhos demFEDJ_v2eltvrig demFEDJ_e_wbgi_pve demFEDJ_instabEvent using "${Tables}/democraciesFEDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab demFEDJ_v2elturnhog demFEDJ_v2elturnhos demFEDJ_v2eltvrig demFEDJ_e_wbgi_pve demFEDJ_instabEvent using "${Tables}/democraciesFEDJ.tex", title(\label{democraciesFEDJ}) label replace compress booktabs wrap varwidth(40)
 * DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' if deme_polity2 == 1, fe cluster(country)
 eststo demFEDF_`stabVar'
 }
-esttab demFEDF_v2elturnhog demFEDF_v2elturnhos demFEDF_v2eltvrig demFEDF_e_wbgi_pve demFEDF_instabEvent using "${Tables}/democraciesFEDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab demFEDF_v2elturnhog demFEDF_v2elturnhos demFEDF_v2eltvrig demFEDF_e_wbgi_pve demFEDF_instabEvent using "${Tables}/democraciesFEDF.tex", title(\label{democraciesFEDF}) label replace compress booktabs wrap varwidth(40)
 
 * Nondemocracies
 * DJ
@@ -1284,13 +1284,13 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' if deme_polity2 == 0, fe cluster(country)
 eststo nondemFEDJ_`stabVar'
 }
-esttab nondemFEDJ_v2elturnhog nondemFEDJ_v2elturnhos nondemFEDJ_v2eltvrig nondemFEDJ_e_wbgi_pve nondemFEDJ_instabEvent using "${Tables}/nondemocraciesFEDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab nondemFEDJ_v2elturnhog nondemFEDJ_v2elturnhos nondemFEDJ_v2eltvrig nondemFEDJ_e_wbgi_pve nondemFEDJ_instabEvent using "${Tables}/nondemocraciesFEDJ.tex", title(\label{nondemocraciesFEDJ}) label replace compress booktabs wrap varwidth(40)
 * DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' if deme_polity2 == 0, fe cluster(country)
 eststo nondemFEDF_`stabVar'
 }
-esttab nondemFEDF_v2elturnhog nondemFEDF_v2elturnhos nondemFEDF_v2eltvrig nondemFEDF_e_wbgi_pve nondemFEDF_instabEvent using "${Tables}/nondemocraciesFEDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab nondemFEDF_v2elturnhog nondemFEDF_v2elturnhos nondemFEDF_v2eltvrig nondemFEDF_e_wbgi_pve nondemFEDF_instabEvent using "${Tables}/nondemocraciesFEDF.tex", title(\label{nondemocraciesFEDF}) label replace compress booktabs wrap varwidth(40)
 
 * Bring all of these together edit for binary democracy
 *DJ
@@ -1298,7 +1298,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo c.lvaw_gar##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo ifullicmiFEDJ_`stabVar'
 }
-esttab ifullicmiFEDJ_v2elturnhog ifullicmiFEDJ_v2elturnhos ifullicmiFEDJ_v2eltvrig ifullicmiFEDJ_e_wbgi_pve ifullicmiFEDJ_instabEvent using "${Tables}/ifullicmultIndFEDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab ifullicmiFEDJ_v2elturnhog ifullicmiFEDJ_v2elturnhos ifullicmiFEDJ_v2eltvrig ifullicmiFEDJ_e_wbgi_pve ifullicmiFEDJ_instabEvent using "${Tables}/ifullicmultIndFEDJ.tex", title(\label{ifullicmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1307,7 +1307,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo i.irregtd##i.deme_polity2 c.RRrate##i.deme_polity2, fe cluster(country)
 eststo ifullicmiFEDF_`stabVar'
 }
-esttab ifullicmiFEDF_v2elturnhog ifullicmiFEDF_v2elturnhos ifullicmiFEDF_v2eltvrig ifullicmiFEDF_e_wbgi_pve ifullicmiFEDF_instabEvent using "${Tables}/ifullicmultIndFEDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab ifullicmiFEDF_v2elturnhog ifullicmiFEDF_v2elturnhos ifullicmiFEDF_v2eltvrig ifullicmiFEDF_e_wbgi_pve ifullicmiFEDF_instabEvent using "${Tables}/ifullicmultIndFEDF.tex", title(\label{ifullicmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1327,14 +1327,14 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDJ_`stabVar'
 }
-esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", label replace compress longtable
+esttab lagsDJ_v2elturnhog lagsDJ_v2elturnhos lagsDJ_v2eltvrig lagsDJ_e_wbgi_pve lagsDJ_instabEvent using "${Tables}/lagsDJ.tex", title(\label{lagsDJ}) label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, fe vce(cluster country)
 eststo lagsDF_`stabVar'
 }
-esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", label replace compress longtable
+esttab lagsDF_v2elturnhog lagsDF_v2elturnhos lagsDF_v2eltvrig lagsDF_e_wbgi_pve lagsDF_instabEvent using "${Tables}/lagsDF.tex", title(\label{lagsDF}) label replace compress longtable
 eststo clear
 
 * Ordinal regression (logistic), random effects
@@ -1348,7 +1348,7 @@ eststo ordLogv2elturnhosDJ: margins, dydx(`primCommInstVarsDJ') post
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo ordLogv2eltvrigDJ: margins, dydx(`primCommInstVarsDJ') post
 
-esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(\label{ordLogDJ}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *DF
@@ -1360,7 +1360,7 @@ eststo ordLogv2elturnhosDF: margins, dydx(`primCommInstVarsDF') post
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo ordLogv2eltvrigDF: margins, dydx(`primCommInstVarsDF') post
 
-esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(\label{ordLogDF}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 * Lagged Ordinal Logit: Margins computation does not run.
@@ -1378,7 +1378,7 @@ eststo lagordLogv2eltvrigDJ
 xtlogit binstabEvent `primCommInstVarsDJ' L(1/10).lvaw_gar L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDJ
 
-esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", label replace compress longtable
+esttab lagordLogv2elturnhogDJ lagordLogv2elturnhosDJ lagordLogv2eltvrigDJ laglogInstabDJ using "${Tables}/lagordLogLogDJ.tex", title(\label{lagordLogLogDJ}) label replace compress longtable
 eststo clear
 
 *DF
@@ -1395,7 +1395,7 @@ eststo lagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' L(1/10).irregtd L(1/10).RRrate, vce(cluster country)
 eststo laglogInstabDF
 
-esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", label replace compress longtable
+esttab lagordLogv2elturnhogDF lagordLogv2elturnhosDF lagordLogv2eltvrigDF laglogInstabDF using "${Tables}/lagordLogLogDF.tex", title(\label{lagordLogLogDF}) label replace compress longtable
 eststo clear
 
 * Lagged Bin Stab Logit: Margins computation does not run.
@@ -1409,7 +1409,7 @@ eststo clear
 
 * Summary Statistics for the entire dataset
 estpost sum
-esttab . using "${Tables}/sumstatsAll.tex", label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
+esttab . using "${Tables}/sumstatsAll.tex", title(\label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
 
 use "${Intermediate_Data}/latepriorities_Ready", clear
 
