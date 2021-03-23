@@ -1,32 +1,11 @@
-{
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular*}{\linewidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{3}{c}}
-\toprule
-                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
-                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}\\
-\midrule
-main            &                  &                  &                  \\
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -0.372\sym{*}  &   -0.295         &   -0.544\sym{**} \\
-                &  (-2.22)         &  (-1.31)         &  (-3.14)         \\
-\addlinespace
-Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0195         &  -0.0392         &   0.0202         \\
-                &  (-1.32)         &  (-1.96)         &   (1.19)         \\
-\midrule
-cut1            &                  &                  &                  \\
-Constant        &    0.168         &    1.317\sym{***}&   -0.176         \\
-                &   (0.80)         &   (4.23)         &  (-0.83)         \\
-\midrule
-cut2            &                  &                  &                  \\
-Constant        &    0.577\sym{**} &    1.833\sym{***}&    0.996\sym{***}\\
-                &   (2.81)         &   (5.95)         &   (4.54)         \\
-\midrule
-sigma2\_u        &                  &                  &                  \\
-Constant        &    0.843\sym{***}&    2.690\sym{***}&    0.610\sym{***}\\
-                &   (4.67)         &   (5.03)         &   (4.29)         \\
-\midrule
-Observations    &     1651         &     1651         &     1334         \\
-\bottomrule
-\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
-\end{tabular*}
-}
+                    &cordLogv2elturnhogDF&cordLogv2elturnhosDF&cordLogv2eltvrigDF\\
+                    &           b&           b&           b\\
+main                &            &            &            \\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&    -.371935&   -.2951545&    -.544013\\
+Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0194792&   -.0392166&    .0202089\\
+cut1                &            &            &            \\
+_cons               &    .1677442&    1.316815&   -.1760637\\
+cut2                &            &            &            \\
+_cons               &    .5772288&     1.83336&    .9956914\\
+sigma2_u            &            &            &            \\
+_cons               &    .8434139&    2.690005&    .6100503\\

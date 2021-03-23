@@ -1,22 +1,5 @@
-{
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular*}{\linewidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
-\toprule
-                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
-                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\midrule
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -0.842         &   -2.290\sym{*}  &    0.452         &    23.30\sym{*}  &    9.329         \\
-                &  (-0.87)         &  (-2.07)         &   (0.53)         &   (2.43)         &   (0.98)         \\
-\addlinespace
-Exchange Rate Classification (RR inverted, higher = more fixed)&   0.0120         &  -0.0157         &   0.0775\sym{**} &    0.252         &   0.0354         \\
-                &   (0.39)         &  (-0.44)         &   (2.77)         &   (1.65)         &   (0.35)         \\
-\addlinespace
-Constant        &    1.492         &    2.673\sym{**} &   -0.134         &   -23.09\sym{*}  &   -7.906         \\
-                &   (1.72)         &   (2.76)         &  (-0.17)         &  (-2.49)         &  (-0.91)         \\
-\midrule
-Observations    &      716         &      715         &      596         &     1582         &     1387         \\
-\bottomrule
-\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
-\end{tabular*}
-}
+                    &demIfivs2_v2elturnhog&demIfivs2_v2elturnhos&demIfivs2_v2eltvrig&demIfivs2_e_wbgi_pve&demIfivs2_instabEvent\\
+                    &           b&           b&           b&           b&           b\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -.8419318&   -2.289557&    .4521762&    23.30232&    9.328988\\
+Exchange Rate Classification (RR inverted, higher = more fixed)&    .0119517&   -.0157008&    .0774808&    .2519216&    .0353563\\
+_cons               &    1.492012&    2.672976&   -.1336206&   -23.09345&   -7.906109\\

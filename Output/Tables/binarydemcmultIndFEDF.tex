@@ -1,55 +1,16 @@
-{
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular*}{\linewidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
-\toprule
-                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
-                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\midrule
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)& -0.00453         &   0.0342         &  -0.0344         &   0.0646         &  -0.0156         \\
-                &  (-0.05)         &   (0.42)         &  (-0.26)         &   (1.21)         &  (-0.51)         \\
-\addlinespace
-Exchange Rate Classification (RR inverted, higher = more fixed)&  0.00369         &  -0.0150         & -0.00334         &   0.0280\sym{*}  &  0.00649         \\
-                &   (0.37)         &  (-1.74)         &  (-0.26)         &   (2.49)         &   (1.15)         \\
-\addlinespace
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=0&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=1&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-deme\_polity2=0  &        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-deme\_polity2=1  &    0.684\sym{***}&    0.458\sym{**} &    0.568\sym{**} &    0.405\sym{**} &  -0.0167         \\
-                &   (4.33)         &   (3.14)         &   (3.02)         &   (2.65)         &  (-0.23)         \\
-\addlinespace
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=0 $\times$ deme\_polity2=0&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=0 $\times$ deme\_polity2=1&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=1 $\times$ deme\_polity2=0&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=1 $\times$ deme\_polity2=1&   -0.173         &  -0.0557         &   -0.184         &  -0.0770         &   0.0672         \\
-                &  (-1.42)         &  (-0.54)         &  (-1.17)         &  (-1.30)         &   (1.63)         \\
-\addlinespace
-Exchange Rate Classification (RR inverted, higher = more fixed)&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-deme\_polity2=0 $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&        0         &        0         &        0         &        0         &        0         \\
-                &      (.)         &      (.)         &      (.)         &      (.)         &      (.)         \\
-\addlinespace
-deme\_polity2=1 $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0105         &  0.00244         &  0.00600         &  -0.0178         &   0.0121         \\
-                &  (-0.85)         &   (0.22)         &   (0.40)         &  (-1.43)         &   (1.60)         \\
-\addlinespace
-Constant        &    0.315\sym{*}  &    0.183         &    0.437\sym{**} &   -0.578\sym{***}&    0.243\sym{***}\\
-                &   (2.61)         &   (1.69)         &   (2.79)         &  (-4.56)         &   (4.10)         \\
-\midrule
-Observations    &     1515         &     1515         &     1244         &     2483         &     4233         \\
-\bottomrule
-\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
-\end{tabular*}
-}
+                    &idemcmiFEDF_v2elturnhog&idemcmiFEDF_v2elturnhos&idemcmiFEDF_v2eltvrig&idemcmiFEDF_e_wbgi_pve&idemcmiFEDF_instabEvent\\
+                    &           b&           b&           b&           b&           b\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -.0045265&    .0342002&   -.0344313&    .0645841&   -.0156367\\
+Exchange Rate Classification (RR inverted, higher = more fixed)&    .0036939&   -.0149636&   -.0033444&    .0280463&     .006494\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=0&           0&           0&           0&           0&           0\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=1&           0&           0&           0&           0&           0\\
+deme_polity2=0      &           0&           0&           0&           0&           0\\
+deme_polity2=1      &    .6835502&    .4583149&    .5675341&    .4053301&   -.0166645\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=0 $\times$ deme_polity2=0&           0&           0&           0&           0&           0\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=0 $\times$ deme_polity2=1&           0&           0&           0&           0&           0\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=1 $\times$ deme_polity2=0&           0&           0&           0&           0&           0\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)=1 $\times$ deme_polity2=1&   -.1729918&   -.0557398&    -.183619&    -.076951&    .0671738\\
+Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
+deme_polity2=0 $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&           0&           0&           0&           0&           0\\
+deme_polity2=1 $\times$ Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0104628&    .0024433&    .0059956&   -.0178131&     .012054\\
+_cons               &    .3146251&    .1825091&    .4373799&   -.5779665&    .2434848\\

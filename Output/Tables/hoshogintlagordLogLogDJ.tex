@@ -1,198 +1,67 @@
-{
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{longtable}{l*{4}{c}}
-\hline\hline\endfirsthead\hline\endhead\hline\endfoot\endlastfoot
-                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
-                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\hline
-main            &                  &                  &                  &                  \\
-De Jure CBI (CNW Index)&    1.092         &    3.678         &    3.737         &    2.984\sym{*}  \\
-                &   (0.65)         &   (1.34)         &   (1.63)         &   (1.98)         \\
-[1em]
-Exchange Rate Classification (RR inverted, higher = more fixed)&   -0.110         &  -0.0274         &  -0.0888         &   0.0367         \\
-                &  (-1.19)         &  (-0.17)         &  (-0.97)         &   (0.66)         \\
-[1em]
-HOS = HOG       &   -0.221         &    3.748         &   -2.086         &    0.353         \\
-                &  (-0.15)         &   (1.35)         &  (-1.50)         &   (0.32)         \\
-[1em]
-De Jure CBI * HOS = HOG&   -2.460         &   -2.454         &   -0.677         &   -2.195         \\
-                &  (-0.90)         &  (-0.68)         &  (-0.26)         &  (-1.09)         \\
-[1em]
-More Fixed Rate * HOS = HOG&  -0.0751         &   -0.202         &   0.0766         &  -0.0312         \\
-                &  (-0.73)         &  (-1.08)         &   (0.83)         &  (-0.44)         \\
-[1em]
-L.De Jure CBI (CNW Index)&    0.931         &   -0.752         &   -0.775         &   -0.628         \\
-                &   (0.40)         &  (-0.23)         &  (-0.28)         &  (-0.48)         \\
-[1em]
-L2.De Jure CBI (CNW Index)&   -1.847         &    1.700         &   -1.543         &    0.134         \\
-                &  (-1.01)         &   (0.84)         &  (-0.74)         &   (0.12)         \\
-[1em]
-L3.De Jure CBI (CNW Index)&   -0.473         &   -2.842         &   -0.119         &    6.002\sym{**} \\
-                &  (-0.25)         &  (-1.29)         &  (-0.07)         &   (3.26)         \\
-[1em]
-L4.De Jure CBI (CNW Index)&    1.865         &   -0.593         &   -1.708         &   -0.694         \\
-                &   (0.74)         &  (-0.19)         &  (-0.80)         &  (-1.31)         \\
-[1em]
-L5.De Jure CBI (CNW Index)&   -0.914         &   -0.225         &    0.787         &   -0.211         \\
-                &  (-0.32)         &  (-0.07)         &   (0.34)         &  (-0.40)         \\
-[1em]
-L6.De Jure CBI (CNW Index)&   -2.418         &    1.136         &    0.918         &    0.854         \\
-                &  (-0.87)         &   (0.35)         &   (0.51)         &   (0.90)         \\
-[1em]
-L7.De Jure CBI (CNW Index)&    2.674         &   -12.15         &    1.207         &    1.404         \\
-                &   (0.95)         &  (-1.73)         &   (0.52)         &   (1.25)         \\
-[1em]
-L8.De Jure CBI (CNW Index)&   -1.972         &    13.22\sym{*}  &    1.106         &    7.675\sym{*}  \\
-                &  (-0.66)         &   (2.00)         &   (0.51)         &   (2.06)         \\
-[1em]
-L9.De Jure CBI (CNW Index)&   -4.117         &   -0.470         &   -3.064         &    4.836         \\
-                &  (-1.52)         &  (-0.21)         &  (-1.65)         &   (1.84)         \\
-[1em]
-L10.De Jure CBI (CNW Index)&    5.822\sym{*}  &   -0.666         &    0.914         &    1.405         \\
-                &   (2.56)         &  (-0.35)         &   (0.55)         &   (0.45)         \\
-[1em]
-L.Exchange Rate Classification (RR inverted, higher = more fixed)&    0.173         &    0.175         &    0.150         &   0.0127         \\
-                &   (1.36)         &   (0.85)         &   (1.46)         &   (0.44)         \\
-[1em]
-L2.Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0941         &   -0.123         &   0.0413         &   0.0637         \\
-                &  (-1.04)         &  (-0.80)         &   (0.49)         &   (1.41)         \\
-[1em]
-L3.Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0183         &  -0.0282         &  -0.0978         &  -0.0910\sym{*}  \\
-                &  (-0.21)         &  (-0.18)         &  (-1.04)         &  (-2.03)         \\
-[1em]
-L4.Exchange Rate Classification (RR inverted, higher = more fixed)&    0.157         &    0.150         &  -0.0559         &  0.00877         \\
-                &   (1.57)         &   (0.73)         &  (-0.47)         &   (0.32)         \\
-[1em]
-L5.Exchange Rate Classification (RR inverted, higher = more fixed)&   -0.198         &   0.0563         &    0.128         &   0.0340         \\
-                &  (-1.86)         &   (0.29)         &   (1.00)         &   (1.24)         \\
-[1em]
-L6.Exchange Rate Classification (RR inverted, higher = more fixed)&    0.106         &   -0.147         &  -0.0140         &   0.0213         \\
-                &   (0.99)         &  (-1.03)         &  (-0.13)         &   (0.56)         \\
-[1em]
-L7.Exchange Rate Classification (RR inverted, higher = more fixed)&   0.0758         &   0.0459         &  -0.0170         &   0.0211         \\
-                &   (0.91)         &   (0.37)         &  (-0.22)         &   (0.64)         \\
-[1em]
-L8.Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0519         &   -0.120         &  -0.0584         &   0.0438         \\
-                &  (-0.67)         &  (-1.18)         &  (-0.69)         &   (1.08)         \\
-[1em]
-L9.Exchange Rate Classification (RR inverted, higher = more fixed)&  0.00717         &   0.0198         & -0.00950         &   0.0373         \\
-                &   (0.11)         &   (0.21)         &  (-0.09)         &   (0.85)         \\
-[1em]
-L10.Exchange Rate Classification (RR inverted, higher = more fixed)&  -0.0466         &   0.0852         &   0.0550         &  -0.0161         \\
-                &  (-0.95)         &   (0.87)         &   (0.66)         &  (-0.40)         \\
-[1em]
-L.HOS = HOG     &   0.0917         &    0.716         &    5.638\sym{**} &    0.481         \\
-                &   (0.04)         &   (0.22)         &   (3.04)         &   (0.63)         \\
-[1em]
-L2.HOS = HOG    &    0.243         &    0.428         &   -3.159\sym{*}  &    0.563         \\
-                &   (0.14)         &   (0.22)         &  (-1.98)         &   (0.63)         \\
-[1em]
-L3.HOS = HOG    &    1.074         &    2.186         &    1.274         &    1.214         \\
-                &   (0.66)         &   (0.94)         &   (0.71)         &   (1.16)         \\
-[1em]
-L4.HOS = HOG    &   -1.796         &   -6.946\sym{*}  &   -6.674\sym{*}  &    0.971         \\
-                &  (-0.91)         &  (-2.18)         &  (-2.51)         &   (1.23)         \\
-[1em]
-L5.HOS = HOG    &   -1.595         &    2.925         &    4.097         &   -1.133         \\
-                &  (-0.86)         &   (1.05)         &   (1.70)         &  (-1.84)         \\
-[1em]
-L6.HOS = HOG    &   -0.902         &   -0.959         &    1.401         &   -1.199         \\
-                &  (-0.43)         &  (-0.37)         &   (0.66)         &  (-1.33)         \\
-[1em]
-L7.HOS = HOG    &    1.063         &   -5.838         &   -0.998         &    0.430         \\
-                &   (0.44)         &  (-1.40)         &  (-0.43)         &   (0.69)         \\
-[1em]
-L8.HOS = HOG    &    4.742\sym{*}  &    9.765\sym{**} &  -0.0292         &    1.543         \\
-                &   (2.22)         &   (2.95)         &  (-0.02)         &   (0.99)         \\
-[1em]
-L9.HOS = HOG    &   -6.644\sym{***}&   -5.949\sym{***}&   -0.739         &    1.116         \\
-                &  (-3.51)         &  (-3.98)         &  (-0.44)         &   (0.79)         \\
-[1em]
-L10.HOS = HOG   &    3.993\sym{**} &    3.518\sym{**} &    0.890         &    0.379         \\
-                &   (3.03)         &   (2.77)         &   (0.69)         &   (0.28)         \\
-[1em]
-L.De Jure CBI * HOS = HOG&    3.190         &    2.248         &   -6.247         &    0.802         \\
-                &   (0.88)         &   (0.48)         &  (-1.84)         &   (0.52)         \\
-[1em]
-L2.De Jure CBI * HOS = HOG&   -1.377         &   -4.215         &    5.960         &    0.171         \\
-                &  (-0.44)         &  (-1.22)         &   (1.84)         &   (0.09)         \\
-[1em]
-L3.De Jure CBI * HOS = HOG&    1.409         &    0.664         &   -3.029         &   -4.043\sym{*}  \\
-                &   (0.46)         &   (0.19)         &  (-0.71)         &  (-2.14)         \\
-[1em]
-L4.De Jure CBI * HOS = HOG&   -0.265         &    4.769         &    7.795         &   -0.934         \\
-                &  (-0.07)         &   (1.11)         &   (1.82)         &  (-0.58)         \\
-[1em]
-L5.De Jure CBI * HOS = HOG&    4.941         &    3.264         &   -1.774         &    2.140         \\
-                &   (1.45)         &   (0.82)         &  (-0.56)         &   (1.43)         \\
-[1em]
-L6.De Jure CBI * HOS = HOG&    2.327         &   -0.661         &   -2.622         &    4.413\sym{*}  \\
-                &   (0.58)         &  (-0.15)         &  (-0.73)         &   (2.23)         \\
-[1em]
-L7.De Jure CBI * HOS = HOG&   -0.902         &    12.09         &    0.949         &   -0.789         \\
-                &  (-0.18)         &   (1.56)         &   (0.23)         &  (-0.63)         \\
-[1em]
-L8.De Jure CBI * HOS = HOG&   -11.45\sym{*}  &   -25.79\sym{***}&   -1.110         &   -3.085         \\
-                &  (-2.46)         &  (-3.53)         &  (-0.29)         &  (-0.74)         \\
-[1em]
-L9.De Jure CBI * HOS = HOG&    15.42\sym{***}&    12.36\sym{***}&    2.506         &   -3.245         \\
-                &   (3.77)         &   (3.57)         &   (0.72)         &  (-0.82)         \\
-[1em]
-L10.De Jure CBI * HOS = HOG&   -9.649\sym{***}&   -2.321         &   -0.944         &   -1.680         \\
-                &  (-3.68)         &  (-0.99)         &  (-0.39)         &  (-0.48)         \\
-[1em]
-L.More Fixed Rate * HOS = HOG&   -0.156         &  -0.0786         &   -0.202         &   0.0175         \\
-                &  (-1.21)         &  (-0.36)         &  (-1.79)         &   (0.40)         \\
-[1em]
-L2.More Fixed Rate * HOS = HOG&   0.0660         &   0.0107         &  -0.0338         &  -0.0840         \\
-                &   (0.56)         &   (0.06)         &  (-0.29)         &  (-1.83)         \\
-[1em]
-L3.More Fixed Rate * HOS = HOG&   0.0634         &   0.0564         &    0.125         &   0.0274         \\
-                &   (0.59)         &   (0.32)         &   (1.00)         &   (0.48)         \\
-[1em]
-L4.More Fixed Rate * HOS = HOG&   -0.126         &  -0.0575         &   0.0735         &  -0.0739\sym{*}  \\
-                &  (-1.07)         &  (-0.27)         &   (0.59)         &  (-2.25)         \\
-[1em]
-L5.More Fixed Rate * HOS = HOG&    0.165         &   -0.110         &  -0.0950         &   0.0216         \\
-                &   (1.45)         &  (-0.55)         &  (-0.68)         &   (0.62)         \\
-[1em]
-L6.More Fixed Rate * HOS = HOG&   -0.134         &    0.154         &  -0.0880         &  -0.0274         \\
-                &  (-1.23)         &   (1.15)         &  (-0.64)         &  (-0.62)         \\
-[1em]
-L7.More Fixed Rate * HOS = HOG&  -0.0467         & -0.00562         &    0.113         &  -0.0519         \\
-                &  (-0.47)         &  (-0.04)         &   (1.12)         &  (-1.31)         \\
-[1em]
-L8.More Fixed Rate * HOS = HOG&   0.0248         &    0.107         & -0.00714         &  -0.0478         \\
-                &   (0.27)         &   (0.98)         &  (-0.06)         &  (-1.06)         \\
-[1em]
-L9.More Fixed Rate * HOS = HOG&   0.0602         & -0.00124         &  -0.0347         &0.0000626         \\
-                &   (0.70)         &  (-0.01)         &  (-0.30)         &   (0.00)         \\
-[1em]
-L10.More Fixed Rate * HOS = HOG&   0.0158         &   -0.109         & -0.00391         &  -0.0234         \\
-                &   (0.24)         &  (-0.98)         &  (-0.04)         &  (-0.39)         \\
-[1em]
-Constant        &                  &                  &                  &   -10.23\sym{***}\\
-                &                  &                  &                  &  (-4.70)         \\
-\hline
-cut1            &                  &                  &                  &                  \\
-Constant        &    0.827\sym{*}  &    4.493\sym{***}&    1.061\sym{**} &                  \\
-                &   (2.07)         &   (6.46)         &   (2.66)         &                  \\
-\hline
-cut2            &                  &                  &                  &                  \\
-Constant        &    1.268\sym{**} &    5.092\sym{***}&    2.505\sym{***}&                  \\
-                &   (3.11)         &   (7.33)         &   (5.80)         &                  \\
-\hline
-sigma2\_u        &                  &                  &                  &                  \\
-Constant        &    1.071\sym{***}&    1.740\sym{***}&    0.776\sym{**} &                  \\
-                &   (3.54)         &   (3.32)         &   (3.09)         &                  \\
-\hline
-/               &                  &                  &                  &                  \\
-lnsig2u         &                  &                  &                  &    2.562\sym{***}\\
-                &                  &                  &                  &   (7.23)         \\
-\hline
-Observations    &      968         &      968         &      798         &     2678         \\
-\hline\hline
-\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
-\end{longtable}
-}
+                    &sglagordLogHOGDJ&sglagordLogHOSDJ&sglagordLogLHDJ&sglaglogInstabDJ\\
+                    &           b&           b&           b&           b\\
+main                &            &            &            &            \\
+De Jure CBI (CNW Index)&    1.091596&    3.677602&    3.736619&    2.983542\\
+Exchange Rate Classification (RR inverted, higher = more fixed)&   -.1103744&   -.0274454&   -.0888064&    .0366974\\
+HOS = HOG           &   -.2206543&    3.748434&   -2.086039&    .3529918\\
+De Jure CBI * HOS = HOG&   -2.459692&   -2.454297&    -.676517&   -2.194936\\
+More Fixed Rate * HOS = HOG&   -.0751228&   -.2016038&    .0766444&   -.0311924\\
+L.De Jure CBI (CNW Index)&    .9314592&    -.752257&   -.7746764&   -.6284065\\
+L2.De Jure CBI (CNW Index)&   -1.847187&    1.700197&   -1.543136&    .1336514\\
+L3.De Jure CBI (CNW Index)&   -.4733958&   -2.842012&   -.1191152&    6.001516\\
+L4.De Jure CBI (CNW Index)&    1.864908&   -.5926348&   -1.707502&   -.6944457\\
+L5.De Jure CBI (CNW Index)&   -.9140002&   -.2245118&    .7874418&    -.210701\\
+L6.De Jure CBI (CNW Index)&   -2.418188&    1.136261&    .9176414&     .854077\\
+L7.De Jure CBI (CNW Index)&    2.674249&   -12.14867&    1.206936&    1.403559\\
+L8.De Jure CBI (CNW Index)&   -1.972357&    13.21972&    1.105595&     7.67479\\
+L9.De Jure CBI (CNW Index)&    -4.11669&   -.4704211&   -3.064189&    4.835801\\
+L10.De Jure CBI (CNW Index)&    5.821889&   -.6655446&    .9139122&    1.404997\\
+L.Exchange Rate Classification (RR inverted, higher = more fixed)&    .1733511&    .1748516&    .1500649&     .012675\\
+L2.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0940512&   -.1229434&    .0412777&    .0636915\\
+L3.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0182768&   -.0282148&   -.0978182&   -.0910048\\
+L4.Exchange Rate Classification (RR inverted, higher = more fixed)&    .1572057&    .1501337&   -.0559471&    .0087692\\
+L5.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.1977535&    .0563036&    .1280244&    .0339583\\
+L6.Exchange Rate Classification (RR inverted, higher = more fixed)&    .1059745&   -.1466646&   -.0139836&    .0213309\\
+L7.Exchange Rate Classification (RR inverted, higher = more fixed)&    .0758189&    .0459248&     -.01699&    .0211018\\
+L8.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0518773&   -.1201316&   -.0583704&    .0437781\\
+L9.Exchange Rate Classification (RR inverted, higher = more fixed)&    .0071679&    .0198094&   -.0094965&    .0373359\\
+L10.Exchange Rate Classification (RR inverted, higher = more fixed)&   -.0466402&    .0852162&    .0549549&   -.0161261\\
+L.HOS = HOG         &     .091743&    .7160975&    5.637965&    .4813856\\
+L2.HOS = HOG        &    .2434777&    .4279201&   -3.159335&    .5627683\\
+L3.HOS = HOG        &    1.074238&    2.186251&    1.273518&    1.213599\\
+L4.HOS = HOG        &   -1.795586&   -6.945996&   -6.673885&    .9712871\\
+L5.HOS = HOG        &   -1.595338&    2.925393&     4.09673&   -1.133483\\
+L6.HOS = HOG        &   -.9016708&   -.9591537&    1.400811&   -1.198529\\
+L7.HOS = HOG        &    1.063452&   -5.837739&   -.9978306&    .4303971\\
+L8.HOS = HOG        &    4.742127&    9.764951&   -.0291669&      1.5427\\
+L9.HOS = HOG        &   -6.643871&   -5.949171&    -.738734&    1.116344\\
+L10.HOS = HOG       &    3.992806&    3.518311&    .8903442&    .3794638\\
+L.De Jure CBI * HOS = HOG&      3.1903&    2.248288&   -6.247208&    .8022631\\
+L2.De Jure CBI * HOS = HOG&   -1.376595&   -4.215144&    5.959969&    .1706725\\
+L3.De Jure CBI * HOS = HOG&    1.409329&    .6639148&   -3.029493&   -4.043355\\
+L4.De Jure CBI * HOS = HOG&   -.2646955&    4.769374&    7.795463&   -.9335123\\
+L5.De Jure CBI * HOS = HOG&    4.941423&    3.264066&   -1.773915&    2.140397\\
+L6.De Jure CBI * HOS = HOG&     2.32742&   -.6611288&   -2.622035&    4.412681\\
+L7.De Jure CBI * HOS = HOG&   -.9017805&    12.08774&    .9493057&   -.7889466\\
+L8.De Jure CBI * HOS = HOG&   -11.45148&   -25.78571&   -1.109617&   -3.084934\\
+L9.De Jure CBI * HOS = HOG&    15.42246&    12.36489&    2.506273&   -3.244847\\
+L10.De Jure CBI * HOS = HOG&   -9.648752&   -2.320762&   -.9444372&   -1.680074\\
+L.More Fixed Rate * HOS = HOG&    -.156046&   -.0786076&   -.2022027&    .0175038\\
+L2.More Fixed Rate * HOS = HOG&    .0659928&    .0106729&   -.0337568&   -.0839852\\
+L3.More Fixed Rate * HOS = HOG&    .0634078&     .056417&    .1247265&    .0274371\\
+L4.More Fixed Rate * HOS = HOG&   -.1257701&    -.057547&    .0734654&   -.0738809\\
+L5.More Fixed Rate * HOS = HOG&    .1651066&    -.109638&   -.0949628&    .0216087\\
+L6.More Fixed Rate * HOS = HOG&   -.1340518&    .1540819&   -.0879637&   -.0274293\\
+L7.More Fixed Rate * HOS = HOG&   -.0466829&   -.0056152&    .1125682&   -.0518692\\
+L8.More Fixed Rate * HOS = HOG&    .0248325&    .1068486&   -.0071414&   -.0478018\\
+L9.More Fixed Rate * HOS = HOG&    .0601685&   -.0012432&   -.0346782&    .0000626\\
+L10.More Fixed Rate * HOS = HOG&    .0157822&   -.1094636&    -.003907&   -.0234312\\
+_cons               &            &            &            &   -10.23432\\
+cut1                &            &            &            &            \\
+_cons               &    .8268123&     4.49343&     1.06095&            \\
+cut2                &            &            &            &            \\
+_cons               &    1.267949&    5.091971&    2.505455&            \\
+sigma2_u            &            &            &            &            \\
+_cons               &    1.071081&    1.740477&    .7763242&            \\
+/                   &            &            &            &            \\
+lnsig2u             &            &            &            &    2.561982\\

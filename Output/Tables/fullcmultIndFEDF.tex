@@ -1,43 +1,12 @@
-{
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular*}{\linewidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{5}{c}}
-\toprule
-                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
-                &\multicolumn{1}{c}{Head of Govt. Turnover}&\multicolumn{1}{c}{Head of State Turnover}&\multicolumn{1}{c}{Lower House Turnover}&\multicolumn{1}{c}{WB Political Stability (Absence of Violence)}&\multicolumn{1}{c}{Instability Event Indicator}\\
-\midrule
-(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -0.332         &  -0.0672         &   -0.528\sym{*}  &   0.0745         &  -0.0254         \\
-                &  (-1.36)         &  (-0.34)         &  (-2.26)         &   (1.94)         &  (-0.43)         \\
-\addlinespace
-Exchange Rate Classification (RR inverted, higher = more fixed)&   0.0338\sym{*}  &  0.00437         &   0.0411         &  -0.0198         &   0.0427\sym{**} \\
-                &   (2.40)         &   (0.32)         &   (1.18)         &  (-1.51)         &   (3.29)         \\
-\addlinespace
-Regional government exists   &   -0.462         &    0.388         &   -0.177         &        0         &   0.0444         \\
-                &  (-1.45)         &   (1.38)         &  (-0.50)         &      (.)         &   (0.29)         \\
-\addlinespace
-Horizontal accountability index&   0.0987         &    0.246\sym{*}  &    0.439\sym{**} &   0.0655         &    0.472\sym{***}\\
-                &   (0.85)         &   (2.77)         &   (2.84)         &   (0.44)         &   (4.13)         \\
-\addlinespace
-Checks and Balances&   0.0591         &  -0.0772         &   0.0476         &  -0.0151         &  -0.0567\sym{*}  \\
-                &   (1.03)         &  (-1.83)         &   (0.97)         &  (-0.63)         &  (-2.26)         \\
-\addlinespace
-Autonomous Regions&    1.098\sym{**} &   -0.193         &    0.251         &        0         &   -0.118         \\
-                &   (3.73)         &  (-0.71)         &   (0.70)         &      (.)         &  (-1.36)         \\
-\addlinespace
-State Government Authority over Taxing, Spending, or Legislating&    0.889\sym{***}&   0.0281         &    0.130         &        0         &    0.239\sym{**} \\
-                &  (11.06)         &   (0.54)         &   (0.79)         &      (.)         &   (3.49)         \\
-\addlinespace
-Coord           &   0.0680         &    0.156         &    0.100         &  -0.0753         &  -0.0141         \\
-                &   (0.39)         &   (1.15)         &   (0.50)         &  (-1.75)         &  (-0.13)         \\
-\addlinespace
-Type            &  0.00993         &  -0.0685         &   0.0270         &    0.100\sym{*}  &  -0.0487         \\
-                &   (0.07)         &  (-1.06)         &   (0.21)         &   (2.23)         &  (-0.89)         \\
-\addlinespace
-Constant        &   -0.165         &   -0.191         &   -0.144         &    0.694\sym{*}  &   -0.451         \\
-                &  (-0.34)         &  (-0.52)         &  (-0.29)         &   (2.55)         &  (-1.49)         \\
-\midrule
-Observations    &      221         &      221         &      203         &      365         &      488         \\
-\bottomrule
-\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
-\end{tabular*}
-}
+                    &fullcmiFEDF_v2elturnhog&fullcmiFEDF_v2elturnhos&fullcmiFEDF_v2eltvrig&fullcmiFEDF_e_wbgi_pve&fullcmiFEDF_instabEvent\\
+                    &           b&           b&           b&           b&           b\\
+(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)&   -.3322392&   -.0671872&   -.5278793&    .0745061&   -.0253515\\
+Exchange Rate Classification (RR inverted, higher = more fixed)&    .0337845&    .0043717&    .0411177&   -.0198166&    .0427049\\
+Regional government exists   &   -.4615368&    .3882712&   -.1771211&           0&    .0444031\\
+Horizontal accountability index&    .0987177&    .2456888&    .4385482&    .0654615&    .4720732\\
+Checks and Balances &    .0590523&   -.0771559&    .0476268&   -.0151229&   -.0567276\\
+Autonomous Regions  &    1.097907&   -.1926691&    .2506248&           0&   -.1179844\\
+State Government Authority over Taxing, Spending, or Legislating&    .8893376&    .0281106&    .1303399&           0&     .239133\\
+Coord               &    .0679794&    .1555411&    .1001899&   -.0753317&   -.0141287\\
+Type                &    .0099342&   -.0685004&    .0269901&    .1000941&   -.0486932\\
+_cons               &   -.1654197&   -.1909193&   -.1440086&    .6939997&    -.450714\\
