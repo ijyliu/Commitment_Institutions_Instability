@@ -757,9 +757,9 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVars' c.lvaw_gar#c.irregtd c.lvaw_gar#c.RRrate c.irregtd#c.RRrate, fe cluster(country)
     eststo imiFE_`stabVar'
 }
-esttab imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "${Tables}/imultIndOLS.tex", title(\label{imultIndOLS}) label replace compress booktabs wrap varwidth(40)
+esttab imiols_v2elturnhog imiols_v2elturnhos imiols_v2eltvrig imiols_e_wbgi_pve imiols_instabEvent using "${Tables}/imultIndOLS.tex", title(CBI and Fixed Rate Interactions, Ordinary Least Squares with Robust Standard Errors \label{imultIndOLS}) label replace compress booktabs wrap varwidth(40)
 
-esttab imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiFE_instabEvent using "${Tables}/imultIndFE.tex", title(\label{imultIndFE}) label replace compress booktabs wrap varwidth(40)
+esttab imiFE_v2elturnhog imiFE_v2elturnhos imiFE_v2eltvrig imiFE_e_wbgi_pve imiFE_instabEvent using "${Tables}/imultIndFE.tex", title(CBI and Fixed Rate Interactions, Fixed Effects Regression with Clustered Standard Errors \label{imultIndFE}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -829,7 +829,7 @@ eststo cbinstabEventDJ
 esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace compress booktabs wrap varwidth(40)
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo mlf_binstabEventDJ: margins, dydx(`primCommInstVarsDJ') post
-esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(De Jure CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
+esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
 
 * DF
 xtlogit binstabEvent `primCommInstVarsDF', fe
@@ -837,7 +837,7 @@ eststo cbinstabEventDF
 esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace compress booktabs wrap varwidth(40)
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
-esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(De Facto CBI, Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40)
+esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40)
 
 *****************************************************************************
 
@@ -1348,7 +1348,7 @@ eststo ordLogv2elturnhosDJ: margins, dydx(`primCommInstVarsDJ') post
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo ordLogv2eltvrigDJ: margins, dydx(`primCommInstVarsDJ') post
 
-esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(\label{ordLogDJ}) label replace compress booktabs wrap varwidth(40)
+esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(De Jure CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDJ}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *DF
@@ -1360,7 +1360,7 @@ eststo ordLogv2elturnhosDF: margins, dydx(`primCommInstVarsDF') post
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo ordLogv2eltvrigDF: margins, dydx(`primCommInstVarsDF') post
 
-esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(\label{ordLogDF}) label replace compress booktabs wrap varwidth(40)
+esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(De Facto CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDF}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 * Lagged Ordinal Logit: Margins computation does not run.
