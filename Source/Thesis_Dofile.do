@@ -1409,7 +1409,7 @@ eststo clear
 
 * Summary Statistics for the entire dataset
 estpost sum
-esttab . using "${Tables}/sumstatsAll.tex", title(\label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
+esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
 
 use "${Intermediate_Data}/latepriorities_Ready", clear
 
@@ -1418,26 +1418,26 @@ reg v2elturnhog irregtd, robust
 eststo a11
 xtreg v2elturnhog irregtd, fe vce(cluster country)
 eststo a12
-esttab a11 a12 using "${Tables}/irregtdHOGalone.tex", title(\label{irregtdHOGalone}) label replace compress booktabs wrap varwidth(40)
+esttab a11 a12 using "${Tables}/irregtdHOGalone.tex", title(Irregular CB Governor Turnover, OLS and FE Regressions \label{irregtdHOGalone}) label replace compress booktabs wrap varwidth(40)
 
 reg v2elturnhog tinoff, robust
 eststo a21
 xtreg v2elturnhog tinoff, fe vce(cluster country)
 eststo a22
-esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", title(\label{timeinoffHOGalone}) label replace compress booktabs wrap varwidth(40)
+esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", title(CB Governor Time in Office \label{timeinoffHOGalone}) label replace compress booktabs wrap varwidth(40)
 
 * Recreating more appendix tables: RRrate and WB alone, RRrate and instabevent alone
 reg e_wbgi_pve RRrate, robust
 eststo wbRROLS
 xtreg e_wbgi_pve RRrate, fe vce(cluster country)
 eststo wbRRFE
-esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", title(\label{WBratesalone}) label replace compress booktabs wrap varwidth(40)
+esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", title(Fixed Exchange Rates and World Bank Political Stability \label{WBratesalone}) label replace compress booktabs wrap varwidth(40)
 
 reg instabEvent RRrate, robust
 eststo instabRROLS
 xtreg instabEvent RRrate, fe vce(cluster country)
 eststo instabRRFE
-esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", title(\label{instabRRalone}) label replace compress booktabs wrap varwidth(40)
+esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", title(Fixed Exchange Rates and Instability Event Indicator \label{instabRRalone}) label replace compress booktabs wrap varwidth(40)
 
 * Capture ordered logit coeffs
 duplicates drop country year, force
@@ -1451,7 +1451,7 @@ eststo cordLogv2elturnhosDJ
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo cordLogv2eltvrigDJ
 
-esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", title(\label{coeffordLogDJ}) label replace compress booktabs wrap varwidth(40)
+esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDJ}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *DF
@@ -1462,7 +1462,7 @@ eststo cordLogv2elturnhosDF
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo cordLogv2eltvrigDF
 
-esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", title(\label{coeffordLogDF}) label replace compress booktabs wrap varwidth(40)
+esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDF}) label replace compress booktabs wrap varwidth(40)
 eststo clear
 
 *****************************************************************************
