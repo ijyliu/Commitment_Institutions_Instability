@@ -1,33 +1,34 @@
-{
+\begin{table}[htbp]\centering
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{De Jure CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDJ}}
 \begin{tabular}{l*{3}{c}}
 \toprule
                                         &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
                                         &\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{}\\
 \midrule
-De Jure CBI (CNW Index)                 &              &              &              \\
-1.\_predict                              &-0.146         &-0.208\sym{***}&-0.316\sym{***}\\
-                                        &(-1.93)         &(-3.54)         &(-3.65)         \\
+De Jure CBI (CNW Index)                 &                  &                  &                  \\
+1.\_predict                              &   -0.146         &   -0.208\sym{***}&   -0.316\sym{***}\\
+                                        &  (-1.93)         &  (-3.54)         &  (-3.65)         \\
 \addlinespace
-2.\_predict                              &0.0152         &0.0390\sym{***}&0.0980\sym{**} \\
-                                        &(1.80)         &(3.32)         &(3.21)         \\
+2.\_predict                              &   0.0152         &   0.0390\sym{***}&   0.0980\sym{**} \\
+                                        &   (1.80)         &   (3.32)         &   (3.21)         \\
 \addlinespace
-3.\_predict                              &0.131         &0.169\sym{***}&0.218\sym{***}\\
-                                        &(1.93)         &(3.47)         &(3.68)         \\
+3.\_predict                              &    0.131         &    0.169\sym{***}&    0.218\sym{***}\\
+                                        &   (1.93)         &   (3.47)         &   (3.68)         \\
 \midrule
-Exchange Rate Classification (RR inverted, higher = more fixed)&              &              &              \\
-1.\_predict                              &0.00792\sym{*}  &0.00896\sym{**} &0.00392         \\
-                                        &(2.45)         &(3.21)         &(0.96)         \\
+Exchange Rate Classification (RR inverted, higher = more fixed)&                  &                  &                  \\
+1.\_predict                              &  0.00792\sym{*}  &  0.00896\sym{**} &  0.00392         \\
+                                        &   (2.45)         &   (3.21)         &   (0.96)         \\
 \addlinespace
-2.\_predict                              &-0.000826\sym{*}  &-0.00168\sym{**} &-0.00122         \\
-                                        &(-2.22)         &(-3.00)         &(-0.96)         \\
+2.\_predict                              &-0.000826\sym{*}  & -0.00168\sym{**} & -0.00122         \\
+                                        &  (-2.22)         &  (-3.00)         &  (-0.96)         \\
 \addlinespace
-3.\_predict                              &-0.00710\sym{*}  &-0.00728\sym{**} &-0.00271         \\
-                                        &(-2.46)         &(-3.18)         &(-0.96)         \\
+3.\_predict                              & -0.00710\sym{*}  & -0.00728\sym{**} & -0.00271         \\
+                                        &  (-2.46)         &  (-3.18)         &  (-0.96)         \\
 \midrule
-Observations                            & 1399         & 1399         & 1141         \\
+Observations                            &     1399         &     1399         &     1141         \\
 \bottomrule
 \multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
-}
+\end{table}

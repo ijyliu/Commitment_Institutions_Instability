@@ -1,20 +1,21 @@
-{
+\begin{table}[htbp]\centering
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual, WBGI >= 0 \label{logitFEMultIndDF}}
 \begin{tabular}{l*{5}{c}}
 \toprule
                                         &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
                                         &\multicolumn{1}{c}{bv2elturnhog}&\multicolumn{1}{c}{bv2elturnhos}&\multicolumn{1}{c}{bv2eltvrig}&\multicolumn{1}{c}{be\_wbgi\_pve}&\multicolumn{1}{c}{Instability Event Indicator}\\
 \midrule
-main                                    &              &              &              &              &              \\
-(Lack of) Irregular CB Governor Turnover&-0.308         &-0.185         &-0.573\sym{**} &0.0728         &0.127         \\
-(higher = more de facto CBI)            &(-1.82)         &(-0.90)         &(-2.95)         &(0.30)         &(1.15)         \\
+main                                    &                  &                  &                  &                  &                  \\
+(Lack of) Irregular CB Governor Turnover&   -0.308         &   -0.185         &   -0.573\sym{**} &   0.0728         &    0.127         \\
+(higher = more de facto CBI)            &  (-1.82)         &  (-0.90)         &  (-2.95)         &   (0.30)         &   (1.15)         \\
 \addlinespace
-Exchange Rate Classification (RR        &-0.0159         &-0.0351         &0.0115         &0.138\sym{**} &0.0685\sym{***}\\
-inverted, higher = more fixed)          &(-0.82)         &(-1.49)         &(0.55)         &(3.06)         &(5.64)         \\
+Exchange Rate Classification (RR        &  -0.0159         &  -0.0351         &   0.0115         &    0.138\sym{**} &   0.0685\sym{***}\\
+inverted, higher = more fixed)          &  (-0.82)         &  (-1.49)         &   (0.55)         &   (3.06)         &   (5.64)         \\
 \midrule
-Observations                            & 1477         & 1058         & 1229         & 1119         & 4163         \\
+Observations                            &     1477         &     1058         &     1229         &     1119         &     4163         \\
 \bottomrule
 \multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
-}
+\end{table}

@@ -1,20 +1,21 @@
-{
+\begin{table}[htbp]\centering
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual, WBGI >= 0 \label{logitFEMultIndDJ}}
 \begin{tabular}{l*{5}{c}}
 \toprule
                                         &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
                                         &\multicolumn{1}{c}{bv2elturnhog}&\multicolumn{1}{c}{bv2elturnhos}&\multicolumn{1}{c}{bv2eltvrig}&\multicolumn{1}{c}{be\_wbgi\_pve}&\multicolumn{1}{c}{Instability Event Indicator}\\
 \midrule
-main                                    &              &              &              &              &              \\
-De Jure CBI (CNW Index)                 &0.702         &1.387\sym{*}  &1.451\sym{**} &-3.569\sym{**} &6.085\sym{***}\\
-                                        &(1.60)         &(2.50)         &(3.00)         &(-2.91)         &(15.42)         \\
+main                                    &                  &                  &                  &                  &                  \\
+De Jure CBI (CNW Index)                 &    0.702         &    1.387\sym{*}  &    1.451\sym{**} &   -3.569\sym{**} &    6.085\sym{***}\\
+                                        &   (1.60)         &   (2.50)         &   (3.00)         &  (-2.91)         &  (15.42)         \\
 \addlinespace
-Exchange Rate Classification (RR        &-0.0404         &-0.0857\sym{**} &-0.0225         &0.135\sym{*}  &0.0366\sym{**} \\
-inverted, higher = more fixed)          &(-1.74)         &(-2.91)         &(-0.94)         &(2.52)         &(2.67)         \\
+Exchange Rate Classification (RR        &  -0.0404         &  -0.0857\sym{**} &  -0.0225         &    0.135\sym{*}  &   0.0366\sym{**} \\
+inverted, higher = more fixed)          &  (-1.74)         &  (-2.91)         &  (-0.94)         &   (2.52)         &   (2.67)         \\
 \midrule
-Observations                            & 1208         &  842         &  991         &  760         & 3912         \\
+Observations                            &     1208         &      842         &      991         &      760         &     3912         \\
 \bottomrule
 \multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
-}
+\end{table}
