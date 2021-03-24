@@ -1407,10 +1407,6 @@ eststo clear
 
 *****************************************************************************
 
-* Summary Statistics for the entire dataset
-estpost sum
-esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
-
 use "${Intermediate_Data}/latepriorities_Ready", clear
 
 * Recreating Appendix Early Tables (were A1 or A3 and A2 i think pre corr)
@@ -2125,3 +2121,10 @@ esttab llpintlagordLogHOGDF llpintlagordLogHOSDF llpintlagordLogLHDF llpintlaglo
 eststo clear
 
 save "${Intermediate_Data}/CR_Adequate", replace
+
+*****************************************************************************
+
+* Summary Statistics for the entire dataset
+des
+estpost sum
+esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
