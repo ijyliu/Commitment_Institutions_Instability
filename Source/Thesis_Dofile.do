@@ -925,7 +925,7 @@ eststo nccmiFEDJ_`stabVar'
 }
 esttab nccmiolsDJ_v2elturnhog nccmiolsDJ_v2elturnhos nccmiolsDJ_v2eltvrig nccmiolsDJ_e_wbgi_pve nccmiolsDJ_instabEvent using "${Tables}/nccmultIndOLSDJ.tex", title(\label{nccmultIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
 
-esttab nccmiFEDJ_v2elturnhog nccmiFEDJ_v2elturnhos nccmiFEDJ_v2eltvrig nccmiFEDJ_e_wbgi_pve nccmiFEDJ_instabEvent using "${Tables}/nccmultIndFEDJ.tex", title(\label{nccmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
+esttab nccmiFEDJ_v2elturnhog nccmiFEDJ_v2elturnhos nccmiFEDJ_v2eltvrig nccmiFEDJ_e_wbgi_pve nccmiFEDJ_instabEvent using "${Tables}/nccmultIndFEDJ.tex", title(All Controls Excluding Corporatism, Fixed Effects and Clustered Standard Errors \label{nccmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -938,7 +938,7 @@ eststo nccmiFEDF_`stabVar'
 }
 esttab nccmiolsDF_v2elturnhog nccmiolsDF_v2elturnhos nccmiolsDF_v2eltvrig nccmiolsDF_e_wbgi_pve nccmiolsDF_instabEvent using "${Tables}/nccmultIndOLSDF.tex", title(\label{nccmultIndOLSDF}) label replace compress booktabs wrap varwidth(40)
 
-esttab nccmiFEDF_v2elturnhog nccmiFEDF_v2elturnhos nccmiFEDF_v2eltvrig nccmiFEDF_e_wbgi_pve nccmiFEDF_instabEvent using "${Tables}/nccmultIndFEDF.tex", title(\label{nccmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
+esttab nccmiFEDF_v2elturnhog nccmiFEDF_v2elturnhos nccmiFEDF_v2eltvrig nccmiFEDF_e_wbgi_pve nccmiFEDF_instabEvent using "${Tables}/nccmultIndFEDF.tex", title(All Controls Excluding Corporatism, Fixed Effects and Clustered Standard Errors \label{nccmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
