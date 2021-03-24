@@ -805,9 +805,10 @@ xtlogit `stabVar' `primCommInstVarsDJ', fe
 eststo lFDJ_`stabVar'
 }
 
-esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", title(\label{logitFEMultIndDJ}) label replace compress booktabs wrap varwidth(40)
+esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual (any turnover), WBGI >= 0 \label{logitFEMultIndDJ}) label replace compress booktabs wrap varwidth(40)
 
-esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", title(\label{logitFEMultInd2DJ}) label replace compress booktabs wrap varwidth(40)
+esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 2, Fixed Effects, Coefficients, Full change in party and individual (full turnover), WBGI >= Median
+ \label{logitFEMultInd2DJ}) label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `bStabVars' {
@@ -815,9 +816,9 @@ xtlogit `stabVar' `primCommInstVarsDF', fe
 eststo lFDF_`stabVar'
 }
 
-esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", title(\label{logitFEMultIndDF}) label replace compress booktabs wrap varwidth(40)
+esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual (any turnover), WBGI >= 0 \label{logitFEMultIndDF}) label replace compress booktabs wrap varwidth(40)
 
-esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", title(\label{logitFEMultInd2DF}) label replace compress booktabs wrap varwidth(40)
+esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 2, Fixed Effects, Coefficients, Full change in party and individual (full turnover), WBGI >= Median \label{logitFEMultInd2DF}) label replace compress booktabs wrap varwidth(40)
 
 *****************************************************************************
 
@@ -855,7 +856,7 @@ xtreg `stabVar' wHighCBI fixed_rate, fe cluster(country)
 eststo bFEDJ_`stabVar'
 }
 esttab bolsDJ_v2elturnhog bolsDJ_v2elturnhos bolsDJ_v2eltvrig bolsDJ_e_wbgi_pve bolsDJ_instabEvent using "${Tables}/binaryIndOLSDJ.tex", title(\label{binaryIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
-esttab bFEDJ_v2elturnhog bFEDJ_v2elturnhos bFEDJ_v2eltvrig bFEDJ_e_wbgi_pve bFEDJ_instabEvent using "${Tables}/binaryIndFEDJ.tex", title(\label{binaryIndFEDJ}) label replace compress booktabs wrap varwidth(40)
+esttab bFEDJ_v2elturnhog bFEDJ_v2elturnhos bFEDJ_v2eltvrig bFEDJ_e_wbgi_pve bFEDJ_instabEvent using "${Tables}/binaryIndFEDJ.tex", title(Commitment Institutions and Binary Variables, Fixed Effects, Clustered Standard Errors, 0.5 as the De Jure CBI cutoff, and 1-8 as fixed, 8-16 as floating on the RR scale \label{binaryIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -867,7 +868,7 @@ xtreg `stabVar' irregtd fixed_rate, fe cluster(country)
 eststo bFEDF_`stabVar'
 }
 esttab bolsDF_v2elturnhog bolsDF_v2elturnhos bolsDF_v2eltvrig bolsDF_e_wbgi_pve bolsDF_instabEvent using "${Tables}/binaryIndOLSDF.tex", title(\label{binaryIndOLSDF}) label replace compress booktabs wrap varwidth(40)
-esttab bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "${Tables}/binaryIndFEDF.tex", title(\label{binaryIndFEDF}) label replace compress booktabs wrap varwidth(40)
+esttab bFEDF_v2elturnhog bFEDF_v2elturnhos bFEDF_v2eltvrig bFEDF_e_wbgi_pve bFEDF_instabEvent using "${Tables}/binaryIndFEDF.tex", title(Commitment Institutions and Binary Variables, Fixed Effects, Clustered Standard Errors, 0.5 as the De Jure CBI cutoff, and 1-8 as fixed, 8-16 as floating on the RR scale \label{binaryIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
