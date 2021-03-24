@@ -826,7 +826,7 @@ esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve 
 * DJ
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo cbinstabEventDJ
-esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", label replace compress booktabs wrap varwidth(40)
+esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Coefficients \label{coeffsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo mlf_binstabEventDJ: margins, dydx(`primCommInstVarsDJ') post
 esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
@@ -834,7 +834,7 @@ esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title
 * DF
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo cbinstabEventDF
-esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", label replace compress booktabs wrap varwidth(40)
+esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Coefficients \label{coeffsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40)
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
 esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40)
@@ -893,9 +893,9 @@ eststo fullcmiolsDJ_`stabVar'
 xtreg `stabVar' `primCommInstVarsDJ' `fullcontrols', fe cluster(country)
 eststo fullcmiFEDJ_`stabVar'
 }
-esttab fullcmiolsDJ_v2elturnhog fullcmiolsDJ_v2elturnhos fullcmiolsDJ_v2eltvrig fullcmiolsDJ_e_wbgi_pve fullcmiolsDJ_instabEvent using "${Tables}/fullcmultIndOLSDJ.tex", title(\label{fullcmultIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
+esttab fullcmiolsDJ_v2elturnhog fullcmiolsDJ_v2elturnhos fullcmiolsDJ_v2eltvrig fullcmiolsDJ_e_wbgi_pve fullcmiolsDJ_instabEvent using "${Tables}/fullcmultIndOLSDJ.tex", title(All controls, OLS \label{fullcmultIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
 
-esttab fullcmiFEDJ_v2elturnhog fullcmiFEDJ_v2elturnhos fullcmiFEDJ_v2eltvrig fullcmiFEDJ_e_wbgi_pve fullcmiFEDJ_instabEvent using "${Tables}/fullcmultIndFEDJ.tex", title(\label{fullcmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
+esttab fullcmiFEDJ_v2elturnhog fullcmiFEDJ_v2elturnhos fullcmiFEDJ_v2eltvrig fullcmiFEDJ_e_wbgi_pve fullcmiFEDJ_instabEvent using "${Tables}/fullcmultIndFEDJ.tex", title(All controls, Fixed Effects and Clustered Standard Errors \label{fullcmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -906,9 +906,9 @@ eststo fullcmiolsDF_`stabVar'
 xtreg `stabVar' `primCommInstVarsDF' `fullcontrols', fe cluster(country)
 eststo fullcmiFEDF_`stabVar'
 }
-esttab fullcmiolsDF_v2elturnhog fullcmiolsDF_v2elturnhos fullcmiolsDF_v2eltvrig fullcmiolsDF_e_wbgi_pve fullcmiolsDF_instabEvent using "${Tables}/fullcmultIndOLSDF.tex", title(\label{fullcmultIndOLSDF}) label replace compress booktabs wrap varwidth(40)
+esttab fullcmiolsDF_v2elturnhog fullcmiolsDF_v2elturnhos fullcmiolsDF_v2eltvrig fullcmiolsDF_e_wbgi_pve fullcmiolsDF_instabEvent using "${Tables}/fullcmultIndOLSDF.tex", title(All controls, OLS \label{fullcmultIndOLSDF}) label replace compress booktabs wrap varwidth(40)
 
-esttab fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig fullcmiFEDF_e_wbgi_pve fullcmiFEDF_instabEvent using "${Tables}/fullcmultIndFEDF.tex", title(\label{fullcmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
+esttab fullcmiFEDF_v2elturnhog fullcmiFEDF_v2elturnhos fullcmiFEDF_v2eltvrig fullcmiFEDF_e_wbgi_pve fullcmiFEDF_instabEvent using "${Tables}/fullcmultIndFEDF.tex", title(All controls, Fixed Effects and Clustered Standard Errors \label{fullcmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
 eststo clear
 
@@ -1533,7 +1533,7 @@ eststo intlagordLogv2eltvrigDF
 xtlogit binstabEvent `primCommInstVarsDF' DFinteraction L(1/10).irregtd L(1/10).RRrate L(1/10).DFinteraction, vce(cluster country)
 eststo intlaglogInstabDF
 
-esttab intlagordLogv2elturnhogDF intlagordLogv2elturnhosDF intlagordLogv2eltvrigDF intlaglogInstabDF using "${Tables}/intlagordLogLogDF.tex", title(\label{intlagordLogLogDF}) label replace compress longtable
+esttab intlagordLogv2elturnhogDF intlagordLogv2elturnhosDF intlagordLogv2eltvrigDF intlaglogInstabDF using "${Tables}/intlagordLogLogDF.tex", title(Lagged Institutional Interaction Terms, Ordinal Logit Model, Random Effects, Clustered Standard Errors \label{intlagordLogLogDF}) label replace compress longtable
 eststo clear
 
 * IVs split sample always
