@@ -2126,5 +2126,7 @@ save "${Intermediate_Data}/CR_Adequate", replace
 
 * Summary Statistics for the entire dataset
 des
+keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* *HighCBI RRrate float_rate fixed_rate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open high ka_open deme_polity2
+order *, alphabetic
 estpost sum
 esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
