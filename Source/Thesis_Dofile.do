@@ -549,8 +549,6 @@ ren LOCATION country_name
 ren TIME year
 ren Value ssbizsh
 
-label var Value "SS/Biz Share"
-
 // Align country names
 replace country_name = strtrim(country_name)
 replace country_name = "Argentina" if country_name == "ARG"
@@ -740,7 +738,7 @@ foreach stabVar in `StabVars' {
     xtreg `stabVar' `primCommInstVarsDF', fe cluster(country)
     eststo miFEDF_`stabVar'
 }
-esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
+esttab miolsDF_v2elturnhog miolsDF_v2elturnhos miolsDF_v2eltvrig miolsDF_e_wbgi_pve miolsDF_instabEvent using "${Tables}/multIndOLSDF.tex", title(De Facto CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDF}) label replace compress booktabs wrap varwidth(40)
 
 esttab miFEDF_v2elturnhog miFEDF_v2elturnhos miFEDF_v2eltvrig miFEDF_e_wbgi_pve miFEDF_instabEvent using "${Tables}/multIndFEDF.tex", title(De Facto CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDF}) label replace compress booktabs wrap varwidth(40)
 
@@ -2142,13 +2140,14 @@ label var b2v2elturnhos "Binary HoS Turnover, Coding 2"
 label var b2v2eltvrig "Binary L. H. Turnover, Coding 2"
 label var b2e_wbgi_pve "Binary WB Pol. Stability, Coding 2"
 label var atertEd "Avg. Tert. Ed. Enrollment"
-label var SE.TER.ENRR "WB Tert. Ed. Enrollment"
-label var SP.POP.TOTL "WB Pop."
+label var se_ter_enrr "WB Tert. Ed. Enrollment"
+label var sp_pop_totl "WB Pop."
 label var deme_polity2 "Polity Dem."
 label var Coord "Coord. Wage Setting"
 label var Type "Govt. Int. in Wage Setting"
 label var itertEd "Interpolated Tert. Ed."
 label var issbizsh "Interpolated SS/Biz. Share"
+label var ssbizsh "SS/Biz. Share"
 label var ivaggGDP "Interpolated V-Dem Agg. GDP"
 label var iwbaggGDP "Interpolated WB Agg. GDP"
 keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* RRrate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open highka_open deme_polity2
