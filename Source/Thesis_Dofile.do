@@ -121,6 +121,9 @@ keep country_name year checks auton author
 // federalism measures (DPI): auton, author
 // autonomy existence and authority over taxing and spending for subnationals
 
+label var author
+label var author "State Govt. Auth."
+
 // Missing value analysis and corrections
 local DPIVars "checks auton author"
 foreach variable in `DPIVars' {
@@ -2063,11 +2066,11 @@ eststo clear
 * Lags LHPractice (v2lglegplo)
 
 gen llpDJinteraction = lvaw_gar * v2lglegplo
-label var llpDJinteraction "De Jure CBI * L. House Legislates in Practice"
+label var llpDJinteraction "De Jure CBI * L. H. Leg."
 gen llpDFinteraction = irregtd * v2lglegplo
-label var llpDFinteraction "De Facto CBI * L. House Legislates in Practice"
+label var llpDFinteraction "De Facto CBI * L. H. Leg."
 gen llpRRinteraction = RRrate * v2lglegplo
-label var llpRRinteraction "Fixed Rate * L. House Legislates in Practice"
+label var llpRRinteraction "Fixed Rate * L. H. Leg."
 
 *Linear models
 *DJ
@@ -2128,13 +2131,21 @@ save "${Intermediate_Data}/CR_Adequate", replace
 des
 label var bv2elturnhog "Binary HoG Turnover, Coding 1"
 label var bv2elturnhos "Binary HoS Turnover, Coding 1"
-label var bv2eltvrig "Binary L. House Turnover, Coding 1"
+label var bv2eltvrig "Binary L. H. Turnover, Coding 1"
 label var be_wbgi_pve "Binary WB Pol. Stability, Coding 1"
 label var b2v2elturnhog "Binary HoG Turnover, Coding 2"
 label var b2v2elturnhos "Binary HoS Turnover, Coding 2"
-label var b2v2eltvrig "Binary L. House Turnover, Coding 2"
+label var b2v2eltvrig "Binary L. H. Turnover, Coding 2"
 label var b2e_wbgi_pve "Binary WB Pol. Stability, Coding 2"
-keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* RRrate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open high ka_open deme_polity2
+label var atertEd "Tert. Ed. Enrollment"
+label var deme_polity2 "Polity Dem."
+label var Coord "Coord. Wage Setting"
+label var Type "Govt. Int. in Wage Setting"
+label var itertEd "Interpolated Tert. Ed."
+label var issbizsh "Interpolated SS/Biz. Share"
+label var ivaggGDP "Interpolated V-Dem Agg. GDP"
+label var iwbaggGDP "Interpolated WB Agg. GDP"
+keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* RRrate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open highka_open deme_polity2
 order *, alphabetic
 estpost sum
 esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
