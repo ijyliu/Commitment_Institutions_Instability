@@ -549,6 +549,8 @@ ren LOCATION country_name
 ren TIME year
 ren Value ssbizsh
 
+label var Value "SS/Biz Share"
+
 // Align country names
 replace country_name = strtrim(country_name)
 replace country_name = "Argentina" if country_name == "ARG"
@@ -971,6 +973,8 @@ save "${Intermediate_Data}/OLS_FEanalysis_Ready", replace
 *Prepare oecd ss biz share variable
 replace v2petersch = v2petersch/100
 gen vssbizagg = v2petersch*ssbizsh
+
+label var vssbizagg "Agg. SS/Biz Share Grads."
 
 * Using not VDEM, but original world bank variables for tert. And preparing the oecd var. Data availability looks to be better
 replace se_ter_enrr = se_ter_enrr/100
@@ -2137,7 +2141,9 @@ label var b2v2elturnhog "Binary HoG Turnover, Coding 2"
 label var b2v2elturnhos "Binary HoS Turnover, Coding 2"
 label var b2v2eltvrig "Binary L. H. Turnover, Coding 2"
 label var b2e_wbgi_pve "Binary WB Pol. Stability, Coding 2"
-label var atertEd "Tert. Ed. Enrollment"
+label var atertEd "Avg. Tert. Ed. Enrollment"
+label var SE.TER.ENRR "WB Tert. Ed. Enrollment"
+label var SP.POP.TOTL "WB Pop."
 label var deme_polity2 "Polity Dem."
 label var Coord "Coord. Wage Setting"
 label var Type "Govt. Int. in Wage Setting"
