@@ -494,6 +494,9 @@ save "${Intermediate_Data}/Clean_Polity4", replace
 use "${Input}/kaopen_2017", clear
 keep country_name year ka_open
 
+label var ka_open
+label var ka_open "Cap. Acct. Openness"
+
 * Cleaning
 sum
 * Data availability is very good: 1970 up to 2017 as desired. And 7.2K observations. ka_open is the normalized index from zero to one. It is compiled from IMF data, and higher values mean a more open capital account/fewer capital controls. Range appears to be good.
@@ -690,6 +693,8 @@ ren irregularturnoverdummy irregtd
 label var irregtd "De facto CBI"
 replace irregtd = 1 - irregtd
 ren timeinoffice tinoff
+label var tinoff
+label var tinoff "CB Gov. Time in Office"
 ren legalduration legdur
 ren lvau_garriga lvau_gar
 ren lvaw_garriga lvaw_gar
@@ -1143,8 +1148,11 @@ merge 1:1 country_name year using "${Intermediate_Data}/Clean_kaopen", gen(merge
 
 hist ka_open
 * Set high as "above median/50th percentile"
-egen mka_open = median(ka_open)
-gen highka_open = (ka_open > mka_open) if ka_open != .
+*egen mka_open = median(ka_open)
+sum ka_open, detail
+local mka_open = `r(p50)'
+gen highka_open = (ka_open > `mka_open') if ka_open != .
+label var highka_open "Open Cap. Acct."
 
 * Repeat regs for high and low samples. Determine which things to run by results of earlier regressions.
 
@@ -1492,7 +1500,7 @@ foreach stabVar in `StabVars' {
 xtreg `stabVar' `primCommInstVarsDJ' DJinteraction L(1/10).lvaw_gar L(1/10).RRrate L(1/10).DJinteraction, fe vce(cluster country)
 eststo intlagsDJ`stabVar'
 }
-esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", title(Lagged Institutional Interaction Terms, Fixed Effects, Clustered Standard Errors \label{intlagsDJ}) label replace compress booktabs wrap varwidth(40)
+esttab intlagsDJv2elturnhog intlagsDJv2elturnhos intlagsDJv2eltvrig intlagsDJe_wbgi_pve intlagsDJinstabEvent using "${Tables}/intlagsDJ.tex", title(Lagged Institutional Interaction Terms, Fixed Effects, Clustered Standard Errors \label{intlagsDJ}) label replace compress longtable
 eststo clear
 *DF
 foreach stabVar in `StabVars' {
@@ -2150,7 +2158,9 @@ label var issbizsh "Interpolated SS/Biz. Share"
 label var ssbizsh "SS/Biz. Share"
 label var ivaggGDP "Interpolated V-Dem Agg. GDP"
 label var iwbaggGDP "Interpolated WB Agg. GDP"
-keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* RRrate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open highka_open deme_polity2
+keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau_garriga lvaw_garriga RRrate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open highka_open deme_polity2
+cap drop lvau_garriga_old
+cap drop lvaw_garriga_old
 order *, alphabetic
 estpost sum
 esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
