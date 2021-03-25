@@ -177,6 +177,9 @@ destring Coord, replace
 destring Type, replace
 drop if year < 1970
 
+cap label var Coord "Coord. Wage Setting"
+cap label var Type "Govt. Int. in Wage Setting"
+
 // Data cleaning
 sum
 // There is an OK amount of missing data. Index values seem to be in line.
@@ -802,6 +805,15 @@ esttab imiFEDF_v2elturnhog imiFEDF_v2elturnhos imiFEDF_v2eltvrig imiFEDF_e_wbgi_
 eststo clear
 
 *****************************************************************************
+
+cap label var bv2elturnhog "HoG Bin. 1"
+cap label var bv2elturnhos "HoS Bin. 1"
+cap label var bv2eltvrig "L.H Bin. 1"
+cap label var be_wbgi_pve "WB Stab. 1"
+cap label var b2v2elturnhog "HoG Bin. 2"
+cap label var b2v2elturnhos "HoS Bin. 2"
+cap label var b2v2eltvrig "L. H. Bin. 2"
+cap label var b2e_wbgi_pve "WB Stab. 2"
 
 * Binary dependent variables.
 * NOT REALLY NEEDED
@@ -2139,20 +2151,10 @@ save "${Intermediate_Data}/CR_Adequate", replace
 
 * Summary Statistics for the entire dataset
 des
-label var bv2elturnhog "Binary HoG Turnover, Coding 1"
-label var bv2elturnhos "Binary HoS Turnover, Coding 1"
-label var bv2eltvrig "Binary L. H. Turnover, Coding 1"
-label var be_wbgi_pve "Binary WB Pol. Stability, Coding 1"
-label var b2v2elturnhog "Binary HoG Turnover, Coding 2"
-label var b2v2elturnhos "Binary HoS Turnover, Coding 2"
-label var b2v2eltvrig "Binary L. H. Turnover, Coding 2"
-label var b2e_wbgi_pve "Binary WB Pol. Stability, Coding 2"
 label var atertEd "Avg. Tert. Ed. Enrollment"
 label var se_ter_enrr "WB Tert. Ed. Enrollment"
 label var sp_pop_totl "WB Pop."
 label var deme_polity2 "Polity Dem."
-label var Coord "Coord. Wage Setting"
-label var Type "Govt. Int. in Wage Setting"
 label var itertEd "Interpolated Tert. Ed."
 label var issbizsh "Interpolated SS/Biz. Share"
 label var ssbizsh "SS/Biz. Share"
