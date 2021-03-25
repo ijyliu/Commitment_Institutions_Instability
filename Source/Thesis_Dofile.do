@@ -825,9 +825,9 @@ xtlogit `stabVar' `primCommInstVarsDJ', fe
 eststo lFDJ_`stabVar'
 }
 
-esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual, WBGI >= 0 \label{logitFEMultIndDJ}) label replace compress booktabs wrap varwidth(40)
+esttab lFDJ_bv2elturnhog lFDJ_bv2elturnhos lFDJ_bv2eltvrig lFDJ_be_wbgi_pve lFDJ_binstabEvent using "${Tables}/logitFEMultIndDJ.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual, WBGI >= 0 \label{logitFEMultIndDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover" "WB Pol. Stability" "Instab. Event")
 
-esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 2, Fixed Effects, Coefficients, Full change in party and individual, WBGI >= Median \label{logitFEMultInd2DJ}) label replace compress booktabs wrap varwidth(40)
+esttab lFDJ_b2v2elturnhog lFDJ_b2v2elturnhos lFDJ_b2v2eltvrig lFDJ_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DJ.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 2, Fixed Effects, Coefficients, Full change in party and individual, WBGI >= Median \label{logitFEMultInd2DJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover" "WB Pol. Stability")
 
 *DF
 foreach stabVar in `bStabVars' {
@@ -835,9 +835,9 @@ xtlogit `stabVar' `primCommInstVarsDF', fe
 eststo lFDF_`stabVar'
 }
 
-esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual, WBGI >= 0 \label{logitFEMultIndDF}) label replace compress booktabs wrap varwidth(40)
+esttab lFDF_bv2elturnhog lFDF_bv2elturnhos lFDF_bv2eltvrig lFDF_be_wbgi_pve lFDF_binstabEvent using "${Tables}/logitFEMultIndDF.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 1, Fixed Effects, Coefficients, Any change in party or individual, WBGI >= 0 \label{logitFEMultIndDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover" "WB Pol. Stability" "Instab. Event")
 
-esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 2, Fixed Effects, Coefficients, Full change in party and individual, WBGI >= Median \label{logitFEMultInd2DF}) label replace compress booktabs wrap varwidth(40)
+esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve using "${Tables}/logitFEMultInd2DF.tex", title(Panel Logit Regression, Binary Dependent Variables Coding 2, Fixed Effects, Coefficients, Full change in party and individual, WBGI >= Median \label{logitFEMultInd2DF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover" "WB Pol. Stability")
 
 *****************************************************************************
 
@@ -846,18 +846,18 @@ esttab lFDF_b2v2elturnhog lFDF_b2v2elturnhos lFDF_b2v2eltvrig lFDF_b2e_wbgi_pve 
 * DJ
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo cbinstabEventDJ
-esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Coefficients \label{coeffsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
+esttab cbinstabEventDJ using "${Tables}/coeffsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Coefficients \label{coeffsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40) mtitles("Instab. Event")
 xtlogit binstabEvent `primCommInstVarsDJ', fe
 eststo mlf_binstabEventDJ: margins, dydx(`primCommInstVarsDJ') post
-esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40)
+esttab mlf_binstabEventDJ using "${Tables}/margsJustBinInstabEventDJ.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDJ}) label replace compress booktabs wrap varwidth(40) mtitles("Instab. Event")
 
 * DF
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo cbinstabEventDF
-esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Coefficients \label{coeffsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40)
+esttab cbinstabEventDF using "${Tables}/coeffsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Coefficients \label{coeffsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40) mtitles("Instab. Event")
 xtlogit binstabEvent `primCommInstVarsDF', fe
 eststo mlf_binstabEventDF: margins, dydx(`primCommInstVarsDF') post
-esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40)
+esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title(Instability Event Panel Logit, Fixed Effects and Clustered Standard Errors, Mean Marginal Effects \label{margsJustBinInstabEventDF}) label replace compress booktabs wrap varwidth(40) mtitles("Instab. Event")
 
 *****************************************************************************
 
@@ -1373,7 +1373,7 @@ eststo ordLogv2elturnhosDJ: margins, dydx(`primCommInstVarsDJ') post
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo ordLogv2eltvrigDJ: margins, dydx(`primCommInstVarsDJ') post
 
-esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(De Jure CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDJ}) label replace compress booktabs wrap varwidth(40)
+esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(De Jure CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
 eststo clear
 
 *DF
@@ -1385,7 +1385,7 @@ eststo ordLogv2elturnhosDF: margins, dydx(`primCommInstVarsDF') post
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo ordLogv2eltvrigDF: margins, dydx(`primCommInstVarsDF') post
 
-esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(De Facto CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDF}) label replace compress booktabs wrap varwidth(40)
+esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(De Facto CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
 eststo clear
 
 * Lagged Ordinal Logit: Margins computation does not run.
@@ -1472,7 +1472,7 @@ eststo cordLogv2elturnhosDJ
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo cordLogv2eltvrigDJ
 
-esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDJ}) label replace compress booktabs wrap varwidth(40)
+esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
 eststo clear
 
 *DF
@@ -1483,7 +1483,7 @@ eststo cordLogv2elturnhosDF
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo cordLogv2eltvrigDF
 
-esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDF}) label replace compress booktabs wrap varwidth(40)
+esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
 eststo clear
 
 *****************************************************************************
@@ -1965,7 +1965,7 @@ eststo hoshogfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 1, robust
 eststo hoshogfivs4_e_wbgi_pve
 
-esttab hoshogfivs4_v2elturnhog hoshogfivs4_v2elturnhos hoshogfivs4_v2eltvrig hoshogfivs4_e_wbgi_pve using "${Tables}/hoshogfivs4.tex", title(\label{hoshogfivs4}) label replace compress booktabs wrap varwidth(40)
+esttab hoshogfivs4_v2elturnhog hoshogfivs4_v2elturnhos hoshogfivs4_v2eltvrig hoshogfivs4_e_wbgi_pve using "${Tables}/hoshogfivs4.tex", title(HOS = HOG, SS/Biz Grads. Instrument, Robust Standard Errors \label{hoshogfivs4}) label replace compress booktabs wrap varwidth(40)
 
 *HOS NOT HOG
 * De jure independence check
@@ -2008,7 +2008,7 @@ eststo NOhoshogIfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust noconstant
 eststo NOhoshogIfivs3_instabEvent
 
-esttab NOhoshogIfivs3_v2elturnhog NOhoshogIfivs3_v2elturnhos NOhoshogIfivs3_v2eltvrig NOhoshogIfivs3_e_wbgi_pve NOhoshogIfivs3_instabEvent using "${Tables}/NOhoshogIfivs3.tex", title(\label{NOhoshogIfivs3}) label replace compress booktabs wrap varwidth(40)
+esttab NOhoshogIfivs3_v2elturnhog NOhoshogIfivs3_v2elturnhos NOhoshogIfivs3_v2eltvrig NOhoshogIfivs3_e_wbgi_pve NOhoshogIfivs3_instabEvent using "${Tables}/NOhoshogIfivs3.tex", title(HOS NOT HOG, SS/Biz Grads. Instrument, Robust Standard Errors \label{NOhoshogIfivs3}) label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
@@ -2020,7 +2020,7 @@ eststo NOhoshogIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if v2exhoshog == 0, robust
 eststo NOhoshogIfivs4_e_wbgi_pve
 
-esttab NOhoshogIfivs4_v2elturnhog NOhoshogIfivs4_v2elturnhos NOhoshogIfivs4_v2eltvrig NOhoshogIfivs4_e_wbgi_pve using "${Tables}/NOhoshogIfivs4.tex", title(\label{NOhoshogIfivs4}) label replace compress booktabs wrap varwidth(40)
+esttab NOhoshogIfivs4_v2elturnhog NOhoshogIfivs4_v2elturnhos NOhoshogIfivs4_v2eltvrig NOhoshogIfivs4_e_wbgi_pve using "${Tables}/NOhoshogIfivs4.tex", title(HOS NOT HOG, SS/Biz Grads. Instrument, Robust Standard Errors \label{NOhoshogIfivs4}) label replace compress booktabs wrap varwidth(40)
 
 * IVS LHPractice
 * SADLY LOWER CHAMBER LEGISLATES IN PRACTICE IS A CONTINUOUS VARIABLE- figure out interaction term and IV simultaneously? Or make it binary and split sample.
