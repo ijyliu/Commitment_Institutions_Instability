@@ -31,12 +31,12 @@ use country_name year v2elturnhog v2elturnhos v2eltvrexo v2eltvrig v3eltvriguc e
 
 label var v2elturnhog "HoG Turnover"
 label var v2elturnhos "HoS Turnover"
-label var v2eltvrig "L. House Turnover"
+label var v2eltvrig "L. H. Turnover"
 label var e_wbgi_pve "WB Pol. Stability"
 label var v2petersch "Tert. Ed. Enrollment"
 label var v2exhoshog "HOS = HOG"
 label var v2lglegplo "Leg. Efficacy"
-label var e_polity2 "Polity Democracy Score"
+label var e_polity2 "Polity Dem. Score"
 
 // Variables are, respectively, country, year, head of government turnover event, head of state turnover event, executive turnover, lower chamber turnover, upper chamber turnover, coups (PIPE), WGI political stability, total population, tertiary school enrollment, GDP per capita, civil war, internal armed conflict, coups d'etat, existence of regional governments, horizontal accountability (checks and balances).
 
@@ -67,7 +67,7 @@ label var e_polity2 "Polity Democracy Score"
 
 // Create aggregate GDP from per capita values and population
 gen aggGDP = e_mipopula*e_migdppc
-label var aggGDP "Aggregate GDP (V-Dem)"
+label var aggGDP "Agg. GDP (V-Dem)"
 
 // Sample restriction
 drop if year < 1970
@@ -684,15 +684,15 @@ ren timetoregularturnover ttregturn
 ren numberofactualturnovers noaturn
 ren regularturnoverdummy regtd
 ren irregularturnoverdummy irregtd
-label var irregtd "(Lack of) Irregular CB Governor Turnover (higher = more de facto CBI)"
+label var irregtd "De facto CBI"
 replace irregtd = 1 - irregtd
 ren timeinoffice tinoff
 ren legalduration legdur
 ren lvau_garriga lvau_gar
 ren lvaw_garriga lvaw_gar
-label var lvaw_gar "De Jure CBI (CNW Index)"
+label var lvaw_gar "De Jure CBI"
 ren rate_regime RRrate
-label var RRrate "Exchange Rate Classification (RR inverted, higher = more fixed)"
+label var RRrate "Fixed Rate"
 // Dep Variables
 local ElStabVars "v2elturnhog v2elturnhos v2eltvrig"
 local PolStabVars "e_wbgi_pve instabEvent"
@@ -844,8 +844,8 @@ esttab mlf_binstabEventDF using "${Tables}/margsJustBinInstabEventDF.tex", title
 * Binary independent variables.
 * Maybe use later if want a combined cbi and fixed rate var
 * gen committedW = (!float_rate & wHighCBI) if float_rate != . & wHighCBI != .
-label var wHighCBI "High De Jure CBI (CNW Index)"
-label var fixed_rate "Fixed Exchange Rate Classification (RR 1-8)"
+label var wHighCBI "High De Jure CBI"
+label var fixed_rate "Fixed Rate (RR 1-8)"
 
 * DJ
 foreach stabVar in `StabVars' {
@@ -1477,9 +1477,9 @@ local primCommInstVarsDF "irregtd RRrate"
 
 * Lagged interaction term analysis
 gen DJinteraction = lvaw_gar * RRrate
-label var DJinteraction "De Jure CBI * More Fixed Rate"
+label var DJinteraction "De Jure CBI * Fixed Rate"
 gen DFinteraction = irregtd * RRrate
-label var DFinteraction "De Facto CBI * More Fixed Rate"
+label var DFinteraction "De Facto CBI * Fixed Rate"
 
 *Linear models
 *DJ
@@ -1762,11 +1762,11 @@ esttab lowKIfivs4_v2elturnhog lowKIfivs4_v2elturnhos lowKIfivs4_v2eltvrig lowKIf
 * Lags and a democracy investigation
 
 gen demDJinteraction = lvaw_gar * e_polity2
-label var demDJinteraction "De Jure CBI * Polity Democracy"
+label var demDJinteraction "De Jure CBI * Polity Dem."
 gen demDFinteraction = irregtd * e_polity2
-label var demDFinteraction "De Facto CBI * Polity Democracy"
+label var demDFinteraction "De Facto CBI * Polity Dem."
 gen demRRinteraction = RRrate * e_polity2
-label var demRRinteraction "More Fixed Rate * Polity Democracy"
+label var demRRinteraction "Fixed Rate * Polity Dem."
 
 *Linear models
 *DJ
@@ -1822,11 +1822,11 @@ eststo clear
 * Lags and a cap controls investigation
 
 gen kapDJinteraction = lvaw_gar * ka_open
-label var kapDJinteraction "De Jure CBI * Capital Account Openness"
+label var kapDJinteraction "De Jure CBI * Cap. Acct. Open"
 gen kapDFinteraction = irregtd * ka_open
-label var kapDFinteraction "De Facto CBI * Capital Account Openness"
+label var kapDFinteraction "De Facto CBI * Cap. Acct. Open"
 gen kapRRinteraction = RRrate * ka_open
-label var kapRRinteraction "More Fixed Rate * Capital Account Openness"
+label var kapRRinteraction "Fixed Rate * Cap. Acct. Open"
 
 *****************************************************************************
 
@@ -2007,7 +2007,7 @@ label var hoshogDJinteraction "De Jure CBI * HOS = HOG"
 gen hoshogDFinteraction = irregtd * v2exhoshog
 label var hoshogDFinteraction "De Facto CBI * HOS = HOG"
 gen hoshogRRinteraction = RRrate * v2exhoshog
-label var hoshogRRinteraction "More Fixed Rate * HOS = HOG"
+label var hoshogRRinteraction "Fixed Rate * HOS = HOG"
 
 *Linear models
 *DJ
@@ -2067,7 +2067,7 @@ label var llpDJinteraction "De Jure CBI * L. House Legislates in Practice"
 gen llpDFinteraction = irregtd * v2lglegplo
 label var llpDFinteraction "De Facto CBI * L. House Legislates in Practice"
 gen llpRRinteraction = RRrate * v2lglegplo
-label var llpRRinteraction "More Fixed Rate * L. House Legislates in Practice"
+label var llpRRinteraction "Fixed Rate * L. House Legislates in Practice"
 
 *Linear models
 *DJ
@@ -2126,7 +2126,15 @@ save "${Intermediate_Data}/CR_Adequate", replace
 
 * Summary Statistics for the entire dataset
 des
-keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* *HighCBI RRrate float_rate fixed_rate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open high ka_open deme_polity2
+label var bv2elturnhog "Binary HoG Turnover, Coding 1"
+label var bv2elturnhos "Binary HoS Turnover, Coding 1"
+label var bv2eltvrig "Binary L. House Turnover, Coding 1"
+label var be_wbgi_pve "Binary WB Pol. Stability, Coding 1"
+label var b2v2elturnhog "Binary HoG Turnover, Coding 2"
+label var b2v2elturnhos "Binary HoS Turnover, Coding 2"
+label var b2v2eltvrig "Binary L. House Turnover, Coding 2"
+label var b2e_wbgi_pve "Binary WB Pol. Stability, Coding 2"
+keep year country_name v2* e_* aggGDP instabEvent binstabEvent bv2* be_wbgi_pve lvau* lvaw* RRrate irregtd tinoff ssbizsh sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr auton author checks Coord Type ssbizagg vssbizagg atertEd itertEd issbizsh ivaggGDP iwbaggGDP ka_open mka_open high ka_open deme_polity2
 order *, alphabetic
 estpost sum
 esttab . using "${Tables}/sumstatsAll.tex", title(Summary Statistics \label{sumstatsAll}) label cells(mean(label(Mean)) sd(par label(Standard Deviation)) count(label(Observations))) noobs replace longtable
