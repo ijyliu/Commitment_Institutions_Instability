@@ -29,14 +29,14 @@ ssc install estout, replace
 // Select out critical variables (since Stata version will not accommodate all of them)
 use country_name year v2elturnhog v2elturnhos v2eltvrexo v2eltvrig v3eltvriguc e_coups e_wbgi_pve e_mipopula v2petersch e_migdppc e_civil_war e_miinterc e_pt_coup v2elreggov v2x_horacc v3eldirepr v2exhoshog v2lglegplo e_polity2 using "${Input}/V-Dem-CY-Full+Others-v10", clear
 
-label var v2elturnhog "Head of Govt. Turnover"
-label var v2elturnhos "Head of State Turnover"
-label var v2eltvrig "Lower House Turnover"
-label var e_wbgi_pve "WB Political Stability (Absence of Violence)"
-label var v2petersch "Tertiary Education Enrollment (V-Dem)"
+label var v2elturnhog "HoG Turnover"
+label var v2elturnhos "HoS Turnover"
+label var v2eltvrig "L. House Turnover"
+label var e_wbgi_pve "WB Pol. Stability"
+label var v2petersch "Tert. Ed. Enrollment"
 label var v2exhoshog "HOS = HOG"
-label var v2lglegplo "Legislative Efficacy"
-label var e_polity2 "Polity Democracy Score (v2)"
+label var v2lglegplo "Leg. Efficacy"
+label var e_polity2 "Polity Democracy Score"
 
 // Variables are, respectively, country, year, head of government turnover event, head of state turnover event, executive turnover, lower chamber turnover, upper chamber turnover, coups (PIPE), WGI political stability, total population, tertiary school enrollment, GDP per capita, civil war, internal armed conflict, coups d'etat, existence of regional governments, horizontal accountability (checks and balances).
 
@@ -88,11 +88,11 @@ sum
 
 // Create an instability event variable for an attempted coup, civil war, or internal conflict.
 gen instabEvent = (e_civil_war | e_miinterc | (e_coups != 0) | (e_pt_coup != 0)) if (e_civil_war != . | e_miinterc != .) & (e_coups != . | e_pt_coup != .)
-label var instabEvent "Instability Event Indicator"
+label var instabEvent "Instab. Event"
 
 * For later- it's already binary really
 gen binstabEvent = instabEvent
-label var binstabEvent "Instability Event Indicator"
+label var binstabEvent "Instab. Event"
 
 * Binary stability variables
 gen bv2elturnhog = (v2elturnhog >= 1) if v2elturnhog != .
@@ -603,7 +603,7 @@ save "${Intermediate_Data}/Clean_OECD_Thesis", replace
 wbopendata, indicator(SP.POP.TOTL; NY.GDP.MKTP.PP.KD; SE.TER.ENRR) year(1970:2019) long clear
 ren countryname country_name
 keep country_name year sp_pop_totl ny_gdp_mktp_pp_kd se_ter_enrr
-label var ny_gdp_mktp_pp_kd "Aggregate GDP, 2011 PP (WB)"
+label var ny_gdp_mktp_pp_kd "Agg. GDP, 2011 PPP"
 
 * Missing values and min/max sense checks
 sum
@@ -2063,11 +2063,11 @@ eststo clear
 * Lags LHPractice (v2lglegplo)
 
 gen llpDJinteraction = lvaw_gar * v2lglegplo
-label var llpDJinteraction "De Jure CBI * Lower House Legislates in Practice"
+label var llpDJinteraction "De Jure CBI * L. House Legislates in Practice"
 gen llpDFinteraction = irregtd * v2lglegplo
-label var llpDFinteraction "De Facto CBI * Lower House Legislates in Practice"
+label var llpDFinteraction "De Facto CBI * L. House Legislates in Practice"
 gen llpRRinteraction = RRrate * v2lglegplo
-label var llpRRinteraction "More Fixed Rate * Lower House Legislates in Practice"
+label var llpRRinteraction "More Fixed Rate * L. House Legislates in Practice"
 
 *Linear models
 *DJ
