@@ -723,7 +723,12 @@ foreach stabVar in `StabVars' {
     eststo miFEDJ_`stabVar'
 }
 
-esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap varwidth(40)
+esttab miolsDJ_v2elturnhog miolsDJ_v2elturnhos miolsDJ_v2eltvrig miolsDJ_e_wbgi_pve miolsDJ_instabEvent using "${Tables}/multIndOLSDJ.tex", title(De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}) label replace compress booktabs wrap varwidth(40) prehead(`"\begin{table}"' `"\tiny"' ///
+                `"\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}"' ///
+                `"\begin{tabular}{l*{2}{c}}"') ///
+        postfoot(`"\end{tabular}"' `"\end{table}"')
+
+stop
 
 esttab miFEDJ_v2elturnhog miFEDJ_v2elturnhos miFEDJ_v2eltvrig miFEDJ_e_wbgi_pve miFEDJ_instabEvent using "${Tables}/multIndFEDJ.tex", title(De Jure CBI, Fixed Effects Regression with Clustered Standard Errors \label{multIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
