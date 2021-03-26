@@ -1445,20 +1445,20 @@ reg v2elturnhog tinoff, robust
 eststo a21
 xtreg v2elturnhog tinoff, fe vce(cluster country)
 eststo a22
-esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", title(CB Governor Time in Office \label{timeinoffHOGalone}) label replace compress booktabs wrap varwidth(40)
+esttab a21 a22 using "${Tables}/timeinoffHOGalone.tex", title(CB Governor Time in Office, OLS and FE Regressions \label{timeinoffHOGalone}) label replace compress booktabs wrap varwidth(40)
 
 * Recreating more appendix tables: RRrate and WB alone, RRrate and instabevent alone
 reg e_wbgi_pve RRrate, robust
 eststo wbRROLS
 xtreg e_wbgi_pve RRrate, fe vce(cluster country)
 eststo wbRRFE
-esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", title(Fixed Exchange Rates and World Bank Political Stability \label{WBratesalone}) label replace compress booktabs wrap varwidth(40)
+esttab wbRROLS wbRRFE using "${Tables}/WBratesalone.tex", title(Fixed Exchange Rates and World Bank Political Stability, OLS and FE Regressions \label{WBratesalone}) label replace compress booktabs wrap varwidth(40)
 
 reg instabEvent RRrate, robust
 eststo instabRROLS
 xtreg instabEvent RRrate, fe vce(cluster country)
 eststo instabRRFE
-esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", title(Fixed Exchange Rates and Instability Event Indicator \label{instabRRalone}) label replace compress booktabs wrap varwidth(40)
+esttab instabRROLS instabRRFE using "${Tables}/instabRRalone.tex", title(Fixed Exchange Rates and Instability Event Indicator, OLS and FE Regressions \label{instabRRalone}) label replace compress booktabs wrap varwidth(40)
 
 * Capture ordered logit coeffs
 duplicates drop country year, force
