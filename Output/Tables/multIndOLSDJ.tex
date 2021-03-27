@@ -1,23 +1,23 @@
-{
+\begin{table}[htbp]\centering
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{longtable}{l*{5}{c}}
-\caption{De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}}\\
-\hline\hline\endfirsthead\hline\endhead\hline\endfoot\endlastfoot
-                &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
-                &\multicolumn{1}{c}{HoG Turnover}&\multicolumn{1}{c}{HoS Turnover}&\multicolumn{1}{c}{L. H. Turnover}&\multicolumn{1}{c}{WB Pol. Stability}&\multicolumn{1}{c}{Instab. Event}\\
-\hline
-De Jure CBI     &    0.321\sym{*}  &    0.648\sym{***}&    0.587\sym{***}&    0.308\sym{**} &    0.488\sym{***}\\
-                &   (2.51)         &   (5.96)         &   (5.01)         &   (2.80)         &  (11.69)         \\
-[1em]
-Fixed Rate      &  -0.0147\sym{**} &  -0.0130\sym{**} & -0.00280         &   0.0347\sym{***}& -0.00292         \\
-                &  (-2.61)         &  (-2.61)         &  (-0.49)         &   (6.45)         &  (-1.74)         \\
-[1em]
-Constant        &    0.617\sym{***}&    0.157\sym{**} &    0.413\sym{***}&   -0.598\sym{***}&    0.193\sym{***}\\
-                &   (8.50)         &   (2.70)         &   (6.19)         &  (-7.54)         &   (8.73)         \\
-\hline
-Observations    &     1399         &     1399         &     1141         &     2141         &     4207         \\
-\hline\hline
+\caption{De Jure CBI, Ordinary Least Squares with Robust Standard Errors \label{multIndOLSDJ}}
+\begin{tabular}{l*{5}{c}}
+\toprule
+                                        &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+                                        &\multicolumn{1}{c}{HoG Turnover}&\multicolumn{1}{c}{HoS Turnover}&\multicolumn{1}{c}{L. H. Turnover}&\multicolumn{1}{c}{WB Pol. Stability}&\multicolumn{1}{c}{Instab. Event}\\
+\midrule
+De Jure CBI                             &    0.321\sym{*}  &    0.648\sym{***}&    0.587\sym{***}&    0.308\sym{**} &    0.488\sym{***}\\
+                                        &   (2.51)         &   (5.96)         &   (5.01)         &   (2.80)         &  (11.69)         \\
+\addlinespace
+Fixed Rate                              &  -0.0147\sym{**} &  -0.0130\sym{**} & -0.00280         &   0.0347\sym{***}& -0.00292         \\
+                                        &  (-2.61)         &  (-2.61)         &  (-0.49)         &   (6.45)         &  (-1.74)         \\
+\addlinespace
+Constant                                &    0.617\sym{***}&    0.157\sym{**} &    0.413\sym{***}&   -0.598\sym{***}&    0.193\sym{***}\\
+                                        &   (8.50)         &   (2.70)         &   (6.19)         &  (-7.54)         &   (8.73)         \\
+\midrule
+Observations                            &     1399         &     1399         &     1141         &     2141         &     4207         \\
+\bottomrule
 \multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
-\end{longtable}
-}
+\end{tabular}
+\end{table}
