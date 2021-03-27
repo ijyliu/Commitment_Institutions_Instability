@@ -130,6 +130,7 @@
     \begin{frame}
         \frametitle{Results}
         \begin{itemize}
+            \item Separate regressions (bad control problem)
             \item FEs, clustered SEs
             \item De Jure CBI and more instability: PBCs
             \item Less De Facto CBI (high irregular turnover) and more lower chamber turnover
@@ -139,7 +140,7 @@
     \end{frame}
 
     \begin{frame}
-        \frametitle{De Jure CBI and FIxed Rates, Fixed Effects Regression}
+        \frametitle{Fixed Effects Regression with Clustered Standard Errors}
         {
             \let\oldcentering\centering
             \renewcommand\centering{\tiny\oldcentering}
@@ -148,7 +149,7 @@
     \end{frame}
 
     \begin{frame}
-        \frametitle{De Facto CBI and FIxed Rates, Fixed Effects Regression}
+        \frametitle{Fixed Effects Regression with Clustered Standard Errors}
         {
             \let\oldcentering\centering
             \renewcommand\centering{\tiny\oldcentering}
@@ -166,6 +167,23 @@
         \input{../../Output/Tables/ordLogDF.tex}
     \end{frame}
 
+    \begin{frame}
+        \frametitle{Ordered Logit Mean Marginal Effects}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ordLogDJ.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Ordered Logit Mean Marginal Effects}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ordLogDJ.tex}
+        }
+    \end{frame}
 
     \begin{frame}
         \frametitle{Panel Logit (binary instability event variable) Mean Marginal Effects}
@@ -174,10 +192,25 @@
             \item More evidence that de jure CBI increases political instability
             \item Fixed exchange rate (low RR rate) increases pol. instability, but very small effect size
         \end{itemize}
-        \input{../../Output/Tables/margsJustBinInstabEventDJ.tex}
-        \input{../../Output/Tables/margsJustBinInstabEventDF.tex}
     \end{frame}
 
+    \begin{frame}
+        \frametitle{Binary Instability Event Logit, Mean Marginal Effects}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/margsJustBinInstabEventDJ.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Binary Instability Event Logit, Mean Marginal Effects}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/margsJustBinInstabEventDF.tex}
+        }
+    \end{frame}
 
     \begin{frame}
         \frametitle{IV1: Tertiary Ed Enrollment (CBI), Aggregate GDP (Fixed Rate)}
