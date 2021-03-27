@@ -18,7 +18,7 @@ Stores output from the stata code, including [intermediate/cleaned data](Output/
 
 ### [Release](Release)
 
-Contains final submissions, paper drafts, and presentations. The main draft is . The main presentation is .
+Contains final submissions, paper drafts, and presentations.
 
 ### [Source](Source)
 
