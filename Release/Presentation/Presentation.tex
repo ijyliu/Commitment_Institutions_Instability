@@ -139,8 +139,19 @@
     \end{frame}
 
     \begin{frame}
-        \input{../../Output/Tables/multIndFEDJ.tex}
-        \input{../../Output/Tables/multIndFEDF.tex}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/multIndFEDJ.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/multIndFEDF.tex}
+        }
     \end{frame}
 
     \begin{frame}
@@ -252,7 +263,7 @@
 
 
     \begin{frame}
-        \frametitle{Additional Results/Checks}
+        \centering Additional Results/Checks
     \end{frame}
 
 
