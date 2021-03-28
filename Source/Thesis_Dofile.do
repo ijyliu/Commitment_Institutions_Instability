@@ -1236,14 +1236,14 @@ local HOSHOGStabVars = "v2elturnhog v2elturnhos"
 
 *DJ
 foreach stabVar in `HOSHOGStabVars' {
-xtreg `stabVar' c.lvaw_gar##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
+xtreg `stabVar' lvaw_gar v2exhoshog c.lvaw_gar#i.v2exhoshog RRrate c.RRrate#i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDJ_`stabVar'
 }
 esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", title(\label{hoshogmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `HOSHOGStabVars' {
-xtreg `stabVar' i.irregtd##i.v2exhoshog c.RRrate##i.v2exhoshog, fe cluster(country)
+xtreg `stabVar' irregtd v2exhoshog i.irregtd#i.v2exhoshog RRrate c.RRrate#i.v2exhoshog, fe cluster(country)
 eststo hoshogmiFEDF_`stabVar'
 }
 esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", title(\label{hoshogmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
@@ -1259,7 +1259,7 @@ xtreg v2eltvrig c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(coun
 eststo llpFEDJ_v2eltvrig
 esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", title(\label{llpFEDJ}) label replace compress booktabs wrap varwidth(40)
 *DF
-xtreg v2eltvrig i.irregtd##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
+xtreg v2eltvrig irregtd v2lglegplo i.irregtd#c.v2lglegplo RRrate c.RRrate#c.v2lglegplo, fe cluster(country)
 eststo llpFEDF_v2eltvrig
 esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", title(\label{llpFEDF}) label replace compress booktabs wrap varwidth(40)
 
