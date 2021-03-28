@@ -1280,7 +1280,7 @@ label var dfcbi_llp "Yes x De Facto CBI"
 label var fixedrate_llp "Yes x Fixed Rate"
 
 *DJ
-xtreg v2eltvrig lvaw_gar dfcbi_llp RRrate fixedrate_llp, fe cluster(country)
+xtreg v2eltvrig lvaw_gar v2lglegplo dfcbi_llp RRrate fixedrate_llp, fe cluster(country)
 eststo llpFEDJ_v2eltvrig
 esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", title(\label{llpFEDJ}) label replace compress booktabs wrap varwidth(40)
 *DF
