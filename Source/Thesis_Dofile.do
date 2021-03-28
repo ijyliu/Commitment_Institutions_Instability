@@ -1242,16 +1242,24 @@ save "${Intermediate_Data}/capaccount_Analysis_Ready",  replace
 * HOS = HOG
 local HOSHOGStabVars = "v2elturnhog v2elturnhos"
 
+*make some interaction term vars by hand
+gen djcbi_hoshog = lvaw_garriga * v2exhoshog
+gen dfcbi_hoshog = irregtd * v2exhoshog
+gen fixedrate_hoshog =  RRrate * v2exhoshog
+label var djcbi_hoshog "Yes x De Jure CBI"
+label var dfcbi_hoshog "Yes x De Facto CBI"
+label var fixedrate_hoshog "Yes x Fixed Rate"
+
 *DJ
 foreach stabVar in `HOSHOGStabVars' {
-xtreg `stabVar' lvaw_gar v2exhoshog c.lvaw_gar#i.v2exhoshog RRrate c.RRrate#i.v2exhoshog, fe cluster(country)
+xtreg `stabVar' lvaw_gar v2exhoshog djcbi_hoshog RRrate fixedrate_hoshog, fe cluster(country)
 eststo hoshogmiFEDJ_`stabVar'
 }
 esttab hoshogmiFEDJ_v2elturnhog hoshogmiFEDJ_v2elturnhos using "${Tables}/hoshogmultIndFEDJ.tex", title(\label{hoshogmultIndFEDJ}) label replace compress booktabs wrap varwidth(40)
 
 *DF
 foreach stabVar in `HOSHOGStabVars' {
-xtreg `stabVar' irregtd v2exhoshog i.irregtd#i.v2exhoshog RRrate c.RRrate#i.v2exhoshog, fe cluster(country)
+xtreg `stabVar' irregtd v2exhoshog dfcbi_hoshog RRrate fixedrate_hoshog, fe cluster(country)
 eststo hoshogmiFEDF_`stabVar'
 }
 esttab hoshogmiFEDF_v2elturnhog hoshogmiFEDF_v2elturnhos using "${Tables}/hoshogmultIndFEDF.tex", title(\label{hoshogmultIndFEDF}) label replace compress booktabs wrap varwidth(40)
@@ -1262,12 +1270,21 @@ browse if v2exhoshog == 0
 eststo clear
 
 * Lower chamber legislates in practice
+
+*make some interaction term vars by hand
+gen djcbi_llp = lvaw_garriga * v2lglegplo
+gen dfcbi_llp = irregtd * v2lglegplo
+gen fixedrate_llp =  RRrate * v2lglegplo
+label var djcbi_llp "Yes x De Jure CBI"
+label var dfcbi_llp "Yes x De Facto CBI"
+label var fixedrate_llp "Yes x Fixed Rate"
+
 *DJ
-xtreg v2eltvrig c.lvaw_gar##c.v2lglegplo c.RRrate##c.v2lglegplo, fe cluster(country)
+xtreg v2eltvrig lvaw_gar dfcbi_llp RRrate fixedrate_llp, fe cluster(country)
 eststo llpFEDJ_v2eltvrig
 esttab llpFEDJ_v2eltvrig using "${Tables}/llpFEDJ.tex", title(\label{llpFEDJ}) label replace compress booktabs wrap varwidth(40)
 *DF
-xtreg v2eltvrig irregtd v2lglegplo i.irregtd#c.v2lglegplo RRrate c.RRrate#c.v2lglegplo, fe cluster(country)
+xtreg v2eltvrig irregtd v2lglegplo dfcbi_llp RRrate fixedrate_llp, fe cluster(country)
 eststo llpFEDF_v2eltvrig
 esttab llpFEDF_v2eltvrig using "${Tables}/llpFEDF.tex", title(\label{llpFEDF}) label replace compress booktabs wrap varwidth(40)
 
