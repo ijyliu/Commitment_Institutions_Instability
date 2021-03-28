@@ -85,7 +85,6 @@
 
     \end{frame}
 
-
     \begin{frame}
         \frametitle{Literature}
         \begin{itemize}
@@ -221,10 +220,25 @@
             \item Unclear sign for fixed rates (last two cols)
             \item De facto CBI omitted, insignificant
         \end{itemize}
-        \input{../../Output/Tables/ifivs.tex}
-        \input{../../Output/Tables/ifivs2.tex}
     \end{frame}
 
+    \begin{frame}
+        \frametitle{Tertiary Education and Aggregate GDP Instruments}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ifivs.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Tertiary Education and Aggregate GDP Instruments}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ifivs2.tex}
+        }
+    \end{frame}
 
     \begin{frame}
         \frametitle{IV2: Population Share Social Science/Business Grads (CBI), Agg GDP (Fixed Rates)}
@@ -232,10 +246,25 @@
             \item Better Exclusion Restriction
             \item Very limited data but strong result for de jure CBI and political instability
         \end{itemize}
-        \input{../../Output/Tables/ifivs3.tex}
-        \input{../../Output/Tables/ifivs4.tex}
     \end{frame}
 
+    \begin{frame}
+        \frametitle{Population Share Social Science/Business Grads and Agg GDP Instruments}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ifivs3.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Population Share Social Science/Business Grads and Agg GDP Instruments}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ifivs4.tex}
+        }
+    \end{frame}
 
     \begin{frame}
         \frametitle{Just Aggregate GDP for Fixed Rates}
@@ -246,11 +275,18 @@
                 \item Agg GDP proxies for economy size (optimum currency area)
                 \item Arguably not as connected to GDP per capita to stability
             \end{itemize}
-            \item Result for LH sensitive to dataset
+            \item Result for lower house sensitive to dataset
         \end{itemize}
-        \input{../../Output/Tables/miniRRIVs.tex}
     \end{frame}
 
+    \begin{frame}
+        \frametitle{Aggregate GDP Instrument for Fixed Rates}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/miniRRIVs.tex}
+        }
+    \end{frame}
 
     \begin{frame}
         \frametitle{Table of Lags (see paper)}
@@ -263,7 +299,6 @@
             \item Similar results with lagged ordinal logit specification
         \end{itemize}
     \end{frame}
-
 
     \begin{frame}
         \frametitle{Summary}
@@ -280,7 +315,6 @@
         \end{itemize}
     \end{frame}
 
-
     \begin{frame}
         \frametitle{Questions/future directions}
         \begin{itemize}
@@ -294,11 +328,9 @@
         \end{itemize}
     \end{frame}
 
-
     \begin{frame}
         \centering Additional Results/Checks
     \end{frame}
-
 
     \begin{frame}
         \frametitle{Controls}
@@ -312,9 +344,25 @@
             \item Omitted: Corporatism
             \item Collinearity?
         \end{itemize}
-        %\input{img0012.png}
     \end{frame}
 
+    \begin{frame}
+        \frametitle{Controls Excluding Corporatism}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/nccmultIndFEDJ.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Controls Excluding Corporatism}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/nccmultIndFEDF.tex}
+        }
+    \end{frame}
 
     \begin{frame}
         \frametitle{HOS = HOG?}
@@ -324,7 +372,24 @@
             \item Weaker effect when they are
             \item Fixed erates reduce turnover in when they are the same person
         \end{itemize}
-        %\input{img0009.png}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{HOS = HOG Interaction Term}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/hoshogmultIndFEDJ.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{HOS = HOG Interaction Term}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/hoshogmultIndFEDF.tex}
+        }
     \end{frame}
 
     \begin{frame}
@@ -335,7 +400,24 @@
             \item Weaker effect when they are
             \item Fixed erates reduce turnover in when they are the same person
         \end{itemize}
-        %\input{img0009.png}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Legislative Power in Practice Interaction Term}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/llpFEDJ.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Legislative Power in Practice Interaction Term}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/llpFEDF.tex}
+        }
     \end{frame}
 
     \begin{frame}
@@ -351,8 +433,7 @@
     \begin{frame}
         \frametitle{Interaction Terms}
         \begin{itemize}
-            \item High polity on the left, low polity on the right
-            \item De facto CBI (less irregular turnover) means less lower chamber turnover in democracies but reverse in autocracies. Rule of law?
+            \item
         \end{itemize}
         %\input{img0013.png}
         %\input{img0014.png}
@@ -361,9 +442,7 @@
     \begin{frame}
         \frametitle{Capital Account Openness Interactions}
         \begin{itemize}
-            \item High polity on the left, low polity on the right
-            \item De facto CBI (less irregular turnover) means less lower chamber turnover in democracies but reverse in autocracies. Rule of law?
-        \end{itemize}
+            \item 
         %\input{img0013.png}
         %\input{img0014.png}
     \end{frame}
