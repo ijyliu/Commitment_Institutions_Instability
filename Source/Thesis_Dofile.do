@@ -897,6 +897,14 @@ eststo clear
 merge 1:1 country_name year using "${Intermediate_Data}/Clean_DPI", gen(merge7)
 merge 1:1 country_name year using "${Intermediate_Data}/Clean_Visser", gen(merge8)
 
+*Shorten variable length for the no Corp Controls
+label var v2elreggov
+label var v2x_horacc
+*label var checks
+*label var auton
+label var v2elreggov "Reg. Govt. Exists"
+label var v2x_horacc "Horiz. Acctability"
+
 local noCorpControls "v2elreggov v2x_horacc checks auton author"
 local fullcontrols "`noCorpControls' Coord Type"
 
