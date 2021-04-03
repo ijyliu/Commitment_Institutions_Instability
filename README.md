@@ -4,7 +4,7 @@ Isaac Liu
 
 Submitted May 2020
 
-Revised and Added to GitHub beginning January 2021
+Revised and added to GitHub beginning January 2021
 
 ## Contents
 
