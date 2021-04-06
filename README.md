@@ -18,7 +18,7 @@ Stores output from the stata code, including [intermediate/cleaned data](Output/
 
 ### [Release](Release)
 
-Contains final submissions, paper drafts, and presentations.
+Contains final submissions, paper drafts, and presentations. The most up to date LaTex/pdf version of the paper is [here](Release/Paper/Liu-%20Commitment%20Institutions%20and%20Instability.pdf) and a pdf of the slides is [here](Release/Presentation/Thesis%20Presentation.pdf).
 
 ### [Source](Source)
 
