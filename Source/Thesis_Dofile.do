@@ -694,6 +694,7 @@ ren numberofactualturnovers noaturn
 ren regularturnoverdummy regtd
 ren irregularturnoverdummy irregtd
 label var irregtd "De Facto CBI"
+*invert the irregular turnover dummy, as de facto cbi is the absence of irregular turnover
 replace irregtd = 1 - irregtd
 ren timeinoffice tinoff
 label var tinoff
