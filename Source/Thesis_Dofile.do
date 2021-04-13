@@ -693,7 +693,7 @@ ren timetoregularturnover ttregturn
 ren numberofactualturnovers noaturn
 ren regularturnoverdummy regtd
 ren irregularturnoverdummy irregtd
-label var irregtd "De facto CBI"
+label var irregtd "De Facto CBI"
 replace irregtd = 1 - irregtd
 ren timeinoffice tinoff
 label var tinoff
