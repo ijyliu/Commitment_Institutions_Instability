@@ -1398,7 +1398,7 @@ eststo ordLogv2elturnhosDJ: margins, dydx(`primCommInstVarsDJ') post
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo ordLogv2eltvrigDJ: margins, dydx(`primCommInstVarsDJ') post
 
-esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(De Jure CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
+esttab ordLogv2elturnhogDJ ordLogv2elturnhosDJ ordLogv2eltvrigDJ using "${Tables}/ordLogDJ.tex", title(De Jure CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover") coeflabels(1._predict "No Turnover" 2._predict "Half Turnover" 3._predict "Full Turnover")
 eststo clear
 
 *DF
@@ -1410,7 +1410,7 @@ eststo ordLogv2elturnhosDF: margins, dydx(`primCommInstVarsDF') post
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo ordLogv2eltvrigDF: margins, dydx(`primCommInstVarsDF') post
 
-esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(De Facto CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
+esttab ordLogv2elturnhogDF ordLogv2elturnhosDF ordLogv2eltvrigDF using "${Tables}/ordLogDF.tex", title(De Facto CBI, Mean Marginal Effects, Ordered Logit Panel Regression, Random Effects, Clustered Standard Errors \label{ordLogDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover") coeflabels(1._predict "No Turnover" 2._predict "Half Turnover" 3._predict "Full Turnover")
 eststo clear
 
 * Lagged Ordinal Logit: Margins computation does not run.
@@ -1497,7 +1497,7 @@ eststo cordLogv2elturnhosDJ
 xtologit v2eltvrig `primCommInstVarsDJ', vce(cluster country)
 eststo cordLogv2eltvrigDJ
 
-esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
+esttab cordLogv2elturnhogDJ cordLogv2elturnhosDJ cordLogv2eltvrigDJ using "${Tables}/coeffordLogDJ.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDJ}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover") coeflabels(1._predict "No Turnover" 2._predict "Half Turnover" 3._predict "Full Turnover")
 eststo clear
 
 *DF
@@ -1508,7 +1508,7 @@ eststo cordLogv2elturnhosDF
 xtologit v2eltvrig `primCommInstVarsDF', vce(cluster country)
 eststo cordLogv2eltvrigDF
 
-esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover")
+esttab cordLogv2elturnhogDF cordLogv2elturnhosDF cordLogv2eltvrigDF using "${Tables}/coeffordLogDF.tex", title(Ordinal panel logit with clustered SEs, Random effects, Coefficients \label{coeffordLogDF}) label replace compress booktabs wrap varwidth(40) mtitles("HoG Turnover" "HoS Turnover" "L.H. Turnover") coeflabels(1._predict "No Turnover" 2._predict "Half Turnover" 3._predict "Full Turnover")
 eststo clear
 
 *****************************************************************************
