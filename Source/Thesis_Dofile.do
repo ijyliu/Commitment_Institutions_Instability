@@ -1599,7 +1599,7 @@ eststo demIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs_instabEvent
 
-esttab demIfivs_v2elturnhog demIfivs_v2elturnhos demIfivs_v2eltvrig demIfivs_e_wbgi_pve demIfivs_instabEvent using "${Tables}/demIfivs.tex", title(Instrumental Variable of Tertiary Education, Democracies \label{demIfivs}) label replace compress booktabs wrap varwidth(40)
+esttab demIfivs_v2elturnhog demIfivs_v2elturnhos demIfivs_v2eltvrig demIfivs_e_wbgi_pve demIfivs_instabEvent using "${Tables}/demIfivs.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, Democracies \label{demIfivs}) label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
@@ -1613,7 +1613,7 @@ eststo demIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs2_instabEvent
 
-esttab demIfivs2_v2elturnhog demIfivs2_v2elturnhos demIfivs2_v2eltvrig demIfivs2_e_wbgi_pve demIfivs2_instabEvent using "${Tables}/demIfivs2.tex", title(Instrumental Variable of Tertiary Education, Democracies \label{demIfivs2}) label replace compress booktabs wrap varwidth(40)
+esttab demIfivs2_v2elturnhog demIfivs2_v2elturnhos demIfivs2_v2eltvrig demIfivs2_e_wbgi_pve demIfivs2_instabEvent using "${Tables}/demIfivs2.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, Democracies \label{demIfivs2}) label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
@@ -1627,7 +1627,7 @@ eststo demIfivs3_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust noconstant
 eststo demIfivs3_instabEvent
 
-esttab demIfivs3_v2elturnhog demIfivs3_v2elturnhos demIfivs3_v2eltvrig demIfivs3_e_wbgi_pve demIfivs3_instabEvent using "${Tables}/demIfivs3.tex", title(Instrumental Variable of Social Science/Business Grads, Democracies \label{demIfivs3}) label replace compress booktabs wrap varwidth(40)
+esttab demIfivs3_v2elturnhog demIfivs3_v2elturnhos demIfivs3_v2eltvrig demIfivs3_e_wbgi_pve demIfivs3_instabEvent using "${Tables}/demIfivs3.tex", title(Instrumental Variables of Social Science/Business Grads and WB Aggregate GDP, Democracies \label{demIfivs3}) label replace compress booktabs wrap varwidth(40)
 
 * OECD instrument with de facto cbi
 ivregress 2sls v2elturnhog (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
@@ -1639,7 +1639,7 @@ eststo demIfivs4_v2eltvrig
 ivregress 2sls e_wbgi_pve (irregtd RRrate = ssbizagg iwbaggGDP) if deme_polity2 == 1, robust
 eststo demIfivs4_e_wbgi_pve
 
-esttab demIfivs4_v2elturnhog demIfivs4_v2elturnhos demIfivs4_v2eltvrig demIfivs4_e_wbgi_pve using "${Tables}/demIfivs4.tex", title(Instrumental Variable of Social Science/Business Grads, Democracies \label{demIfivs4}) label replace compress booktabs wrap varwidth(40)
+esttab demIfivs4_v2elturnhog demIfivs4_v2elturnhos demIfivs4_v2eltvrig demIfivs4_e_wbgi_pve using "${Tables}/demIfivs4.tex", title(Instrumental Variables of Social Science/Business Grads and WB Aggregate GDP, Democracies \label{demIfivs4}) label replace compress booktabs wrap varwidth(40)
 
 *Nondemocracies
 * De jure independence check
@@ -1654,7 +1654,7 @@ eststo ndemIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
 eststo ndemIfivs_instabEvent
 
-esttab ndemIfivs_v2elturnhog ndemIfivs_v2elturnhos ndemIfivs_v2eltvrig ndemIfivs_e_wbgi_pve ndemIfivs_instabEvent using "${Tables}/ndemIfivs.tex", title(Instrumental Variable of Tertiary Education, Nondemocracies \label{ndemIfivs}) label replace compress booktabs wrap varwidth(40)
+esttab ndemIfivs_v2elturnhog ndemIfivs_v2elturnhos ndemIfivs_v2eltvrig ndemIfivs_e_wbgi_pve ndemIfivs_instabEvent using "${Tables}/ndemIfivs.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, Nondemocracies \label{ndemIfivs}) label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
@@ -1668,7 +1668,7 @@ eststo ndemIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if deme_polity2 == 0, robust
 eststo ndemIfivs2_instabEvent
 
-esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIfivs2_e_wbgi_pve ndemIfivs2_instabEvent using "${Tables}/ndemIfivs2.tex", title(Instrumental Variable of Tertiary Education, Nondemocracies \label{ndemIfivs2}) label replace compress booktabs wrap varwidth(40)
+esttab ndemIfivs2_v2elturnhog ndemIfivs2_v2elturnhos ndemIfivs2_v2eltvrig ndemIfivs2_e_wbgi_pve ndemIfivs2_instabEvent using "${Tables}/ndemIfivs2.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, Nondemocracies \label{ndemIfivs2}) label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 * NO OBSERVATIONS!!!
@@ -1713,7 +1713,7 @@ eststo hiKfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if highka_open, robust
 eststo hiKfivs_instabEvent
 
-esttab hiKfivs_v2elturnhog hiKfivs_v2elturnhos hiKfivs_v2eltvrig hiKfivs_e_wbgi_pve hiKfivs_instabEvent using "${Tables}/hiKfivs.tex", title(\label{hiKfivs}) label replace compress booktabs wrap varwidth(40)
+esttab hiKfivs_v2elturnhog hiKfivs_v2elturnhos hiKfivs_v2eltvrig hiKfivs_e_wbgi_pve hiKfivs_instabEvent using "${Tables}/hiKfivs.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, High Capital Account Openness Countries \label{hiKfivs}) label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if highka_open, robust
@@ -1727,7 +1727,7 @@ eststo hiKfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if highka_open, robust
 eststo hiKfivs2_instabEvent
 
-esttab hiKfivs2_v2elturnhog hiKfivs2_v2elturnhos hiKfivs2_v2eltvrig hiKfivs2_e_wbgi_pve hiKfivs2_instabEvent using "${Tables}/hiKfivs2.tex", title(\label{hiKfivs2}) label replace compress booktabs wrap varwidth(40)
+esttab hiKfivs2_v2elturnhog hiKfivs2_v2elturnhos hiKfivs2_v2eltvrig hiKfivs2_e_wbgi_pve hiKfivs2_instabEvent using "${Tables}/hiKfivs2.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, High Capital Account Openness Countries \label{hiKfivs2}) label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if highka_open, robust
@@ -1768,7 +1768,7 @@ eststo lowKIfivs_e_wbgi_pve
 ivregress 2sls instabEvent (lvaw_gar RRrate = itertEd iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs_instabEvent
 
-esttab lowKIfivs_v2elturnhog lowKIfivs_v2elturnhos lowKIfivs_v2eltvrig lowKIfivs_e_wbgi_pve lowKIfivs_instabEvent using "${Tables}/lowKIfivs.tex", title(\label{lowKIfivs}) label replace compress booktabs wrap varwidth(40)
+esttab lowKIfivs_v2elturnhog lowKIfivs_v2elturnhos lowKIfivs_v2eltvrig lowKIfivs_e_wbgi_pve lowKIfivs_instabEvent using "${Tables}/lowKIfivs.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, Low Capital Account Openness Countries \label{lowKIfivs}) label replace compress booktabs wrap varwidth(40)
 
 * De facto independence check
 ivregress 2sls v2elturnhog (irregtd RRrate = itertEd iwbaggGDP) if !highka_open, robust
@@ -1782,7 +1782,7 @@ eststo lowKIfivs2_e_wbgi_pve
 ivregress 2sls instabEvent (irregtd RRrate = itertEd iwbaggGDP) if !highka_open, robust
 eststo lowKIfivs2_instabEvent
 
-esttab lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIfivs2_e_wbgi_pve lowKIfivs2_instabEvent using "${Tables}/lowKIfivs2.tex", title(\label{lowKIfivs2}) label replace compress booktabs wrap varwidth(40)
+esttab lowKIfivs2_v2elturnhog lowKIfivs2_v2elturnhos lowKIfivs2_v2eltvrig lowKIfivs2_e_wbgi_pve lowKIfivs2_instabEvent using "${Tables}/lowKIfivs2.tex", title(Instrumental Variables of Tertiary Education and WB Aggregate GDP, Low Capital Account Openness Countries \label{lowKIfivs2}) label replace compress booktabs wrap varwidth(40)
 
 * Try the OECD instrument, with de jure cbi
 *ivregress 2sls v2elturnhog (lvaw_gar RRrate = ssbizagg iwbaggGDP) if !highka_open, robust
