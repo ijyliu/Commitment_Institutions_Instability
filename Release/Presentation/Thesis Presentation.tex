@@ -63,7 +63,7 @@
                 \item Net Welfare Benefits
                 \begin{itemize}
                     \item Inflation time inconsistency problem solved
-                    \item Increased olitical efficacy, access to capital
+                    \item Increased political efficacy, access to capital
                     \item Economic voting theory thus implies increased stability
                 \end{itemize}
                 \item Political Business Cycles
@@ -125,7 +125,7 @@
             \item Contribution:
             \begin{itemize}
                 \item Far larger dataset including non/semi-democracies
-                \item More consideration of endogeneity: choice of institutions based on stability consideration, de jure independence
+                \item More consideration of endogeneity: choice of institutions based on stability consideration, de jure/de facto independence difference
                 \item Political, not just electoral stability (coups, civil wars, etc), consideration for specific governmental positions
             \end{itemize}
         \end{itemize}
@@ -139,24 +139,24 @@
             \begin{itemize}
                 \item Turnover variables: v2eltturnhog (Head of Government, HOG), v2elturnhos (Head of State, HOG), v2eltvrig (Lower House, L.H.)
                 \item 0 for same individual (no turnover), 1 for same party or coalition (half turnover), 2 for new party and individual (full turnover)
-                \item WGI Political Violence (neg = unstable)
-                \item Instability Event- coup, civil war, internal conflict
+                \item WGI Political Violence (positive value implies more stable)
+                \item Instability Event- coup, civil war, internal conflict indicator
             \end{itemize}
             \item Garriga (Cukierman, Webb, Neyapti)- de jure CBI
             \item Dreher et al.- Irregular turnover of governor- de facto CBI
-            \item Reinhart, Rogoff Exchange Rates: 16 categories (higher = float)
+            \item Reinhart, Rogoff Exchange Rates: 16 categories (higher implies closer to a pure float)
         \end{itemize}
     \end{frame}
 
     \begin{frame}
         \frametitle{Results}
         \begin{itemize}
-            \item Separate regressions (bad control problem)
+            \item Separate regressions for de jure and de facto CBI (bad control problem)
             \item FEs, clustered SEs
-            \item De jure CBI and more instability: PBCs
+            \item De jure CBI and more instability: political business cycles
             \item De facto CBI (high irregular turnover) and less lower chamber turnover
             \item Fixed rate and less HOS turnover
-            \item Welfare benefits of de facto CBI, fixed rates?
+            \item De facto CBI, fixed rates and less instability: welfare benefits?
         \end{itemize}
     \end{frame}
 
@@ -236,8 +236,8 @@
         \begin{itemize}
             \item Good first stages
             \item Poor exclusion restrictions for political stability, better ones for electoral stability/turnover
-            \item De jure CBI now increases lower chamber turnover, but no longer HOS; strange sign for WB stability
-            \item Fixed rates appear to increase instability
+            \item De jure CBI now increases lower chamber turnover, but no longer HOS
+            \item Fixed rates appear to increase lower chamber turnover
             \item De facto CBI more or less insignificant
         \end{itemize}
     \end{frame}
@@ -265,7 +265,7 @@
         \begin{itemize}
             \item Better exclusion restriction
             \item Very limited data but strong result for de jure CBI and political instability
-            \item Fixed rates and lower house turnover in the de facto specification
+            \item Fixed rates again associated with lower house turnover in the de facto specification
         \end{itemize}
     \end{frame}
 
@@ -328,7 +328,7 @@
             \item De jure CBI and fixed rates jointly grow political instability
             \item Signs mixed for other kinds of instability
             \item De facto CBI and fixed rates in combination somewhat increase instability relative to individually
-            \item Pseudo Mundell-Fleming trilemma and PBCs: more difficult to manage the economy
+            \item Pseudo Mundell-Fleming trilemma and PBCs: more difficult to manage the economy with more commitments
             \begin{itemize}
                 \item Is CBI a good representation of "domestic monetary autonomy"?
                 \item See appendix for test with capital controls explicitly
@@ -359,8 +359,8 @@
             \begin{itemize}
                 \item HOS and Lower House seem to have strongest relationships
             \end{itemize}
-            \item Endogenous elections
-            \item Dynamic panel (A-Bond)?
+            \item Account for endogenous elections
+            \item Dynamic panel analysis (Arellano-Bond, etc.)
             \item Ordinal logit regression with IV (different procedure)
         \end{itemize}
     \end{frame}
