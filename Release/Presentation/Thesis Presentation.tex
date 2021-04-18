@@ -62,15 +62,15 @@
             \begin{itemize}
                 \item Net Welfare Benefits
                 \begin{itemize}
-                    \item Inflation time inconsistency
-                    \item Political efficacy, access to capital
-                    \item Economic voting, increased stability
+                    \item Inflation time inconsistency problem solved
+                    \item Increased olitical efficacy, access to capital
+                    \item Economic voting theory thus implies increased stability
                 \end{itemize}
                 \item Political Business Cycles
                 \begin{itemize}
                     \item Inability to manipulate economy or satisfy partisans
                     \item Monetary (perhaps fiscal) policy limited
-                    \item Economic voting, decreased stability
+                    \item Economic voting theory thus implies decreased stability
                 \end{itemize}
             \end{itemize}
         \end{itemize}
@@ -115,12 +115,12 @@
             \item Bernhard and Leblang (2002)
             \begin{itemize}
                 \item OLS, 16 parliamentary democracies since 1970s
-                \item CBI increases cabinet duration by 3mos, Fixed rates by 5mos, especially with open trade and capital account
+                \item CBI increases cabinet duration by 3 months, fixed rates by 5 months, especially with open trade and capital account
             \end{itemize}
             \item Clark, Golder, and Poast (2013)
             \begin{itemize}
                 \item Survival analysis, 19 OECD countries since 1970s
-                \item Both institutions increase leader survival but only after 7y in office
+                \item Both institutions increase leader survival but only after 7 years in office
             \end{itemize}
             \item Contribution:
             \begin{itemize}
@@ -138,7 +138,7 @@
             \item Varieties of Democracy
             \begin{itemize}
                 \item Turnover variables: v2eltturnhog (Head of Government, HOG), v2elturnhos (Head of State, HOG), v2eltvrig (Lower House, L.H.)
-                \item 0 for same individual (no turnover), 1 for same party or coalition (half turnover), 2 for new party \& ind. (full turnover)
+                \item 0 for same individual (no turnover), 1 for same party or coalition (half turnover), 2 for new party and individual (full turnover)
                 \item WGI Political Violence (neg = unstable)
                 \item Instability Event- coup, civil war, internal conflict
             \end{itemize}
@@ -339,7 +339,7 @@
     \begin{frame}
         \frametitle{Summary}
         \begin{itemize}
-            \item De jure CBI generally decreases (esp. political) stability, suggesting limits on PBCs
+            \item De jure CBI generally decreases (especially political) stability, suggesting limits on PBCs
             \item Unclear sign for de facto CBI though it appears to increase stability if anything
             \item Fixed rates mostly appear to increase stability in fixed effects regressions, but the sign flips in more robust models (IV, lags)
             \item Combinations/interactions of commitment institutions more destabilizing
@@ -398,6 +398,50 @@
             \let\oldcentering\centering
             \renewcommand\centering{\tiny\oldcentering}
             \input{../../Output/Tables/nccmultIndFEDF.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Capital Account Openness Interactions}
+        \begin{itemize}
+            \item See paper for lagged interaction term analysis. Some results, particularly those for the ordinal logit model, agree with Bernhard et al. (2002)
+            \item Interesting side result on the political optimality of Bretton Woods (closed capital account, fixed rates, de facto CBI)
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Democracies, Tertiary Education Instrument}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/demIfivs.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Democracies, Tertiary Education Instrument}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/demIfivs2.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Nondemocracies, Tertiary Education Instrument}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ndemIfivs.tex}
+        }
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Nondemocracies, Tertiary Education Instrument}
+        {
+            \let\oldcentering\centering
+            \renewcommand\centering{\tiny\oldcentering}
+            \input{../../Output/Tables/ndemIfivs2.tex}
         }
     \end{frame}
 
@@ -464,57 +508,13 @@
         \frametitle{Democracy/Nondemocracy}
         \begin{itemize}
             \item Classification based on Polity IV scores
-            \item Tested:
+            \item Tested hypotheses:
             \begin{itemize}
                 \item De jure versus de facto CBI matters more in democracies due to rule of law
                 \item Electoral versus political turnover/instability matters more in democracies
             \end{itemize}
             \item Not really any consistent pattern of major differences. All items generally more significant in democracies
-            \item See paper for lagged interaction term analysis, which somewhat challenges the last point
-        \end{itemize}
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Democracies, Tertiary Education Instrument}
-        {
-            \let\oldcentering\centering
-            \renewcommand\centering{\tiny\oldcentering}
-            \input{../../Output/Tables/demIfivs.tex}
-        }
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Democracies, Tertiary Education Instrument}
-        {
-            \let\oldcentering\centering
-            \renewcommand\centering{\tiny\oldcentering}
-            \input{../../Output/Tables/demIfivs2.tex}
-        }
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Nondemocracies, Tertiary Education Instrument}
-        {
-            \let\oldcentering\centering
-            \renewcommand\centering{\tiny\oldcentering}
-            \input{../../Output/Tables/ndemIfivs.tex}
-        }
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Nondemocracies, Tertiary Education Instrument}
-        {
-            \let\oldcentering\centering
-            \renewcommand\centering{\tiny\oldcentering}
-            \input{../../Output/Tables/ndemIfivs2.tex}
-        }
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Capital Account Openness Interactions}
-        \begin{itemize}
-            \item See paper for lagged interaction term analysis. Some results, particularly those for the ordinal logit model, agree with Bernhard et al. (2002)
-            \item Interesting side result on the political optimality of Bretton Woods (closed capital account, fixed rates, de facto CBI)
+            \item See paper for lagged interaction term analysis, which somewhat challenges the second hypothesis
         \end{itemize}
     \end{frame}
 
