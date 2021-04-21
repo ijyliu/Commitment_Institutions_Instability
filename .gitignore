@@ -1,0 +1,6 @@
+
+# Ignore synctex
+**/*.synctex.gz
+
+# Ignore RData
+**/*.RData
