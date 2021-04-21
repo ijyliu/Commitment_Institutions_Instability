@@ -1,4 +1,4 @@
-# Commitment Institutions and Electoral and Political Instability: A Reduced-Form Approach
+# [Commitment Institutions and Electoral and Political Instability: A Reduced-Form Approach](Release/Paper/Liu-%20Commitment%20Institutions%20and%20Instability.pdf)
 
 Isaac Liu
 
