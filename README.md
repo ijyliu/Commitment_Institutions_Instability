@@ -2,7 +2,7 @@
 
 Isaac Liu
 
-Submitted as a senior thesis in International Political Economy in April 2020
+Submitted as a senior thesis in International Political Economy at Georgetown University in April 2020
 
 Revised and added to GitHub beginning January 2021
 
