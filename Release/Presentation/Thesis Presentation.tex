@@ -119,12 +119,15 @@
                 \item Survival Analysis, 19 OECD countries since 1970s
                 \item Both institutions increase leader survival but only after 7y in office
             \end{itemize}
-            \item Contribution:
-            \begin{itemize}
-                \item Far larger dataset including non/semi-democracies
-                \item More consideration of endogeneity: choice of institutions based on stability consideration, de jure independence
-                \item Political, not just electoral stability (coups, civil wars, etc), consideration for specific governmental positions
-            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Contribution}
+        \begin{itemize}
+            \item Far larger dataset including non/semi-democracies
+            \item More consideration of endogeneity: choice of institutions based on stability consideration, de jure independence
+            \item Political, not just electoral stability (coups, civil wars, etc), consideration for specific governmental positions
         \end{itemize}
     \end{frame}
 
@@ -149,7 +152,7 @@
         \frametitle{Results}
         \begin{itemize}
             \item Separate regressions (bad control problem)
-            \item FEs, clustered SEs
+            \item Fixed effects, clustered standard errors
             \item De Jure CBI and more instability: PBCs
             \item De Facto CBI (high irregular turnover) and less lower chamber turnover
             \item Fixed rate and less HOS turnover
@@ -229,9 +232,18 @@
     \end{frame}
 
     \begin{frame}
+        \frametitle{Instrumental Variables}
+        \begin{itemize}
+            \item Break potential endogeneity of institutions to strategic political choice, differing from previous literature
+            \item CBI: technical expertise/competence needed for an independent central bank, and unrelated to instability in some cases
+            \item Fixed Rates: optimal currency area literature implies that large economies see more gains from trade, try to proxy for size rather than wealth
+            \item Good first stages in robust regression
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
         \frametitle{IV1: Tertiary Ed Enrollment (CBI), Aggregate GDP (Fixed Rate)}
         \begin{itemize}
-            \item Good first stages
             \item Poor exclusion restrictions for political stability, better ones for electoral stability/turnover
             \item De jure CBI now increases lower chamber turnover, but no longer HOS; strange sign for WB stability
             \item Fixed rates appear to increase instability
