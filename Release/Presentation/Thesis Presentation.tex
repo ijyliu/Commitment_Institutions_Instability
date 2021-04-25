@@ -140,7 +140,7 @@
         \frametitle{Contribution}
         \begin{itemize}
             \item Far larger dataset including non/semi-democracies
-            \item More consideration of endogeneity: choice of institutions based on stability consideration, de jure independence
+            \item More consideration of endogeneity: choice of institutions based on stability consideration, potential for de jure independence only
             \item Political, not just electoral stability (coups, civil wars, etc), consideration for specific governmental positions
         \end{itemize}
     \end{frame}
@@ -153,7 +153,7 @@
             \begin{itemize}
                 \item Turnover variables: v2eltturnhog (Head of Government, HOG), v2elturnhos (Head of State, HOG), v2eltvrig (Lower House, L.H.)
                 \item 0 for same individual (no turnover), 1 for same party or coalition (half turnover), 2 for new party and individual (full turnover)
-                \item WGI Political Violence (positive value implies more stable)
+                \item World Governance Indicators Political Violence (positive value implies more stable)
                 \item Instability Event- coup, civil war, internal conflict indicator
             \end{itemize}
             \item Garriga (Cukierman, Webb, Neyapti)- de jure CBI
@@ -250,8 +250,14 @@
         \frametitle{Instrumental Variables}
         \begin{itemize}
             \item Break potential endogeneity of institutions to strategic political choice, differing from previous literature
-            \item CBI: technical expertise/competence needed for an independent central bank, and unrelated to instability in some cases
-            \item Fixed Rates: optimal currency area literature implies that large economies see more gains from trade, try to proxy for size rather than wealth
+            \item CBI: Tertiary education enrollment and the share of social science/business graduates
+            \begin{itemize}
+                \item Technical expertise/competence needed for an independent central bank, and unrelated to instability in some cases
+            \end{itemize}
+            \item Fixed Rates: Aggregate GDP
+            \begin{itemize}
+                \item Optimal currency area literature implies that large economies see more gains from trade, try to proxy for size rather than wealth
+            \end{itemize}
             \item Good first stages in robust regression
         \end{itemize}
     \end{frame}
@@ -368,7 +374,7 @@
             \item Combinations/interactions of commitment institutions more destabilizing
             \item Robust results
             \begin{itemize}
-                \item Not covered: controls for federalism, corporatism do not affect signs or cause large changes in effects, capital account openness generally destabilizing but mitigated with interactions with fixed rates and de facto CBI, interactions with democracy do not behave as expected, expected results on HOS = HOG and less expected ones for legislative power in practice
+                \item Not covered: controls for federalism, corporatism do not affect signs or cause large changes in effects, capital account openness generally destabilizing but mitigated with interactions with fixed rates and de facto CBI, interactions with democracy do not behave as expected, expected accountability results on HOS = HOG and less expected ones for legislative power in practice
             \end{itemize}
         \end{itemize}
     \end{frame}
