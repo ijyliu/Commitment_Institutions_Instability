@@ -4,7 +4,7 @@ Isaac Liu
 
 This thesis uses quasi-experimental econometric methods (panel data and fixed effects, instrumental variables, interaction terms) to test whether limiting monetary institutions of central bank independence and fixed exchange rates affect countries' electoral and political instability. This provides insight into choice among social welfare, political business cycle, and economic voting theories, which provide for numerous competing mechanisms. I find suggestive evidence that de jure central bank independence and fixed rates increase instability and mixed evidence for de facto independence. In an analysis of an interaction term model, combinations of de jure CBI and fixed rates and de facto CBI and fixed rates are somewhat more destabilizing than their individual components. Overall, there is potential for serious political economy complications in the implementation of these institutions.
 
-This work was one of roughly 20 top undergraduate economics papers worldwide selected for the 2021 [Carroll Round Conference](https://sfs.georgetown.edu/carroll-round/about/)
+This work was one of roughly 20 top undergraduate economics papers worldwide selected for the 2021 [Carroll Round Conference](https://sfs.georgetown.edu/carroll-round/about/).
 
 ## Contents
 
